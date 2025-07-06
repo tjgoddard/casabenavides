@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import heroImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
 
 export default function HeroSection() {
   return (
@@ -8,7 +9,7 @@ export default function HeroSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://www.casabenavides.com/quality_auto/Exterior-Front-Homepage-Alt-1.jpg)'
+            backgroundImage: `url(${heroImage})`
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>

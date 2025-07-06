@@ -13,7 +13,7 @@
   --card-foreground: hsl(20, 14.3%, 4.1%);
   --border: hsl(20, 5.9%, 90%);
   --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(217, 82%, 45%);
+  --primary: #0682b3;
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(60, 4.8%, 95.9%);
   --secondary-foreground: hsl(24, 9.8%, 10%);
@@ -25,9 +25,9 @@
   --radius: 0.5rem;
   
   /* Casa Benavides Custom Colors */
-  --casa-blue: hsl(217, 82%, 45%);
-  --casa-blue-light: hsl(217, 82%, 55%);
-  --casa-blue-accent: hsl(217, 82%, 65%);
+  --casa-blue: #0682b3;
+  --casa-blue-light: #0d9ad6;
+  --casa-blue-accent: #14a8e6;
   --casa-light: hsl(210, 40%, 98%);
 }
 
@@ -42,7 +42,7 @@
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(217, 82%, 45%);
+  --primary: #0682b3;
   --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(240, 3.7%, 15.9%);
   --secondary-foreground: hsl(0, 0%, 98%);
@@ -70,27 +70,27 @@
 
 @layer utilities {
   .casa-blue {
-    color: hsl(217, 82%, 45%);
+    color: #0682b3;
   }
   
   .bg-casa-blue {
-    background-color: hsl(217, 82%, 45%);
+    background-color: #0682b3;
   }
   
   .casa-blue-light {
-    color: hsl(217, 82%, 55%);
+    color: #0d9ad6;
   }
   
   .bg-casa-blue-light {
-    background-color: hsl(217, 82%, 55%);
+    background-color: #0d9ad6;
   }
   
   .casa-blue-accent {
-    color: hsl(217, 82%, 65%);
+    color: #14a8e6;
   }
   
   .bg-casa-blue-accent {
-    background-color: hsl(217, 82%, 65%);
+    background-color: #14a8e6;
   }
   
   .bg-casa-light {
