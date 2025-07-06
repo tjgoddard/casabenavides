@@ -9,7 +9,10 @@ export default function HeroSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(${heroImage})`
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            transform: 'scale(0.85)',
+            transformOrigin: 'center'
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
