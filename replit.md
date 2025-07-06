@@ -1,0 +1,116 @@
+# Casa Benavides Inn Website
+
+## Overview
+
+Casa Benavides Inn is a full-stack web application built for a historic bed & breakfast in Taos, New Mexico. The application serves as a marketing website with contact form functionality, featuring a modern React frontend and Express.js backend with PostgreSQL database integration.
+
+## System Architecture
+
+### Frontend Architecture
+- **Framework**: React 18 with TypeScript
+- **Routing**: Wouter for client-side routing
+- **UI Framework**: Radix UI components with shadcn/ui design system
+- **Styling**: Tailwind CSS with custom CSS variables for theming
+- **State Management**: TanStack Query for server state management
+- **Build Tool**: Vite for development and production builds
+
+### Backend Architecture
+- **Runtime**: Node.js with Express.js framework
+- **Language**: TypeScript with ES modules
+- **Database**: PostgreSQL with Drizzle ORM
+- **Database Provider**: Neon Database (@neondatabase/serverless)
+- **Session Management**: In-memory storage with fallback to PostgreSQL sessions
+- **API Design**: RESTful API with JSON responses
+
+### Development Setup
+- **Monorepo Structure**: Shared code between client and server
+- **Hot Reloading**: Vite middleware integration for development
+- **Error Handling**: Runtime error overlay for development
+- **Type Safety**: Shared TypeScript types between frontend and backend
+
+## Key Components
+
+### Database Schema
+- **Users Table**: Basic user authentication structure (id, username, password)
+- **Contact Submissions Table**: Stores form submissions (id, name, email, message, created_at)
+- **Schema Validation**: Zod schemas for runtime validation and type inference
+
+### API Endpoints
+- `POST /api/contact` - Submit contact form with validation
+- `GET /api/contact-submissions` - Retrieve all contact submissions (admin)
+
+### UI Components
+- **Navigation**: Sticky navigation with mobile menu support
+- **Hero Section**: Full-screen hero with booking integration
+- **Location Section**: Interactive content about Taos location
+- **Features Section**: Highlights of the inn's amenities
+- **Breakfast Section**: Details about gourmet breakfast offerings
+- **Contact Section**: Contact form with real-time validation
+- **Story Section**: Historic background of the inn
+- **Footer**: Links and additional information
+
+### Form Handling
+- **Validation**: Zod schema validation on both client and server
+- **Error Handling**: User-friendly error messages with toast notifications
+- **Success Feedback**: Confirmation messages for successful submissions
+
+## Data Flow
+
+1. **User Interaction**: User fills out contact form on the frontend
+2. **Client Validation**: Form data validated using Zod schemas
+3. **API Request**: TanStack Query sends POST request to backend
+4. **Server Validation**: Backend validates request using shared schemas
+5. **Database Storage**: Valid submissions stored in PostgreSQL
+6. **Response**: Success/error response sent back to client
+7. **UI Update**: Toast notification displays result to user
+
+## External Dependencies
+
+### Frontend Dependencies
+- **UI Components**: Extensive Radix UI primitives for accessibility
+- **Icons**: Lucide React icons
+- **Form Handling**: React Hook Form with resolvers
+- **Date Utilities**: date-fns for date formatting
+- **Styling**: Tailwind CSS with PostCSS
+
+### Backend Dependencies
+- **Database**: Drizzle ORM with PostgreSQL dialect
+- **Validation**: Zod with validation error formatting
+- **Session Storage**: connect-pg-simple for PostgreSQL sessions
+- **Development**: tsx for TypeScript execution
+
+### External Services
+- **Database Hosting**: Neon Database (serverless PostgreSQL)
+- **Reservation System**: Integration with ResNexus booking system
+- **Maps**: Google Maps integration for location
+- **Social Media**: Facebook page integration
+
+## Deployment Strategy
+
+### Build Process
+1. **Client Build**: Vite builds React app to `dist/public`
+2. **Server Build**: esbuild bundles Express server to `dist/index.js`
+3. **Database Migration**: Drizzle migrations applied to PostgreSQL
+
+### Environment Configuration
+- **Development**: Uses tsx for TypeScript execution with hot reload
+- **Production**: Node.js runs compiled JavaScript bundle
+- **Database**: PostgreSQL connection via DATABASE_URL environment variable
+
+### Storage Strategy
+- **Development**: In-memory storage for rapid development
+- **Production**: PostgreSQL with Drizzle ORM for persistence
+- **Sessions**: PostgreSQL session store for scalability
+
+## Changelog
+
+```
+Changelog:
+- July 06, 2025. Initial setup
+```
+
+## User Preferences
+
+```
+Preferred communication style: Simple, everyday language.
+```
