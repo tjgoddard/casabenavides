@@ -1,14 +1,8 @@
-import { Calendar, ExternalLink } from "lucide-react";
+import { Calendar } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="bg-casa-blue text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,36 +28,24 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <button 
-                  onClick={() => scrollToSection('home')}
-                  className="text-casa-blue-accent hover:text-white transition-colors duration-200"
-                >
+                <Link href="/" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
                   Home
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('breakfast')}
-                  className="text-casa-blue-accent hover:text-white transition-colors duration-200"
-                >
+                <Link href="/breakfast" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
                   Breakfast
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('contact')}
-                  className="text-casa-blue-accent hover:text-white transition-colors duration-200"
-                >
+                <Link href="/contact" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
                   Contact
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('our-story')}
-                  className="text-casa-blue-accent hover:text-white transition-colors duration-200"
-                >
+                <Link href="/our-story" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
                   Our Story
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
