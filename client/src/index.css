@@ -101,18 +101,12 @@
   /* Hero background responsiveness */
   .hero-bg {
     background-size: cover;
-    background-position: center 20%;
-  }
-  
-  @media (min-width: 768px) {
-    .hero-bg {
-      background-position: center center;
-    }
+    background-position: center center;
   }
   
   @media (max-width: 767px) {
     .hero-bg {
-      background-position: center 25%;
+      background-position: center 35%;
       background-size: cover;
     }
   }
