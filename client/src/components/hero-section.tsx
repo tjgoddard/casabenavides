@@ -6,14 +6,12 @@ export default function HeroSection() {
     <section id="home" className="relative">
       {/* Hero Section */}
       <div className="relative h-screen min-h-[500px] sm:min-h-[600px] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-no-repeat hero-bg"
-          style={{
-            backgroundImage: `url(${heroImage})`
-          }}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        </div>
+        <img 
+          src={heroImage}
+          alt="Casa Benavides Inn"
+          className="absolute inset-0 w-full h-full object-cover hero-image-position"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center text-white px-4 max-w-4xl mx-auto">

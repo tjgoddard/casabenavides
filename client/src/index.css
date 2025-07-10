@@ -98,16 +98,14 @@
     background-color: hsl(210, 40%, 98%);
   }
   
-  /* Hero background responsiveness */
-  .hero-bg {
-    background-size: cover;
-    background-position: center center;
+  /* Hero image positioning */
+  .hero-image-position {
+    object-position: center center;
   }
   
   @media (max-width: 767px) {
-    .hero-bg {
-      background-position: center 35%;
-      background-size: cover;
+    .hero-image-position {
+      object-position: center 70%;
     }
   }
 }
