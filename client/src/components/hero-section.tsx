@@ -7,12 +7,11 @@ export default function HeroSection() {
       {/* Hero Section */}
       <div className="relative h-screen min-h-[600px] overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-no-repeat sm:bg-center"
           style={{
             backgroundImage: `url(${heroImage})`,
-            backgroundSize: 'cover',
-            transform: 'scale(0.85)',
-            transformOrigin: 'center'
+            backgroundPosition: 'center 40%',
+            backgroundSize: 'cover'
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
