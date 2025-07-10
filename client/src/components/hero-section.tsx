@@ -5,13 +5,11 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative">
       {/* Hero Section */}
-      <div className="relative h-screen min-h-[600px] overflow-hidden">
+      <div className="relative h-screen min-h-[500px] sm:min-h-[600px] overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-no-repeat sm:bg-center"
+          className="absolute inset-0 bg-cover bg-no-repeat hero-bg"
           style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundPosition: 'center 40%',
-            backgroundSize: 'cover'
+            backgroundImage: `url(${heroImage})`
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>

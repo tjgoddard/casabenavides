@@ -97,4 +97,23 @@
   .bg-casa-light {
     background-color: hsl(210, 40%, 98%);
   }
+  
+  /* Hero background responsiveness */
+  .hero-bg {
+    background-size: cover;
+    background-position: center 20%;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-bg {
+      background-position: center center;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .hero-bg {
+      background-position: center 25%;
+      background-size: cover;
+    }
+  }
 }
