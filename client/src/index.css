@@ -98,14 +98,16 @@
     background-color: hsl(210, 40%, 98%);
   }
   
-  /* Hero image positioning */
+  /* Hero image positioning and cropping */
   .hero-image-position {
     object-position: center center;
+    transform: scale(1.2) translateY(-8%);
   }
   
   @media (max-width: 767px) {
     .hero-image-position {
-      object-position: center 70%;
+      object-position: center 50%;
+      transform: scale(1.4) translateY(-12%);
     }
   }
 }
