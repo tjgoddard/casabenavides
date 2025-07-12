@@ -1,17 +1,53 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
+import { useState, useEffect } from "react";
+import heroImage1 from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
+import heroImage2 from "@assets/Exterior-Front-Homepage-Alt-1_1752189444760.jpg";
+import heroImage3 from "@assets/Exterior-Front-Homepage-Alt-1_1752348951824.jpg";
 
 export default function HeroSection() {
+  const images = [
+    {
+      src: heroImage1,
+      alt: "Casa Benavides Inn - Historic Adobe Architecture"
+    },
+    {
+      src: heroImage2,
+      alt: "Casa Benavides Inn - Courtyard View"
+    },
+    {
+      src: heroImage3,
+      alt: "Casa Benavides Inn - Sunset Exterior"
+    }
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % images.length
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section id="home" className="relative">
       {/* Hero Section */}
       <div className="relative h-screen min-h-[700px] overflow-hidden">
-        <img 
-          src={heroImage}
-          alt="Casa Benavides Inn"
-          className="absolute inset-0 w-full h-full object-cover hero-image-position"
-        />
+        {/* Image carousel */}
+        {images.map((image, index) => (
+          <img 
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            className={`absolute inset-0 w-full h-full object-cover hero-image-position transition-opacity duration-1000 ease-in-out ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        ))}
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
@@ -47,6 +83,22 @@ export default function HeroSection() {
             </div>
           </div>
           
+          {/* Image indicators */}
+          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-3">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentImageIndex 
+                    ? 'bg-white scale-125' 
+                    : 'bg-white/50 hover:bg-white/80'
+                }`}
+                aria-label={`View image ${index + 1}`}
+              />
+            ))}
+          </div>
+
           {/* Scroll down indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ChevronDown className="w-8 h-8 text-white" />
