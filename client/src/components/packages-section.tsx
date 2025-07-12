@@ -28,7 +28,7 @@ export default function PackagesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">SPECIALS & PACKAGES</h2>
-          <p className="luxury-body text-xl text-casa-warm-gray max-w-4xl mx-auto leading-relaxed">
+          <p className="luxury-body text-sm text-casa-warm-gray max-w-4xl mx-auto leading-relaxed">
             Enhance your stay with our carefully crafted packages designed to create unforgettable experiences
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function PackagesSection() {
               
               <div className="space-y-6">
                 <h3 className="luxury-subheading text-3xl font-light tracking-wide text-casa-navy mb-4">{pkg.title}</h3>
-                <p className="text-lg text-casa-blue font-medium mb-6">{pkg.description}</p>
+                <p className="text-sm text-casa-blue font-medium mb-6">{pkg.description}</p>
                 <p className="luxury-body text-casa-warm-gray leading-relaxed mb-8">{pkg.details}</p>
                 
                 <Button 

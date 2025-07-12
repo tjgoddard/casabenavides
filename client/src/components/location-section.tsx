@@ -10,13 +10,13 @@ export default function LocationSection() {
             <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">
               Location... Location... Location...
             </h2>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            <p className="text-sm text-gray-700 mb-6 leading-relaxed">
               It's no accident the Casa Benavides is located in the heart of Taos. Once you arrive and park the car, put away those keys because you probably won't need them. Just outside the front door is a leisurely stroll to all the enchanted beauty, energy, shopping, Southwest cuisine and Native culture Taos has to offer.
             </p>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-sm text-gray-700 mb-8 leading-relaxed">
               Be sure to save some time to enjoy the serenity of your accommodations in one of our 36 distinctively styled rooms, decorated with artistic treasures, private baths, cable TV and complimentary Wi-Fi internet access in every room and throughout the property. Selected rooms offer kitchens, refrigerators, microwaves, patios or balconies overlooking Taos, the mountains or our gardens.
             </p>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-sm text-gray-700 mb-8 leading-relaxed">
               We serve our full gourmet breakfast in our dining room each and every morning from 7:00a.m. to 9:30a.m. Our breakfast is included in the price of our rooms for two guests.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

@@ -19,21 +19,21 @@ export default function AboutSection() {
           
           {/* Text Content */}
           <div className="space-y-8">
-            <p className="luxury-body text-xl text-casa-warm-gray leading-relaxed">
+            <p className="luxury-body text-sm text-casa-warm-gray leading-relaxed">
               Casa Benavides Inn, situated in the heart of historic Taos, New Mexico, offers a serene 
               setting surrounded by beautiful adobe architecture and towering cottonwood trees. The perfectly 
               manicured grounds make this historic bed & breakfast an oasis only a few blocks away from 
               the town of Taos's historic plaza and 20 miles away from world class skiing at Taos Ski Valley.
             </p>
             
-            <p className="luxury-body text-xl text-casa-warm-gray leading-relaxed">
+            <p className="luxury-body text-sm text-casa-warm-gray leading-relaxed">
               Casa Benavides Inn features award-winning gourmet breakfast service inspired by 
               international and local influences. Known for its authentic Southwest design, our historic 
               inn has a welcoming atmosphere where our guests can experience signature hospitality 
               and traditional New Mexican cuisine.
             </p>
             
-            <p className="luxury-body text-xl text-casa-warm-gray leading-relaxed">
+            <p className="luxury-body text-sm text-casa-warm-gray leading-relaxed">
               Casa Benavides Inn offers 36 unique rooms and suites, each distinctively decorated with 
               artistic treasures and authentic Southwest furnishings. Casa Benavides Inn offers the perfect 
               venue for intimate weddings and special events with the beautiful Sangre de Cristo Mountains 
