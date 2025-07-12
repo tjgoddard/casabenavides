@@ -36,7 +36,7 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative">
       {/* Hero Section */}
-      <div className="relative h-screen min-h-[700px] overflow-hidden">
+      <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
         {/* Image carousel */}
         {images.map((image, index) => (
           <img 
@@ -63,14 +63,14 @@ export default function HeroSection() {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-8 justify-center mb-20">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <Button asChild className="luxury-button text-white rounded-full">
                 <a 
                   href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  RESERVE YOUR ESCAPE
+                  STAY
                 </a>
               </Button>
               <Button 
@@ -78,7 +78,14 @@ export default function HeroSection() {
                 variant="outline" 
                 className="border-2 border-white/60 text-white hover:bg-white/10 hover:border-white text-lg px-8 py-6 font-medium tracking-wide rounded-full smooth-transition backdrop-blur-sm"
               >
-                <a href="tel:5757581772">CALL: 575-758-1772</a>
+                <a href="/contact">EXPERIENCES</a>
+              </Button>
+              <Button 
+                asChild 
+                variant="outline" 
+                className="border-2 border-white/60 text-white hover:bg-white/10 hover:border-white text-lg px-8 py-6 font-medium tracking-wide rounded-full smooth-transition backdrop-blur-sm"
+              >
+                <a href="/breakfast">BREAKFAST</a>
               </Button>
             </div>
           </div>
