@@ -1,6 +1,7 @@
 import { Check, Shield } from "lucide-react";
-import taosLandscapeImg from "@assets/iStock-1458935906_1752360314185.jpg";
-import casaLogo from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)-Photoroom_1752359300963.jpg";
+import kitchenImg from "@assets/Kitchen-1072-2a-cropped-web (1)_1752361224342.jpeg";
+import breakfastSpreadImg from "@assets/94178027[1]_1752361258523.jpeg";
+import editedBreakfastImg from "@assets/_edited_1752361258523.jpeg";
 
 export default function BreakfastSection() {
   const breakfastItems = [
@@ -24,8 +25,8 @@ export default function BreakfastSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src={taosLandscapeImg} 
-              alt="Beautiful Taos mountain landscape at sunrise" 
+              src={kitchenImg} 
+              alt="Casa Benavides kitchen and dining area" 
               className="w-full h-96 object-cover rounded-xl shadow-lg"
             />
           </div>
@@ -56,15 +57,15 @@ export default function BreakfastSection() {
         <div className="mt-16 grid md:grid-cols-2 gap-8">
           <div>
             <img 
-              src={casaLogo} 
-              alt="Casa Benavides Inn elegant logo" 
-              className="w-full h-64 object-contain rounded-xl shadow-lg bg-white p-8"
+              src={breakfastSpreadImg} 
+              alt="Delicious breakfast spread at Casa Benavides" 
+              className="w-full h-64 object-cover rounded-xl shadow-lg"
             />
           </div>
           <div>
             <img 
-              src={taosLandscapeImg} 
-              alt="Scenic Taos mountain views" 
+              src={editedBreakfastImg} 
+              alt="Casa Benavides breakfast presentation" 
               className="w-full h-64 object-cover rounded-xl shadow-lg"
             />
           </div>
