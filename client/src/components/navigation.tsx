@@ -15,7 +15,7 @@ export default function Navigation() {
             href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-casa-blue text-white px-4 py-1.5 rounded-sm text-sm font-medium tracking-wide hover:bg-casa-blue/90 smooth-transition"
+            className="bg-casa-blue text-white px-3 py-1 rounded-sm text-sm font-medium tracking-wide hover:bg-casa-blue/90 smooth-transition"
           >
             Check Availability
           </a>
