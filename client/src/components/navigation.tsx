@@ -4,10 +4,10 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex-1"></div>
         
-        <div className="flex items-center space-x-6">
+        <div className="flex flex-col items-end space-y-2">
           <a 
             href="tel:5757581772" 
-            className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
+            className="text-white text-sm font-medium tracking-wide hover:text-white/80 smooth-transition"
           >
             (575) 758-1772
           </a>
@@ -15,7 +15,7 @@ export default function Navigation() {
             href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-casa-blue text-white px-6 py-2 rounded-sm text-lg font-medium tracking-wide hover:bg-casa-blue/90 smooth-transition"
+            className="bg-casa-blue text-white px-4 py-1.5 rounded-sm text-sm font-medium tracking-wide hover:bg-casa-blue/90 smooth-transition"
           >
             Check Availability
           </a>
