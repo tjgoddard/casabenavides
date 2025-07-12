@@ -8,7 +8,7 @@ export default function Navigation() {
           <img 
             src={logoImage} 
             alt="Casa Benavides Inn Logo" 
-            className="h-16 w-auto"
+            className="h-20 w-auto"
           />
         </div>
         

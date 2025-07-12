@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import heroImage1 from "@assets/Exterior-Front-Homepage-Alt-1_1752358119635.jpg";
-import heroImage2 from "@assets/istockphoto-941217304-612x612_1752358127414.jpg";
+import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
 import heroImage3 from "@assets/f4f18f_8c67a594acb642f79ba51f013c955aca~mv2 (1)_1752358146484.avif";
 import logoImage from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)-Photoroom_1752359300963.jpg";
 
@@ -14,7 +14,7 @@ export default function HeroSection() {
     },
     {
       src: heroImage2,
-      alt: "Sangre de Cristo Mountains - Taos Landscape"
+      alt: "Taos Mountain Landscape at Sunset"
     },
     {
       src: heroImage3,
