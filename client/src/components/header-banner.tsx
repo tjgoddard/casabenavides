@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import bannerImage from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)_1752358959142.avif";
+import bannerImage from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)_1752359016794.jpeg";
 
 export default function HeaderBanner() {
   return (
