@@ -46,7 +46,7 @@ export default function Navigation() {
             href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-amber-100 text-gray-800 px-3 py-1 text-xs font-medium tracking-wide hover:bg-amber-200 smooth-transition text-center whitespace-nowrap"
+            className="bg-gray-200 text-gray-800 px-3 py-1 text-xs font-medium tracking-wide hover:bg-gray-300 smooth-transition text-center whitespace-nowrap"
           >
             CHECK AVAILABILITY
           </a>
