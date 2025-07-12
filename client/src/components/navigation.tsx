@@ -5,11 +5,13 @@ export default function Navigation() {
     <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-start justify-between">
         <div className="flex items-center">
-          <img 
-            src={logoImage} 
-            alt="Casa Benavides Inn Logo" 
-            className="h-32 w-auto"
-          />
+          <a href="/" className="block">
+            <img 
+              src={logoImage} 
+              alt="Casa Benavides Inn Logo" 
+              className="h-32 w-auto hover:opacity-80 transition-opacity duration-200"
+            />
+          </a>
         </div>
         
         <div className="flex flex-col space-y-2 items-end">
