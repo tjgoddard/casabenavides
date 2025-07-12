@@ -53,7 +53,6 @@ export default function HeroSection() {
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <div className="text-white px-4 max-w-6xl mx-auto">
-            <h1 className="text-6xl md:text-8xl mb-6 tracking-wider text-white font-serif italic">Casa Benavides Inn</h1>
             <p className="luxury-subheading text-2xl md:text-4xl mb-12 font-light tracking-wide text-white/90">Historic Bed & Breakfast in the Heart of Taos</p>
             
             <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
