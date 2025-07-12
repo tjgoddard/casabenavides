@@ -35,18 +35,18 @@ export default function Navigation() {
         
         <div className="flex flex-col space-y-2 items-end">
           <a 
-            href="tel:5757581772" 
+            href="tel:+15757581772" 
             className={`text-sm font-medium tracking-wide hover:opacity-80 smooth-transition whitespace-nowrap ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}
           >
-            (575) 758-1772
+            +1 (575) 758-1772
           </a>
           <a 
             href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-800 text-white px-4 py-2 rounded-sm text-xs font-medium tracking-wide hover:bg-gray-700 smooth-transition text-center whitespace-nowrap"
+            className="bg-gray-800 text-white px-4 py-2 text-sm font-medium tracking-wide hover:bg-gray-700 smooth-transition text-center whitespace-nowrap"
           >
             CHECK AVAILABILITY
           </a>
