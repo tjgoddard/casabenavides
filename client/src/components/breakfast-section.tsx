@@ -61,7 +61,7 @@ export default function BreakfastSection() {
               src={breakfastSpreadImg} 
               alt="Delicious breakfast spread at Casa Benavides" 
               className="w-full h-72 object-cover rounded-xl shadow-lg"
-              style={{ objectPosition: 'center 45%' }}
+              style={{ objectPosition: 'center 65%' }}
             />
           </div>
           <div>
