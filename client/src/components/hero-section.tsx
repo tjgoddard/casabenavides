@@ -68,16 +68,22 @@ export default function HeroSection() {
                 STAY
               </a>
               <a 
-                href="/contact"
+                href="/our-story"
                 className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
               >
-                EXPERIENCES
+                OUR STORY
               </a>
               <a 
                 href="/breakfast"
                 className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
               >
                 BREAKFAST
+              </a>
+              <a 
+                href="/contact"
+                className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
+              >
+                EXPERIENCES
               </a>
             </div>
           </div>
