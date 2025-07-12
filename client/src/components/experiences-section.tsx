@@ -1,36 +1,36 @@
-import { Mountain, MapPin, Calendar, Camera, Waves, Palette } from "lucide-react";
+import taosLandscapeImg from "@assets/iStock-1458935906_1752360314185.jpg";
 
 export default function ExperiencesSection() {
   const experiences = [
     {
       title: "Conquer the Slopes at Taos Ski Valley",
-      icon: <Mountain className="w-6 h-6 text-casa-blue" />,
-      description: "Just a short drive away, Taos Ski Valley is a year‑round playground. In winter, skiers and snowboarders relish world‑class expert terrain—and après‑ski treats like bratwurst and green‑chile burritos at Bavarian‑style lodges. Spring through fall? Hit the mountain biking trails, guided hikes (including to Wheeler Peak or Williams Lake), snowshoe tours, ice skating, and even snowmobiling under starlit skies."
+      description: "Just a short drive away, Taos Ski Valley is a year‑round playground. In winter, skiers and snowboarders relish world‑class expert terrain—and après‑ski treats like bratwurst and green‑chile burritos at Bavarian‑style lodges. Spring through fall? Hit the mountain biking trails, guided hikes (including to Wheeler Peak or Williams Lake), snowshoe tours, ice skating, and even snowmobiling under starlit skies.",
+      image: taosLandscapeImg
     },
     {
       title: "Discover Taos Plaza & Historic Downtown",
-      icon: <MapPin className="w-6 h-6 text-casa-blue" />,
-      description: "At the historic heart of town, Taos Plaza blends centuries of culture with contemporary flair. Wander through art galleries, boutique shops, and cafés; soak up live music or join the farmers' market on weekends. Notable stops include the Kit Carson House & Museum, the Harwood Museum, and the Millicent Rogers Museum—all just steps from the plaza."
+      description: "At the historic heart of town, Taos Plaza blends centuries of culture with contemporary flair. Wander through art galleries, boutique shops, and cafés; soak up live music or join the farmers' market on weekends. Notable stops include the Kit Carson House & Museum, the Harwood Museum, and the Millicent Rogers Museum—all just steps from the plaza.",
+      image: taosLandscapeImg
     },
     {
       title: "Step Back in Time at Taos Pueblo",
-      icon: <Calendar className="w-6 h-6 text-casa-blue" />,
-      description: "A UNESCO World Heritage Site and National Historic Landmark, Taos Pueblo is the oldest continuously inhabited community in the U.S. Explore its multi‑storied adobe structures, learn from local guides about ancient Tiwa traditions, and savor authentic cultural workshops."
+      description: "A UNESCO World Heritage Site and National Historic Landmark, Taos Pueblo is the oldest continuously inhabited community in the U.S. Explore its multi‑storied adobe structures, learn from local guides about ancient Tiwa traditions, and savor authentic cultural workshops.",
+      image: taosLandscapeImg
     },
     {
       title: "Marvel at Rio Grande Gorge & Bridge",
-      icon: <Camera className="w-6 h-6 text-casa-blue" />,
-      description: "Head 10 minutes out of town to witness the Rio Grande Gorge Bridge—one of America's tallest. Hike the scenic rim trails, spot bighorn sheep, watch rafters tackle the rapids below, or time it for magical sunset views."
+      description: "Head 10 minutes out of town to witness the Rio Grande Gorge Bridge—one of America's tallest. Hike the scenic rim trails, spot bighorn sheep, watch rafters tackle the rapids below, or time it for magical sunset views.",
+      image: taosLandscapeImg
     },
     {
       title: "Adventure on the Rio Grande River",
-      icon: <Waves className="w-6 h-6 text-casa-blue" />,
-      description: "Just below the gorge awaits an exhilarating whitewater rafting route—17 miles of basalt‑walled chasm with rapids and calm stretches. For anglers, the Rio Grande and Red River offer prime fishing spots year‑round."
+      description: "Just below the gorge awaits an exhilarating whitewater rafting route—17 miles of basalt‑walled chasm with rapids and calm stretches. For anglers, the Rio Grande and Red River offer prime fishing spots year‑round.",
+      image: taosLandscapeImg
     },
     {
       title: "Explore Art, History & Local Culture",
-      icon: <Palette className="w-6 h-6 text-casa-blue" />,
-      description: "Taos is an artistic mecca—from the Taos Art Museum (Nicolai Fechin House) to the fall Dixon Studio Tour. Add historic Spanish mission tours (like San Francisco de Asís in Ranchos de Taos), D.H. Lawrence explorations, rock‑climbing, disc golf, horseback riding, hot air ballooning, and soaking in hot springs."
+      description: "Taos is an artistic mecca—from the Taos Art Museum (Nicolai Fechin House) to the fall Dixon Studio Tour. Add historic Spanish mission tours (like San Francisco de Asís in Ranchos de Taos), D.H. Lawrence explorations, rock‑climbing, disc golf, horseback riding, hot air ballooning, and soaking in hot springs.",
+      image: taosLandscapeImg
     }
   ];
 
@@ -44,19 +44,25 @@ export default function ExperiencesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="space-y-20">
           {experiences.map((experience, index) => (
-            <div key={index} className="bg-casa-light rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <div className="flex items-start mb-4">
-                {experience.icon}
-                <h3 className="text-xl font-semibold text-gray-900 ml-3">{experience.title}</h3>
+            <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+              <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 font-serif">{experience.title}</h3>
+                <p className="text-gray-700 text-lg leading-relaxed">{experience.description}</p>
               </div>
-              <p className="text-gray-700 leading-relaxed">{experience.description}</p>
+              <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+                <img 
+                  src={experience.image} 
+                  alt={experience.title} 
+                  className="w-full h-80 object-cover rounded-xl shadow-lg"
+                />
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="bg-casa-blue rounded-xl p-8 text-center">
+        <div className="bg-casa-blue rounded-xl p-8 text-center mt-20">
           <h3 className="text-2xl font-bold text-white mb-4">Why Stay at Casa Benavides?</h3>
           <p className="text-white/90 text-lg leading-relaxed max-w-4xl mx-auto">
             Our prime downtown location puts you in the center of everything: a short drive to Taos Ski Valley, 
