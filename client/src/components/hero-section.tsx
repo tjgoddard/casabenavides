@@ -48,7 +48,7 @@ export default function HeroSection() {
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             } ${index === 0 ? 'object-cover object-center md:object-center' : 'object-cover object-center'}`}
             style={{
-              objectPosition: index === 0 ? '25% 30%' : 'center center'
+              objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : 'center center'
             }}
           />
         ))}
