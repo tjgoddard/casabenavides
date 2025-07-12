@@ -1,4 +1,4 @@
-import { Bed, Utensils, MapPin } from "lucide-react";
+import { Bed, Utensils, MapPin, Wifi, Car, Users } from "lucide-react";
 
 export default function FeaturesSection() {
   const features = [
@@ -16,31 +16,49 @@ export default function FeaturesSection() {
       icon: MapPin,
       title: "Prime Location",
       description: "Walking distance to Taos Plaza, shopping, galleries, dining, and cultural attractions"
+    },
+    {
+      icon: Wifi,
+      title: "Modern Amenities",
+      description: "Stay connected with complimentary high-speed Wi-Fi and contemporary conveniences"
+    },
+    {
+      icon: Car,
+      title: "Convenient Parking",
+      description: "Complimentary secure on-site parking available for all guests"
+    },
+    {
+      icon: Users,
+      title: "Personalized Service",
+      description: "Our dedicated staff provides exceptional personal attention and local expertise"
     }
   ];
 
   return (
-    <div className="py-20 bg-white">
+    <section className="py-24 bg-gradient-to-b from-casa-light to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-serif">What Makes Us Special</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Experience the perfect blend of historic charm and modern comfort in the heart of Taos
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-wide font-serif casa-blue">WHY CHOOSE CASA BENAVIDES?</h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Experience the perfect blend of historic charm and modern luxury in the heart of Taos, 
+            where authentic Southwest hospitality meets contemporary comfort
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {features.map((feature, index) => (
-            <div key={index} className="text-center group">
-              <div className="bg-casa-blue-accent bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-casa-blue group-hover:text-white transition-colors duration-200">
-                <feature.icon className="w-8 h-8 text-casa-blue group-hover:text-white" />
+            <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <div className="flex justify-center mb-6">
+                <div className="p-4 bg-casa-blue bg-opacity-10 rounded-full group-hover:bg-casa-blue group-hover:text-white transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-casa-blue group-hover:text-white" />
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-2xl font-light mb-4 casa-blue tracking-wide">{feature.title}</h3>
+              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
