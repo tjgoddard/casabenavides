@@ -1,14 +1,10 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
+import heroImage from "@assets/Exterior-Front-Homepage-Alt-1_1752348951824.jpg";
 
 export default function AboutSection() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-wide font-serif casa-blue">CASA BENAVIDES</h2>
-        </div>
-        
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <div className="relative">
