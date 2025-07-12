@@ -55,7 +55,7 @@ export default function HeroSection() {
             <h1 className="luxury-heading text-7xl md:text-9xl mb-6 tracking-wider text-white">CASA BENAVIDES</h1>
             <p className="luxury-subheading text-2xl md:text-4xl mb-12 font-light tracking-wide text-white/90">Historic Bed & Breakfast in the Heart of Taos</p>
             
-            <div className="flex flex-col sm:flex-row gap-8 justify-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
               <a 
                 href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
                 target="_blank"
@@ -80,7 +80,7 @@ export default function HeroSection() {
           </div>
           
           {/* Image indicators */}
-          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-3">
+          <div className="absolute bottom-14 left-1/2 transform -translate-x-1/2 flex space-x-3">
             {images.map((_, index) => (
               <button
                 key={index}
