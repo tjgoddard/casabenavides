@@ -86,7 +86,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
                 BREAKFAST
               </a>
               <a 
-                href="/contact"
+                href="/experiences"
                 className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
               >
                 EXPERIENCES
