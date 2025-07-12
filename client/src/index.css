@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,6 +31,10 @@
   --casa-blue-light: #0d9ad6;
   --casa-blue-accent: #14a8e6;
   --casa-light: hsl(210, 40%, 98%);
+  --casa-navy: #1a365d;
+  --casa-cream: #fefcf9;
+  --casa-sage: #9ca89b;
+  --casa-warm-gray: #6b7280;
 }
 
 .dark {
@@ -111,5 +117,106 @@
       object-position: center 50%;
       transform: scale(1.4) translateY(-12%);
     }
+  }
+
+  /* Luxury design elements */
+  .luxury-shadow {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .luxury-border {
+    border: 1px solid rgba(6, 130, 179, 0.08);
+  }
+
+  .luxury-gradient {
+    background: linear-gradient(135deg, #fefcf9 0%, #f8fafc 100%);
+  }
+
+  .luxury-text-gradient {
+    background: linear-gradient(135deg, #0682b3 0%, #1e9bcd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .smooth-transition {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .luxury-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+
+  .luxury-subheading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+  }
+
+  .luxury-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #64748b;
+  }
+
+  .luxury-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.2);
+  }
+
+  .luxury-button {
+    background: linear-gradient(135deg, #0682b3 0%, #1e9bcd 100%);
+    border: none;
+    padding: 18px 36px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 12px 28px rgba(6, 130, 179, 0.25);
+  }
+
+  .luxury-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(6, 130, 179, 0.35);
+  }
+
+  .luxury-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .luxury-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-casa-cream {
+    background-color: var(--casa-cream);
+  }
+
+  .bg-casa-navy {
+    background-color: var(--casa-navy);
+  }
+
+  .text-casa-sage {
+    color: var(--casa-sage);
+  }
+
+  .text-casa-warm-gray {
+    color: var(--casa-warm-gray);
   }
 }
