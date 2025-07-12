@@ -1,9 +1,18 @@
 import { Link } from "wouter";
+import bannerImage from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)_1752358798556.avif";
 
 export default function HeaderBanner() {
   return (
-    <header className="bg-casa-blue py-3 px-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <header className="relative py-3 px-4 overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bannerImage})` }}
+      />
+      <div className="absolute inset-0 bg-black/20" />
+      
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-8">
           <Link href="/" className="text-white font-medium text-lg tracking-wide hover:text-white/80 smooth-transition">
             CASA BENAVIDES
