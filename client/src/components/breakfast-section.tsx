@@ -1,7 +1,7 @@
 import { Check, Shield } from "lucide-react";
 import kitchenImg from "@assets/Kitchen-1072-2a-cropped-web (1)_1752361224342.jpeg";
 import breakfastSpreadImg from "@assets/94178027[1]_1752361258523.jpeg";
-import editedBreakfastImg from "@assets/_edited_1752361258523.jpeg";
+import frenchToastImg from "@assets/unnamed (2)_1752361773590.webp";
 
 export default function BreakfastSection() {
   const breakfastItems = [
@@ -28,6 +28,7 @@ export default function BreakfastSection() {
               src={kitchenImg} 
               alt="Casa Benavides kitchen and dining area" 
               className="w-full h-96 object-cover rounded-xl shadow-lg"
+              style={{ objectPosition: '25% center' }}
             />
           </div>
           
@@ -60,12 +61,13 @@ export default function BreakfastSection() {
               src={breakfastSpreadImg} 
               alt="Delicious breakfast spread at Casa Benavides" 
               className="w-full h-64 object-cover rounded-xl shadow-lg"
+              style={{ objectPosition: 'center 60%' }}
             />
           </div>
           <div>
             <img 
-              src={editedBreakfastImg} 
-              alt="Casa Benavides breakfast presentation" 
+              src={frenchToastImg} 
+              alt="Gourmet French toast with fresh berries and banana" 
               className="w-full h-64 object-cover rounded-xl shadow-lg"
             />
           </div>
