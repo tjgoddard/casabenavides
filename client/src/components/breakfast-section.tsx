@@ -60,7 +60,7 @@ export default function BreakfastSection() {
             <img 
               src={breakfastSpreadImg} 
               alt="Delicious breakfast spread at Casa Benavides" 
-              className="w-full h-64 object-cover rounded-xl shadow-lg"
+              className="w-full h-72 object-cover rounded-xl shadow-lg"
               style={{ objectPosition: 'center 60%' }}
             />
           </div>
@@ -68,7 +68,7 @@ export default function BreakfastSection() {
             <img 
               src={frenchToastImg} 
               alt="Gourmet French toast with fresh berries and banana" 
-              className="w-full h-64 object-cover rounded-xl shadow-lg"
+              className="w-full h-72 object-cover rounded-xl shadow-lg"
             />
           </div>
         </div>
