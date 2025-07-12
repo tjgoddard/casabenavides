@@ -79,22 +79,6 @@ export default function HeroSection() {
             </div>
           </div>
           
-          {/* Image indicators */}
-          <div className="absolute bottom-14 left-1/2 transform -translate-x-1/2 flex space-x-3">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentImageIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentImageIndex 
-                    ? 'bg-white scale-125' 
-                    : 'bg-white/50 hover:bg-white/80'
-                }`}
-                aria-label={`View image ${index + 1}`}
-              />
-            ))}
-          </div>
-
           {/* Scroll down indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ChevronDown className="w-8 h-8 text-white" />
