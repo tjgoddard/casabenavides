@@ -44,9 +44,12 @@ export default function HeroSection() {
             key={index}
             src={image.src}
             alt={image.alt}
-            className={`absolute inset-0 w-full h-full object-cover hero-image-position transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            } ${index === 0 ? 'object-cover object-center md:object-center' : 'object-cover object-center'}`}
+            style={{
+              objectPosition: index === 0 ? 'center 30%' : 'center center'
+            }}
           />
         ))}
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
