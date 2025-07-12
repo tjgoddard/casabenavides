@@ -12,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navigation />
       <main>
-        <HeroSection />
+        <HeroSection showSubtitle={true} />
         <AboutSection />
         <SeasonalSection />
         <LocationSection />

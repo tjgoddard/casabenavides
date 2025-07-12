@@ -6,7 +6,11 @@ import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
 import heroImage3 from "@assets/f4f18f_8c67a594acb642f79ba51f013c955aca~mv2 (1)_1752358146484.avif";
 import logoImage from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)-Photoroom_1752359300963.jpg";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  showSubtitle?: boolean;
+}
+
+export default function HeroSection({ showSubtitle = false }: HeroSectionProps) {
   const images = [
     {
       src: heroImage1,
@@ -56,7 +60,9 @@ export default function HeroSection() {
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <div className="text-white px-4 max-w-6xl mx-auto">
-            <p className="luxury-subheading text-2xl md:text-4xl mb-12 font-light tracking-wide text-white/90">Historic Bed & Breakfast in the Heart of Taos</p>
+            {showSubtitle && (
+              <p className="luxury-subheading text-2xl md:text-4xl mb-12 font-light tracking-wide text-white/90">Historic Bed & Breakfast in the Heart of Taos</p>
+            )}
             
             <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
               <a 
