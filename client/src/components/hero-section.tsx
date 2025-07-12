@@ -1,23 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
-import heroImage1 from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
-import heroImage2 from "@assets/Exterior-Front-Homepage-Alt-1_1752189444760.jpg";
-import heroImage3 from "@assets/Exterior-Front-Homepage-Alt-1_1752348951824.jpg";
+import heroImage1 from "@assets/Exterior-Front-Homepage-Alt-1_1752358119635.jpg";
+import heroImage2 from "@assets/istockphoto-941217304-612x612_1752358127414.jpg";
+import heroImage3 from "@assets/f4f18f_8c67a594acb642f79ba51f013c955aca~mv2 (1)_1752358146484.avif";
 
 export default function HeroSection() {
   const images = [
     {
       src: heroImage1,
-      alt: "Casa Benavides Inn - Historic Adobe Architecture"
+      alt: "Casa Benavides Inn - Adobe Architecture at Sunset"
     },
     {
       src: heroImage2,
-      alt: "Casa Benavides Inn - Courtyard View"
+      alt: "Sangre de Cristo Mountains - Taos Landscape"
     },
     {
       src: heroImage3,
-      alt: "Casa Benavides Inn - Sunset Exterior"
+      alt: "Casa Benavides Inn - Southwest Architecture"
     }
   ];
 
