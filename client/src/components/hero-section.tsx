@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import heroImage1 from "@assets/Exterior-Front-Homepage-Alt-1_1752358119635.jpg";
 import heroImage2 from "@assets/istockphoto-941217304-612x612_1752358127414.jpg";
 import heroImage3 from "@assets/f4f18f_8c67a594acb642f79ba51f013c955aca~mv2 (1)_1752358146484.avif";
+import logoImage from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)-Photoroom_1752359300963.jpg";
 
 export default function HeroSection() {
   const images = [
@@ -52,7 +53,13 @@ export default function HeroSection() {
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <div className="text-white px-4 max-w-6xl mx-auto">
-            <h1 className="luxury-heading text-7xl md:text-9xl mb-6 tracking-wider text-white">CASA BENAVIDES</h1>
+            <div className="mb-6">
+              <img 
+                src={logoImage} 
+                alt="Casa Benavides Inn" 
+                className="w-full max-w-4xl mx-auto h-auto"
+              />
+            </div>
             <p className="luxury-subheading text-2xl md:text-4xl mb-12 font-light tracking-wide text-white/90">Historic Bed & Breakfast in the Heart of Taos</p>
             
             <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
