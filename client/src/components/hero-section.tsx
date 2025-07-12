@@ -53,15 +53,7 @@ export default function HeroSection() {
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <div className="text-white px-4 max-w-6xl mx-auto">
             <h1 className="luxury-heading text-7xl md:text-9xl mb-6 tracking-wider text-white">CASA BENAVIDES</h1>
-            <p className="luxury-subheading text-2xl md:text-4xl mb-16 font-light tracking-wide text-white/90">Historic Bed & Breakfast in the Heart of Taos</p>
-            
-            <div className="mb-20">
-              <p className="luxury-body text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-white/80">
-                Casa Benavides Inn offers a serene setting in the historic town of Taos, New Mexico. 
-                Experience authentic Southwest hospitality in our beautifully restored adobe buildings, 
-                just steps from the Plaza and surrounded by the natural beauty of the Sangre de Cristo Mountains.
-              </p>
-            </div>
+            <p className="luxury-subheading text-2xl md:text-4xl mb-12 font-light tracking-wide text-white/90">Historic Bed & Breakfast in the Heart of Taos</p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <Button asChild className="luxury-button text-white rounded-full">
