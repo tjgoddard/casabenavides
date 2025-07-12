@@ -39,7 +39,7 @@ export default function ExperiencesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 font-serif">Taos Experiences</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm text-gray-900 max-w-3xl mx-auto">
             Discover the magic of Taos with adventures that blend natural beauty, rich culture, and unforgettable experiences.
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function ExperiencesSection() {
             <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <h3 className="text-3xl font-bold text-gray-900 mb-6 font-serif">{experience.title}</h3>
-                <p className="text-gray-700 text-lg leading-relaxed">{experience.description}</p>
+                <p className="text-gray-900 text-sm leading-relaxed">{experience.description}</p>
               </div>
               <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
                 <img 
@@ -64,7 +64,7 @@ export default function ExperiencesSection() {
 
         <div className="bg-casa-blue rounded-xl p-8 text-center mt-20">
           <h3 className="text-2xl font-bold text-white mb-4">Why Stay at Casa Benavides?</h3>
-          <p className="text-white/90 text-lg leading-relaxed max-w-4xl mx-auto">
+          <p className="text-white/90 text-sm leading-relaxed max-w-4xl mx-auto">
             Our prime downtown location puts you in the center of everything: a short drive to Taos Ski Valley, 
             steps from Taos Plaza, and just minutes from world‑famous landmarks like Taos Pueblo and the Rio Grande Gorge. 
             Whether you're chasing adrenaline—or cultural enrichment—you'll find it all close to your door.

@@ -16,7 +16,7 @@ export default function BreakfastSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 font-serif">So What's For Breakfast?</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm text-gray-900 max-w-3xl mx-auto">
             Our full breakfast service is available in our dining room each and every morning from 7:00a.m. to 9:30a.m. 
             and is included in the price of our rooms for two guests.
           </p>
@@ -40,7 +40,7 @@ export default function BreakfastSection() {
               {breakfastItems.map((item, index) => (
                 <div key={index} className="flex items-start">
                   <Check className="w-5 h-5 text-casa-blue mt-1 mr-3 flex-shrink-0" />
-                  <p className="text-gray-700">{item}</p>
+                  <p className="text-sm text-gray-900">{item}</p>
                 </div>
               ))}
             </div>
@@ -50,7 +50,7 @@ export default function BreakfastSection() {
                 <Shield className="w-5 h-5 text-casa-blue mr-2" />
                 <span className="font-semibold text-gray-900">New Mexico Safe Certified</span>
               </div>
-              <p className="text-gray-600 text-sm">Our kitchen meets all New Mexico safety standards</p>
+              <p className="text-gray-900 text-sm">Our kitchen meets all New Mexico safety standards</p>
             </div>
           </div>
         </div>

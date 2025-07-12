@@ -4,7 +4,7 @@ export default function StorySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 font-serif">The Story of Casa Benavides Inn</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm text-gray-900 max-w-3xl mx-auto">
             A tale of love, family, and dedication spanning generations in the heart of Taos
           </p>
         </div>
@@ -20,7 +20,7 @@ export default function StorySection() {
           
           <div>
             <h3 className="text-2xl font-semibold mb-6 text-gray-900">A Love Story in Taos</h3>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-900 text-sm leading-relaxed">
               <p>
                 As is often the case in stories of happenstance, the arrival of the McCarthy and Benavides families to Taos during the 19th century set a life-long chain of events in motion for Tom McCarthy and Barbara Benavides, the owners of The Casa Benavides Inn.
               </p>
@@ -45,7 +45,7 @@ export default function StorySection() {
           
           <div className="lg:order-1">
             <h3 className="text-2xl font-semibold mb-6 text-gray-900">From Educators to Innkeepers</h3>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-900 text-sm leading-relaxed">
               <p>
                 But eventually they became restless, deciding to change directions and bought the McCarthy family business, The El Mercado, opened The Old Mexico Shop and The Village Weavers Shop and eventually launched their own lodging business.
               </p>
@@ -62,7 +62,7 @@ export default function StorySection() {
         <div className="mt-16 text-center">
           <div className="bg-white p-8 rounded-xl shadow-sm max-w-3xl mx-auto">
             <h3 className="text-xl font-semibold mb-4 text-gray-900">Continuing the Legacy</h3>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-900 text-sm leading-relaxed">
               Barbara McCarthy passed in June of 2016. Tom and a dedicated staff continue with the daily management of The Casa Benavides, preserving the warmth and hospitality that has made this inn a beloved destination for over three decades.
             </p>
           </div>

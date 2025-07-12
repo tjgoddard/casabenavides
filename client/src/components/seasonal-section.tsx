@@ -10,13 +10,13 @@ export default function SeasonalSection() {
           <div className="space-y-8">
             <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">WINTER IN TAOS</h2>
             
-            <p className="luxury-body text-sm text-casa-warm-gray leading-relaxed">
+            <p className="luxury-body text-sm text-gray-900 leading-relaxed">
               Start planning your winter getaway today. Experience world-class skiing in the mountains, 
               cozy evenings by the fireplace, discover handcrafted treasures in local galleries, 
               and savor the season's best cuisine. Winter in Taos is magical like no other.
             </p>
             
-            <p className="luxury-body text-sm text-casa-warm-gray leading-relaxed">
+            <p className="luxury-body text-sm text-gray-900 leading-relaxed">
               Book now and enjoy exclusive savings of up to 20% off our Best Flexible Rate with promo code WINTER25.
             </p>
             
