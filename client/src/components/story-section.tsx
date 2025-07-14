@@ -3,7 +3,7 @@ export default function StorySection() {
     <section id="our-story" className="py-20 bg-casa-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-serif">The Story of Casa Benavides Inn</h2>
+          <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">OUR STORY</h2>
           <p className="text-sm text-gray-900 max-w-3xl mx-auto">
             A tale of love, family, and dedication spanning generations in the heart of Taos
           </p>
@@ -12,7 +12,7 @@ export default function StorySection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://www.casabenavides.com/quality_auto/f4f18f_aecaf5bcc6b941fbaf88d778b20dd194~mv2.jpg" 
+              src="/casa-owners-photo.jpg" 
               alt="Tom and Barbara McCarthy, owners of Casa Benavides Inn" 
               className="w-full h-96 object-cover rounded-xl shadow-lg"
             />
@@ -37,7 +37,7 @@ export default function StorySection() {
         <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
           <div className="lg:order-2">
             <img 
-              src="https://www.casabenavides.com/quality_auto/f4f18f_8c67a594acb642f79ba51f013c955aca~mv2.jpg" 
+              src="/casa-historic-building.avif" 
               alt="Historic Casa Benavides building showing family heritage" 
               className="w-full h-96 object-cover rounded-xl shadow-lg"
             />
