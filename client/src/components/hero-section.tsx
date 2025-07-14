@@ -64,9 +64,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <div className="text-white px-4 max-w-6xl mx-auto">
-            {showSubtitle && (
-              <p className="luxury-subheading text-2xl md:text-4xl mb-12 font-light tracking-wide text-white/90">Historic Bed & Breakfast in the Heart of Taos</p>
-            )}
+            
             
             <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
               <a 
