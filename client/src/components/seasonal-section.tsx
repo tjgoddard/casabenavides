@@ -7,7 +7,7 @@ export default function SeasonalSection() {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Text Content */}
           <div className="space-y-8">
-            <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">WINTER IN TAOS</h2>
+            <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">Experience TAOS</h2>
             
             <p className="luxury-body text-sm text-gray-900 leading-relaxed">
               Start planning your winter getaway today. Experience world-class skiing in the mountains, 
