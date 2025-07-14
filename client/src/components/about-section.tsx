@@ -1,17 +1,19 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/Exterior-Front-Homepage-Alt-1_1752348951824.jpg";
 
 export default function AboutSection() {
   return (
     <section className="py-32 bg-casa-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">ABOUT CASA BENAVIDES</h2>
+        </div>
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Image Section */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-casa-blue/20 to-transparent rounded-2xl transform rotate-2 group-hover:rotate-1 smooth-transition"></div>
             <img 
-              src={heroImage}
-              alt="Casa Benavides Inn exterior at sunset"
+              src="/attached_assets/IMG_3403_1752505966419.PNG"
+              alt="Casa Benavides Inn authentic Southwest architecture"
               className="relative w-full h-[500px] object-cover rounded-2xl luxury-shadow smooth-transition group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>

@@ -7,9 +7,7 @@ export default function LocationSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">
-              Stay Close to the Best of Taos
-            </h2>
+            <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">STAY CLOSE TO THE BEST OF TAOS</h2>
             <p className="text-sm text-gray-900 mb-6 leading-relaxed">
               Looking for a hotel steps from the iconic Taos Plaza or near the Taos Ski Valley? Casa Benavides Historic Bed & Breakfast is the perfect place to stay. Just outside the front door is a leisurely stroll to all the enchanted beauty, energy, shopping, Southwest cuisine and Native culture Taos has to offer — plus it's just a short 30-minute drive to the legendary slopes of Taos Ski Valley.
             </p>
@@ -45,8 +43,8 @@ export default function LocationSection() {
           <div className="lg:order-first">
             <div className="relative">
               <img 
-                src="https://www.casabenavides.com/quality_auto/f4f18f_03968c7e019247b5b46e968f3f7ae001~mv2.jpg" 
-                alt="Casa Benavides location map in Taos" 
+                src="/attached_assets/IMG_3405_1752505966420.PNG" 
+                alt="Casa Benavides Inn interior with authentic Southwest furniture and art" 
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
               <div className="absolute inset-0 bg-casa-blue bg-opacity-20 rounded-xl"></div>

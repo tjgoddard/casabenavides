@@ -17,7 +17,6 @@ export default function Home() {
         <AboutSection />
         <SeasonalSection />
         <FeaturesSection />
-        <PackagesSection />
       </main>
       <Footer />
     </div>

@@ -15,12 +15,12 @@ export default function FeaturesSection() {
     {
       icon: MapPin,
       title: "Prime Location",
-      description: "Walking distance to Taos Plaza, shopping, galleries, dining, and cultural attractions"
+      description: "Walking distance to Taos Plaza, shopping, galleries, dining, and cultural attractions. 20 miles from Taos Ski Valley"
     },
     {
-      icon: Wifi,
-      title: "Modern Amenities",
-      description: "Stay connected with complimentary high-speed Wi-Fi and contemporary conveniences"
+      icon: Users,
+      title: "Family Owned and Operated",
+      description: "Experience authentic hospitality from the McCarthy family, who have been welcoming guests for over 30 years"
     },
     {
       icon: Car,
@@ -28,7 +28,7 @@ export default function FeaturesSection() {
       description: "Complimentary secure on-site parking available for all guests"
     },
     {
-      icon: Users,
+      icon: Wifi,
       title: "Personalized Service",
       description: "Our dedicated staff provides exceptional personal attention and local expertise"
     }
