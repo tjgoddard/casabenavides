@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
-import heroImage1 from "@assets/Exterior-Front-Homepage-Alt-1_1752358119635.jpg";
+import heroImage1 from "@assets/IMG_4448 edit no sky_1752536665386.jpg";
 import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
 import heroImage3 from "@assets/IMG_4446_1752533547603.jpg";
 import heroImage4 from "@assets/IMG_4445_1752533547607.jpg";
@@ -15,7 +15,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
   const images = [
     {
       src: heroImage1,
-      alt: "Casa Benavides Inn - Adobe Architecture at Sunset"
+      alt: "Casa Benavides Inn - Adobe Architecture with Turquoise Accents"
     },
     {
       src: heroImage2,
