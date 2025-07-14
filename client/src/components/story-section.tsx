@@ -37,8 +37,8 @@ export default function StorySection() {
         <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
           <div className="lg:order-2">
             <img 
-              src="/casa-historic-building.avif" 
-              alt="Historic Casa Benavides building showing family heritage" 
+              src="/casa-story-interior.png" 
+              alt="Casa Benavides Inn interior with fireplace and authentic Southwest decor" 
               className="w-full h-96 object-cover rounded-xl shadow-lg"
             />
           </div>
