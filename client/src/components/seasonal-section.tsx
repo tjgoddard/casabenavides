@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import img2 from "@assets/IMG_3404.png";
 
 export default function SeasonalSection() {
   return (
@@ -39,7 +40,7 @@ export default function SeasonalSection() {
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-casa-blue/20 to-transparent rounded-2xl transform -rotate-2 group-hover:-rotate-1 smooth-transition"></div>
             <img 
-              src="/attached_assets/IMG_3404_1752505966420.PNG"
+              src={img2}
               alt="Casa Benavides Inn interior with authentic Southwest decor"
               className="relative w-full h-[500px] object-cover rounded-2xl luxury-shadow smooth-transition group-hover:scale-105"
             />

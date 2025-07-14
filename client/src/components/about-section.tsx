@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import img1 from "@assets/IMG_3403.png";
 
 export default function AboutSection() {
   return (
@@ -12,7 +13,7 @@ export default function AboutSection() {
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-casa-blue/20 to-transparent rounded-2xl transform rotate-2 group-hover:rotate-1 smooth-transition"></div>
             <img 
-              src="/attached_assets/IMG_3403_1752505966419.PNG"
+              src={img1}
               alt="Casa Benavides Inn authentic Southwest architecture"
               className="relative w-full h-[500px] object-cover rounded-2xl luxury-shadow smooth-transition group-hover:scale-105"
             />

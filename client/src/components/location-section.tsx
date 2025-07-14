@@ -1,6 +1,8 @@
 import { MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import img3 from "@assets/IMG_3405.png";
+
 export default function LocationSection() {
   return (
     <div className="py-20 bg-casa-light">
@@ -43,7 +45,7 @@ export default function LocationSection() {
           <div className="lg:order-first">
             <div className="relative">
               <img 
-                src="/attached_assets/IMG_3405_1752505966420.PNG" 
+                src={img3} 
                 alt="Casa Benavides Inn interior with authentic Southwest furniture and art" 
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
