@@ -50,7 +50,6 @@ export default function LocationSection() {
                 alt="Casa Benavides Inn living room with authentic Southwest art collection and pottery" 
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
-              <div className="absolute inset-0 bg-casa-blue bg-opacity-20 rounded-xl"></div>
             </div>
           </div>
         </div>
