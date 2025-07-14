@@ -47,6 +47,16 @@ export default function Footer() {
                   Our Story
                 </Link>
               </li>
+              <li>
+                <Link href="/policies" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
+                  Policies
+                </Link>
+              </li>
+              <li>
+                <Link href="/group-reservations" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
+                  Group Reservations
+                </Link>
+              </li>
             </ul>
           </div>
           

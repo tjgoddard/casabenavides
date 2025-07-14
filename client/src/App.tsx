@@ -8,6 +8,8 @@ import Breakfast from "@/pages/breakfast";
 import Contact from "@/pages/contact";
 import Experiences from "@/pages/experiences";
 import OurStory from "@/pages/our-story";
+import Policies from "@/pages/policies";
+import GroupReservations from "@/pages/group-reservations";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +20,8 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/experiences" component={Experiences} />
       <Route path="/our-story" component={OurStory} />
+      <Route path="/policies" component={Policies} />
+      <Route path="/group-reservations" component={GroupReservations} />
       <Route component={NotFound} />
     </Switch>
   );
