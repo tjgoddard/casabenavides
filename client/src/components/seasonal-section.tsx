@@ -13,9 +13,7 @@ export default function SeasonalSection() {
               From world-class skiing at Taos Ski Valley to fireside evenings, vibrant art galleries, and unforgettable Southwestern cuisine. Casa Benavides puts you in the heart of it all.
             </p>
             
-            <p className="luxury-body text-sm text-gray-900 leading-relaxed">
-              Book now and enjoy exclusive savings of up to 20% off our Best Flexible Rate with promo code WINTER25.
-            </p>
+            
             
             <div className="pt-6">
               <Button 
