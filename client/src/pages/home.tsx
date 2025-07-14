@@ -13,9 +13,9 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection showSubtitle={true} />
+        <LocationSection />
         <AboutSection />
         <SeasonalSection />
-        <LocationSection />
         <FeaturesSection />
         <PackagesSection />
       </main>
