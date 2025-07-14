@@ -66,7 +66,7 @@ export default function ExperiencesSection() {
 
         <div className="bg-gradient-to-r from-[#1a365d] to-[#0682b3] rounded-xl p-12 text-center mt-32 shadow-2xl">
           <h3 className="luxury-subheading text-3xl md:text-4xl font-light text-white mb-8 tracking-wide">Why Stay at Casa Benavides?</h3>
-          <p className="luxury-body text-white text-sm leading-relaxed max-w-4xl mx-auto mb-8">
+          <p className="text-white text-sm leading-relaxed max-w-4xl mx-auto mb-8 font-light">
             Our prime downtown location puts you in the center of everything: a short drive to Taos Ski Valley, 
             steps from Taos Plaza, and just minutes from world‑famous landmarks like Taos Pueblo and the Rio Grande Gorge. 
             Whether you're chasing adrenaline or cultural enrichment, you'll find it all close to your door.
