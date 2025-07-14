@@ -11,119 +11,95 @@ export default function GroupReservations() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">GROUP RESERVATIONS</h1>
-            <p className="luxury-body text-sm text-gray-900 max-w-3xl mx-auto leading-relaxed">
-              Plan your special event, retreat, or group getaway at Casa Benavides Historic Bed & Breakfast. We offer personalized service and authentic Taos charm for groups of all sizes.
-            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Perfect for Groups</h2>
+          <div className="space-y-12">
+            <section>
               <div className="space-y-4 luxury-body text-gray-900">
-                <p>Casa Benavides is the ideal venue for:</p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Wedding parties and celebrations</li>
-                  <li>Corporate retreats and meetings</li>
-                  <li>Family reunions and gatherings</li>
-                  <li>Art and photography workshops</li>
-                  <li>Wellness and yoga retreats</li>
-                  <li>Special interest group tours</li>
-                </ul>
+                <p>Group Reservations are a single reservation of four (4) rooms, or more for single or multiple nights, paid for by a single or multiple payers.</p>
+                <p>Group Reservations cannot be made using our automated online reservations system.</p>
+                <p><strong>Group Reservations can only be made and confirmed by calling the Casa Benavides office at: 575-758-1772</strong></p>
               </div>
-            </div>
+            </section>
 
-            <div>
-              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Group Benefits</h2>
+            <section>
+              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Deposit Requirements</h2>
               <div className="space-y-4 luxury-body text-gray-900">
-                <div className="flex items-start">
-                  <Users className="w-5 h-5 text-casa-blue mt-1 mr-3 flex-shrink-0" />
-                  <p>Exclusive group rates for 8+ rooms</p>
-                </div>
-                <div className="flex items-start">
-                  <Calendar className="w-5 h-5 text-casa-blue mt-1 mr-3 flex-shrink-0" />
-                  <p>Flexible booking terms for group events</p>
-                </div>
-                <div className="flex items-start">
-                  <MapPin className="w-5 h-5 text-casa-blue mt-1 mr-3 flex-shrink-0" />
-                  <p>Prime location near Taos Plaza</p>
-                </div>
-                <div className="flex items-start">
-                  <Users className="w-5 h-5 text-casa-blue mt-1 mr-3 flex-shrink-0" />
-                  <p>Personalized concierge services</p>
-                </div>
+                <p>Group Reservations made within 90 days of arrival require a 100% non-refundable deposit. We understand that plans can change. Any unused portion of the non-refundable deposit can be applied toward a future reservation made within one year. The non-refundable deposit will be forfeited.</p>
+                <p>Advanced Group Reservations made outside the 90-day arrival window require a 50% non-refundable deposit. The remaining 50% non-refundable balance must be paid by 90 days prior to arrival, or 50% of the room reservations will be cancelled at that time. We understand that plans can change. Otherwise, the non-refundable deposit will be forfeited.</p>
               </div>
-            </div>
-          </div>
+            </section>
 
-          <div className="bg-casa-light rounded-xl p-8 mb-12">
-            <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide text-center">Group Rates & Packages</h2>
-            <div className="space-y-6 luxury-body text-gray-900">
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <h3 className="luxury-subheading text-xl font-medium mb-2 text-casa-navy">Small Groups</h3>
-                  <p className="text-sm">8-15 rooms</p>
-                  <p className="text-sm font-medium">10% discount</p>
-                </div>
-                <div className="text-center">
-                  <h3 className="luxury-subheading text-xl font-medium mb-2 text-casa-navy">Medium Groups</h3>
-                  <p className="text-sm">16-25 rooms</p>
-                  <p className="text-sm font-medium">15% discount</p>
-                </div>
-                <div className="text-center">
-                  <h3 className="luxury-subheading text-xl font-medium mb-2 text-casa-navy">Large Groups</h3>
-                  <p className="text-sm">26+ rooms</p>
-                  <p className="text-sm font-medium">20% discount</p>
-                </div>
+            <section>
+              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Room Rates</h2>
+              <div className="space-y-4 luxury-body text-gray-900">
+                <p>Group Reservations room prices are based upon double occupancy – Two (2) guests per room per night. Our room fees include our gourmet breakfast for each guest in our dining room, between the hours of 7:00 AM and 9:30 AM every morning. Any number of guests exceeding the double occupancy shall be charged an additional rate of $20 per person per night. If the number of room guests exceed the number of guests designated at the time the original reservation was made, then the additional charges will be collected at check-in.</p>
               </div>
-              <p className="text-center text-sm mt-6">
-                *Group rates are subject to availability and blackout dates may apply during peak seasons.
-              </p>
-            </div>
-          </div>
+            </section>
 
-          <div className="bg-white rounded-xl shadow-sm p-8 mb-12">
-            <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide text-center">Contact Our Group Coordinator</h2>
-            <div className="space-y-6">
-              <div className="flex items-center justify-center">
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 text-casa-blue mr-3" />
-                  <span className="luxury-body text-gray-900">575-758-1772</span>
-                </div>
+            <section>
+              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Discounts</h2>
+              <div className="space-y-4 luxury-body text-gray-900">
+                <p>Casa Benavides is a small family operated business and unable to offer any discounted rates. We do not participate in AARP or AAA travel membership programs, nor do we offer Government or Military discounts.</p>
               </div>
-              <div className="flex items-center justify-center">
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 text-casa-blue mr-3" />
-                  <span className="luxury-body text-gray-900">groups@casabenavides.com</span>
-                </div>
+            </section>
+
+            <section>
+              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Check-In</h2>
+              <div className="space-y-4 luxury-body text-gray-900">
+                <p>Room Check-In time for Group Reservations is from 3:00 PM to 7:00 PM Mountain time.</p>
+                <p>Room Check-In is not available outside of this time window, unless advanced arrangements have been made with the Casa Benavides by calling 575-758-1772. Additional fees may apply for early or late check-in.</p>
               </div>
+            </section>
+
+            <section>
+              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Check-Out</h2>
+              <div className="space-y-4 luxury-body text-gray-900">
+                <p><strong>Room Check-Out is by 11:00 AM Mountain time</strong></p>
+                <p>Extended Check-Out time is available by calling the front desk 575-758-1772. Additional fees may apply.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Conference & Meeting Room</h2>
+              <div className="space-y-4 luxury-body text-gray-900">
+                <p>Conference & Meeting Room - is available for Group Reservations with advanced notice.</p>
+                <p>An additional Conference Room fee may apply.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">No Smoking</h2>
+              <div className="space-y-4 luxury-body text-gray-900">
+                <p>Casa Benavides is a non-smoking, non-vaping facility. Smoking/vaping is permitted only outdoors on the Casa Benavides property at a single location. Contact our front desk at 575-758-1772 for the designated area.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Guest Criteria</h2>
+              <div className="space-y-4 luxury-body text-gray-900">
+                <p>Human guests including children are welcome. Non-human pets are not.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Payment</h2>
+              <div className="space-y-4 luxury-body text-gray-900">
+                <p>All deposits and payments can be made by using Cash, Check, Visa, MasterCard, American Express, or Discovery.</p>
+              </div>
+            </section>
+
+            <div className="bg-casa-light rounded-xl p-8 mt-12">
               <div className="text-center">
-                <Button 
-                  asChild 
-                  className="luxury-button text-white rounded-full"
-                >
-                  <a href="mailto:groups@casabenavides.com">
-                    REQUEST GROUP QUOTE
-                  </a>
-                </Button>
+                <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">For Group Reservations</h2>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-casa-blue mr-3" />
+                    <span className="luxury-body text-gray-900 text-lg">575-758-1772</span>
+                  </div>
+                  <p className="luxury-body text-gray-900 text-sm">Call to discuss your group reservation needs</p>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Booking Information</h2>
-            <div className="space-y-4 luxury-body text-gray-900">
-              <p>
-                <strong>Advance Notice:</strong> We recommend booking group reservations at least 30 days in advance, especially during peak seasons (December-March and June-August).
-              </p>
-              <p>
-                <strong>Deposit:</strong> A 25% deposit is required to secure group reservations, with the balance due 14 days prior to arrival.
-              </p>
-              <p>
-                <strong>Cancellation:</strong> Group cancellations must be made at least 14 days prior to arrival. Special cancellation terms may apply for large groups.
-              </p>
-              <p>
-                <strong>Payment:</strong> We accept major credit cards, checks, and wire transfers for group bookings.
-              </p>
             </div>
           </div>
         </div>
