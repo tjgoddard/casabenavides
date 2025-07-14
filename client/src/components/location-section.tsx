@@ -11,12 +11,8 @@ export default function LocationSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">STAY CLOSE TO THE BEST OF TAOS</h2>
-            <p className="luxury-body text-sm text-gray-900 mb-6 leading-relaxed">
-              Looking for a hotel steps from the iconic Taos Plaza or near the Taos Ski Valley? Casa Benavides Historic Bed & Breakfast is the perfect place to stay. Just outside the front door is a leisurely stroll to all the enchanted beauty, energy, shopping, Southwest cuisine and Native culture Taos has to offer — plus it's just a short 30-minute drive to the legendary slopes of Taos Ski Valley.
-            </p>
-            <p className="luxury-body text-sm text-gray-900 mb-6 leading-relaxed">
-              From here, you can explore the town's rich cultural heritage, enjoy world-class skiing and snowboarding, or take a scenic drive to the Rio Grande Gorge Bridge, the High Road to Taos, or Ojo Caliente Hot Springs. Whether you're planning a winter getaway or a summer road trip through Northern New Mexico, Casa Benavides is the perfect home base.
-            </p>
+            <p className="luxury-body text-sm text-gray-900 mb-6 leading-relaxed">Looking for a hotel in the heart of Taos? Casa Benavides Historic Bed & Breakfast is the perfect place to stay. Just outside the front door is a leisurely stroll to all the enchanted beauty, energy, shopping, Southwest cuisine and Native culture Taos has to offer. And we're just a short 30-minute drive to the legendary slopes of Taos Ski Valley.</p>
+            <p className="luxury-body text-sm text-gray-900 mb-6 leading-relaxed">At Casa Benavides, you can explore the town's rich cultural heritage, enjoy world-class skiing and snowboarding, or take a scenic drive to the Rio Grande Gorge Bridge, the High Road to Taos, or Ojo Caliente Hot Springs. Whether you're planning a winter getaway or a summer road trip through Northern New Mexico, Casa Benavides is the perfect home base.</p>
             <p className="luxury-body text-sm text-gray-900 mb-8 leading-relaxed">
               For travelers searching for a cozy, well-located Taos hotel, Casa Benavides blends comfort, character, and unbeatable proximity to everything this magical town has to offer.
             </p>
