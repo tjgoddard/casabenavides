@@ -1,7 +1,7 @@
 import { MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import img3 from "@assets/IMG_3405.png";
+import img3 from "@assets/IMG_3405_new.png";
 
 export default function LocationSection() {
   return (
@@ -46,7 +46,7 @@ export default function LocationSection() {
             <div className="relative">
               <img 
                 src={img3} 
-                alt="Casa Benavides Inn interior with authentic Southwest furniture and art" 
+                alt="Casa Benavides Inn living room with authentic Southwest art collection and pottery" 
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
               <div className="absolute inset-0 bg-casa-blue bg-opacity-20 rounded-xl"></div>
