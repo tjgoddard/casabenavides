@@ -7,7 +7,7 @@ export default function ExperiencesSection() {
     },
     {
       title: "Discover Taos Plaza & Historic Downtown",
-      description: "At the historic heart of town, Taos Plaza blends centuries of culture with contemporary flair. Wander through art galleries, boutique shops, and cafés; soak up live music or join the farmers' market on weekends. Notable stops include the Kit Carson House & Museum, the Harwood Museum, and the Millicent Rogers Museum—all just steps from the plaza.",
+      description: "At the historic heart of town, Taos Plaza blends centuries of culture with contemporary flair. Wander through art galleries, boutique shops, and cafés; soak up live music or join the farmers' market on weekends. Notable stops include the Kit Carson House & Museum, the Couse-Sharp Historic Site, The Harwood Museum, and Millicent Rogers Museum.",
       image: "/taos-plaza-new.jpg"
     },
     {
