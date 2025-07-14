@@ -23,6 +23,10 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
     {
       src: heroImage3,
       alt: "Casa Benavides Inn - Southwest Architecture"
+    },
+    {
+      src: "/casa-winter-snow.jpg",
+      alt: "Casa Benavides Inn in Winter Snow - Authentic Southwest Adobe Architecture"
     }
   ];
 
@@ -52,7 +56,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             } ${index === 0 ? 'object-cover object-center md:object-center' : 'object-cover object-center'}`}
             style={{
-              objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : 'center center'
+              objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : index === 3 ? 'center center' : 'center center'
             }}
           />
         ))}
