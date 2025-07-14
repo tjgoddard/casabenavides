@@ -3,7 +3,8 @@ import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import heroImage1 from "@assets/Exterior-Front-Homepage-Alt-1_1752358119635.jpg";
 import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
-import heroImage3 from "@assets/f4f18f_8c67a594acb642f79ba51f013c955aca~mv2 (1)_1752358146484.avif";
+import heroImage3 from "@assets/IMG_4446_1752533547603.jpg";
+import heroImage4 from "@assets/IMG_4445_1752533547607.jpg";
 import logoImage from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)-Photoroom_1752359300963.jpg";
 
 interface HeroSectionProps {
@@ -22,11 +23,11 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
     },
     {
       src: heroImage3,
-      alt: "Casa Benavides Inn - Southwest Architecture"
+      alt: "Casa Benavides Inn - Courtyard Patio with Colorful Umbrellas"
     },
     {
-      src: "/casa-winter-snow.jpg",
-      alt: "Casa Benavides Inn in Winter Snow - Authentic Southwest Adobe Architecture"
+      src: heroImage4,
+      alt: "Casa Benavides Inn - Interior Living Space with Southwest Decor"
     }
   ];
 
