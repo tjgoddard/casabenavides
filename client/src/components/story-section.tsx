@@ -47,9 +47,7 @@ export default function StorySection() {
               <p>
                 But eventually they became restless, deciding to change directions and bought the McCarthy family business, The El Mercado, opened The Old Mexico Shop and The Village Weavers Shop and eventually launched their own lodging business.
               </p>
-              <p>
-                On a whim in 1989, Tom and Barbara acquired the Lewis Art Gallery Building on Kit Carson Road, originally built by Barbara's father, Carlos Benavides. The Gallery, along with three other adjacent homes built by Carlos, and the original McCarthy family home, were converted into the living quarters and multiple guest rooms, and were officially named The Casa Benavides Inn.
-              </p>
+              <p>In 1988, Tom and Barbara acquired the Lewis Art Gallery Building on Kit Carson Road, originally built by Barbara's father, Carlos Benavides. The Gallery, along with three other adjacent homes built by Carlos, and the original McCarthy family home, were converted into the living quarters and multiple guest rooms, and were officially named The Casa Benavides Inn.</p>
               <p>
                 Now, over 30 years later, with the infusion of much artistic flair, hard work, sacrifice and dedication, The Casa Benavides Inn has become the premier hospitality lodging for visitors to Taos and Northern New Mexico.
               </p>
