@@ -74,24 +74,7 @@ export default function PageHeaderCarousel({ title, subtitle }: PageHeaderCarous
         ))}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         
-        {/* Navigation buttons */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 text-white hover:bg-white/20 h-12 w-12 rounded-full"
-          onClick={goToPrevious}
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </Button>
         
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 text-white hover:bg-white/20 h-12 w-12 rounded-full"
-          onClick={goToNext}
-        >
-          <ChevronRight className="h-6 w-6" />
-        </Button>
         
         {/* Down arrow */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
