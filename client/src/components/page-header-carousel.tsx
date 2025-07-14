@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage1 from "@assets/Exterior-Front-Homepage-Alt-1_1752358119635.jpg";
 import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
 import heroImage3 from "@assets/f4f18f_8c67a594acb642f79ba51f013c955aca~mv2 (1)_1752358146484.avif";
-import heroImage4 from "@assets/IMG_3406_1752509363210.jpg";
 
 interface PageHeaderCarouselProps {
   title: string;
@@ -26,8 +25,8 @@ export default function PageHeaderCarousel({ title, subtitle }: PageHeaderCarous
       alt: "Casa Benavides Inn - Southwest Architecture"
     },
     {
-      src: heroImage4,
-      alt: "Casa Benavides Inn Interior - Authentic Southwest Decor"
+      src: "/casa-winter-snow.jpg",
+      alt: "Casa Benavides Inn in Winter Snow - Authentic Southwest Adobe Architecture"
     }
   ];
 
@@ -94,17 +93,9 @@ export default function PageHeaderCarousel({ title, subtitle }: PageHeaderCarous
           <ChevronRight className="h-6 w-6" />
         </Button>
         
-        {/* Dots indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentImageIndex ? 'bg-white' : 'bg-white/50'
-              }`}
-              onClick={() => setCurrentImageIndex(index)}
-            />
-          ))}
+        {/* Down arrow */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+          <ChevronDown className="w-8 h-8 text-white animate-bounce" />
         </div>
         
         {/* Content overlay */}
