@@ -1,20 +1,17 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import HeaderBanner from "@/components/header-banner";
+import PageHeaderCarousel from "@/components/page-header-carousel";
 
 export default function Policies() {
   return (
     <>
       <Navigation />
-      <HeaderBanner />
-      <main className="pt-24 pb-16">
+      <PageHeaderCarousel 
+        title="OUR POLICIES" 
+        subtitle="Policies for Individual Room Reservations"
+      />
+      <main className="pt-16 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">OUR POLICIES</h1>
-            <p className="luxury-body text-sm text-gray-900 max-w-3xl mx-auto leading-relaxed">
-              Policies for Individual Room Reservations
-            </p>
-          </div>
 
           <div className="space-y-12">
             <section>
