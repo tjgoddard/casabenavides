@@ -107,6 +107,11 @@ Casa Benavides Inn is a full-stack web application built for a historic bed & br
 ```
 Changelog:
 - July 06, 2025. Initial setup
+- July 14, 2025. Standardized typography system across all pages
+  - luxury-heading: Playfair Display serif for main headings
+  - luxury-subheading: Inter sans-serif for section headings  
+  - luxury-body: Inter sans-serif for body text (color removed from class)
+  - Applied consistent font usage throughout all components
 ```
 
 ## User Preferences

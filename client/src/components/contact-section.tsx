@@ -59,9 +59,9 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-serif">Contact Us</h2>
-          <p className="text-xl text-gray-600">Get in touch to plan your perfect Taos getaway</p>
+        <div className="text-center mb-20">
+          <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">CONTACT US</h2>
+          <p className="luxury-body text-sm text-gray-900 max-w-4xl mx-auto leading-relaxed">Get in touch to plan your perfect Taos getaway</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -79,8 +79,8 @@ export default function ContactSection() {
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-casa-blue mt-1 mr-4 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-gray-900">Address</h3>
-                  <p className="text-gray-600">
+                  <h3 className="luxury-subheading font-semibold text-casa-navy">Address</h3>
+                  <p className="luxury-body text-gray-900">
                     Casa Benavides Inn<br />
                     137 Kit Carson Road<br />
                     Taos, New Mexico 87571
@@ -91,7 +91,7 @@ export default function ContactSection() {
               <div className="flex items-start">
                 <Phone className="w-5 h-5 text-casa-blue mt-1 mr-4 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-gray-900">Phone</h3>
+                  <h3 className="luxury-subheading font-semibold text-casa-navy">Phone</h3>
                   <a href="tel:5757581772" className="text-casa-blue hover:text-casa-blue-light">
                     575-758-1772
                   </a>
@@ -101,7 +101,7 @@ export default function ContactSection() {
               <div className="flex items-start">
                 <Mail className="w-5 h-5 text-casa-blue mt-1 mr-4 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-gray-900">Email</h3>
+                  <h3 className="luxury-subheading font-semibold text-casa-navy">Email</h3>
                   <a href="mailto:info@casabenavides.com" className="text-casa-blue hover:text-casa-blue-light">
                     Info@CasaBenavides.com
                   </a>

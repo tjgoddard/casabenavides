@@ -4,7 +4,7 @@ export default function StorySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">OUR STORY</h2>
-          <p className="text-sm text-gray-900 max-w-3xl mx-auto">
+          <p className="luxury-body text-sm text-gray-900 max-w-4xl mx-auto leading-relaxed">
             A tale of love, family, and dedication spanning generations in the heart of Taos
           </p>
         </div>
@@ -19,8 +19,8 @@ export default function StorySection() {
           </div>
           
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-gray-900">A Love Story in Taos</h3>
-            <div className="space-y-4 text-gray-900 text-sm leading-relaxed">
+            <h3 className="luxury-subheading text-2xl md:text-3xl font-light mb-8 text-casa-navy tracking-wide">A Love Story in Taos</h3>
+            <div className="space-y-4 luxury-body text-gray-900 text-sm leading-relaxed">
               <p>
                 As is often the case in stories of happenstance, the arrival of the McCarthy and Benavides families to Taos during the 19th century set a life-long chain of events in motion for Tom McCarthy and Barbara Benavides, the owners of The Casa Benavides Inn.
               </p>
@@ -44,8 +44,8 @@ export default function StorySection() {
           </div>
           
           <div className="lg:order-1">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-900">From Educators to Innkeepers</h3>
-            <div className="space-y-4 text-gray-900 text-sm leading-relaxed">
+            <h3 className="luxury-subheading text-2xl md:text-3xl font-light mb-8 text-casa-navy tracking-wide">From Educators to Innkeepers</h3>
+            <div className="space-y-4 luxury-body text-gray-900 text-sm leading-relaxed">
               <p>
                 But eventually they became restless, deciding to change directions and bought the McCarthy family business, The El Mercado, opened The Old Mexico Shop and The Village Weavers Shop and eventually launched their own lodging business.
               </p>

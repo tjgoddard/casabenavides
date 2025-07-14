@@ -15,8 +15,8 @@ export default function BreakfastSection() {
     <section id="breakfast" className="py-20 bg-casa-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-serif">So What's For Breakfast?</h2>
-          <p className="text-sm text-gray-900 max-w-3xl mx-auto">
+          <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">SO WHAT'S FOR BREAKFAST?</h2>
+          <p className="luxury-body text-sm text-gray-900 max-w-4xl mx-auto leading-relaxed">
             Our full breakfast service is available in our dining room each and every morning from 7:00a.m. to 9:30a.m. 
             and is included in the price of our rooms for two guests.
           </p>
@@ -33,14 +33,14 @@ export default function BreakfastSection() {
           </div>
           
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-gray-900">
+            <h3 className="luxury-subheading text-2xl md:text-3xl font-light mb-8 text-casa-navy tracking-wide">
               Casa Benavides offers a delicious variety of freshly prepared and served gourmet entrees including:
             </h3>
             <div className="space-y-4">
               {breakfastItems.map((item, index) => (
                 <div key={index} className="flex items-start">
                   <Check className="w-5 h-5 text-casa-blue mt-1 mr-3 flex-shrink-0" />
-                  <p className="text-sm text-gray-900">{item}</p>
+                  <p className="luxury-body text-sm text-gray-900">{item}</p>
                 </div>
               ))}
             </div>
@@ -50,7 +50,7 @@ export default function BreakfastSection() {
                 <Shield className="w-5 h-5 text-casa-blue mr-2" />
                 <span className="font-semibold text-gray-900">New Mexico Safe Certified</span>
               </div>
-              <p className="text-gray-900 text-sm">Our kitchen meets all New Mexico safety standards</p>
+              <p className="luxury-body text-gray-900 text-sm">Our kitchen meets all New Mexico safety standards</p>
             </div>
           </div>
         </div>
