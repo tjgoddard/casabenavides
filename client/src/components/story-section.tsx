@@ -21,9 +21,7 @@ export default function StorySection() {
           <div>
             <h3 className="luxury-subheading text-2xl md:text-3xl font-light mb-8 text-casa-navy tracking-wide">A Love Story in Taos</h3>
             <div className="space-y-4 luxury-body text-gray-900 text-sm leading-relaxed">
-              <p>
-                As is often the case in stories of happenstance, the arrival of the McCarthy and Benavides families to Taos during the 19th century set a life-long chain of events in motion for Tom McCarthy and Barbara Benavides, the owners of The Casa Benavides Inn.
-              </p>
+              <p>As is often the case in stories of happenstance, the arrival of the McCarthy and Benavides families to Taos in the early 1900s set a life-long chain of events in motion for Tom McCarthy and Barbara Benavides, the owners of The Casa Benavides Inn.</p>
               <p>
                 By the time Tom and Barbara were born, while the country was recovering from The Great Depression, their parents had already established successful businesses in the Taos Community.
               </p>
