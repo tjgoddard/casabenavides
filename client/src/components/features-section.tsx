@@ -49,8 +49,8 @@ export default function FeaturesSection() {
           {features.map((feature, index) => (
             <div key={index} className="text-center group luxury-hover smooth-transition">
               <div className="flex justify-center mb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-casa-navy to-casa-blue rounded-full flex items-center justify-center group-hover:scale-110 smooth-transition shadow-lg border-2 border-casa-blue/20">
-                  <feature.icon className="w-10 h-10 text-white stroke-2" />
+                <div className="w-20 h-20 bg-gradient-to-br from-[#1a365d] to-[#0682b3] rounded-full flex items-center justify-center group-hover:scale-110 smooth-transition shadow-lg border-2 border-blue-200">
+                  <feature.icon className="w-10 h-10 text-white stroke-2" strokeWidth={2} />
                 </div>
               </div>
               <h3 className="luxury-subheading text-2xl font-light mb-6 text-casa-navy tracking-wide">{feature.title}</h3>
