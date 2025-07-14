@@ -8,16 +8,16 @@ export default function LocationSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">
-              Location... Location... Location...
+              Stay Close to the Best of Taos
             </h2>
-            <p className="text-sm text-gray-700 mb-6 leading-relaxed">
-              It's no accident the Casa Benavides is located in the heart of Taos. Once you arrive and park the car, put away those keys because you probably won't need them. Just outside the front door is a leisurely stroll to all the enchanted beauty, energy, shopping, Southwest cuisine and Native culture Taos has to offer.
+            <p className="text-sm text-gray-900 mb-6 leading-relaxed">
+              Looking for a hotel steps from the iconic Taos Plaza or near the Taos Ski Valley? Casa Benavides Historic Bed & Breakfast is the perfect place to stay. Just outside the front door is a leisurely stroll to all the enchanted beauty, energy, shopping, Southwest cuisine and Native culture Taos has to offer — plus it's just a short 30-minute drive to the legendary slopes of Taos Ski Valley.
             </p>
-            <p className="text-sm text-gray-700 mb-8 leading-relaxed">
-              Be sure to save some time to enjoy the serenity of your accommodations in one of our 36 distinctively styled rooms, decorated with artistic treasures, private baths, cable TV and complimentary Wi-Fi internet access in every room and throughout the property. Selected rooms offer kitchens, refrigerators, microwaves, patios or balconies overlooking Taos, the mountains or our gardens.
+            <p className="text-sm text-gray-900 mb-6 leading-relaxed">
+              From here, you can explore the town's rich cultural heritage, enjoy world-class skiing and snowboarding, or take a scenic drive to the Rio Grande Gorge Bridge, the High Road to Taos, or Ojo Caliente Hot Springs. Whether you're planning a winter getaway or a summer road trip through Northern New Mexico, Casa Benavides is the perfect home base.
             </p>
-            <p className="text-sm text-gray-700 mb-8 leading-relaxed">
-              We serve our full gourmet breakfast in our dining room each and every morning from 7:00a.m. to 9:30a.m. Our breakfast is included in the price of our rooms for two guests.
+            <p className="text-sm text-gray-900 mb-8 leading-relaxed">
+              For travelers searching for a cozy, well-located Taos hotel, Casa Benavides blends comfort, character, and unbeatable proximity to everything this magical town has to offer.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild variant="outline" className="border-casa-blue text-casa-blue hover:bg-casa-blue hover:text-white">
