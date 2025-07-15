@@ -24,6 +24,7 @@ export default function ContactSection() {
 
     // Debug the environment variables
     console.log('EmailJS Environment Check:');
+    console.log('All env vars:', import.meta.env);
     console.log('SERVICE_ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
     console.log('TEMPLATE_ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
     console.log('PUBLIC_KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
