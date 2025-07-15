@@ -63,13 +63,11 @@ export default function ContactSection() {
 
     console.log('Using email config:', emailConfig);
 
-    // Try different field mapping patterns that EmailJS commonly uses
+    // Use the exact field names from the EmailJS template
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
+      name: formData.name,
+      email: formData.email,
       message: formData.message,
-      to_name: "Casa Benavides",
-      to_email: "casabena@taosnet.com"
     };
     
     console.log('Sending email with params:', templateParams);
