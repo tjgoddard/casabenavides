@@ -34,12 +34,19 @@ export default function ContactSection() {
       message: formData.message,
     };
 
+    // Use the correct hardcoded values for now
+    const serviceId = 'service_zqnfqk6';
+    const templateId = 'template_28n7rp';
+    const publicKey = 'Zr0gq__GXcuv6SV7';
+
+    console.log('Using hardcoded values:', { serviceId, templateId, publicKey });
+
     // Initialize EmailJS with the public key first
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    emailjs.init(publicKey);
 
     emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      serviceId,
+      templateId,
       formDataToSend
     )
     .then((result) => {
