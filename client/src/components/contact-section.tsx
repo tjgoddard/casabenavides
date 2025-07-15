@@ -37,6 +37,9 @@ export default function ContactSection() {
         console.error('Failed to load email config:', error);
         // Fallback to hardcoded values if API fails
         console.log('Using fallback email configuration');
+        
+        // Let's try the exact service ID from your screenshot
+        // From your screenshot, the service ID shows as service_zqnfqk6
         setEmailConfig({
           serviceId: 'service_zqnfqk6',
           templateId: 'template_28nj7rp',
@@ -72,19 +75,20 @@ export default function ContactSection() {
     
     console.log('Sending email with params:', templateParams);
 
-    // Try initializing EmailJS first (some versions require this)
-    try {
-      emailjs.init(emailConfig.publicKey);
-      console.log('EmailJS initialized successfully');
-    } catch (initError) {
-      console.warn('EmailJS init warning:', initError);
-    }
-
+    // Debug: Let's test with the most basic EmailJS call
+    console.log('Testing EmailJS configuration:');
+    console.log('Service ID:', emailConfig.serviceId);
+    console.log('Template ID:', emailConfig.templateId); 
+    console.log('Public Key:', emailConfig.publicKey);
+    
+    // Initialize EmailJS properly (this is required for newer versions)
+    emailjs.init(emailConfig.publicKey);
+    
+    // Try the basic EmailJS call
     emailjs.send(
       emailConfig.serviceId,
       emailConfig.templateId,
-      templateParams,
-      emailConfig.publicKey
+      templateParams
     )
     .then((result) => {
       console.log("Email successfully sent!", result);
