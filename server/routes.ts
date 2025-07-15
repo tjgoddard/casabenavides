@@ -37,6 +37,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Debug middleware to log all API requests
   app.use('/api/*', (req, res, next) => {
     console.log(`API Request: ${req.method} ${req.originalUrl}`);
+    console.log('Headers:', req.headers);
+    console.log('Body:', req.body);
     next();
   });
   
@@ -53,9 +55,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const transporter = createTransporter();
       if (transporter) {
         try {
+          console.log("Attempting to send email...");
+          console.log("From:", process.env.EMAIL_FROM || process.env.SMTP_USER);
+          console.log("To: casabena@taosnet.com");
+          
           await transporter.sendMail({
             from: process.env.EMAIL_FROM || process.env.SMTP_USER,
-            to: "info@casabenavides.com",
+            to: "casabena@taosnet.com",
             subject: `New Contact Form Submission from ${submission.name}`,
             html: `
               <h3>New Contact Form Submission</h3>
@@ -69,8 +75,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
           console.log("Email sent successfully for submission:", submission.id);
         } catch (emailError) {
           console.error("Failed to send email:", emailError);
+          console.error("Email error details:", emailError.message);
           // Don't fail the request if email fails
         }
+      } else {
+        console.warn("Email transporter not configured - email will not be sent");
       }
       
       res.json({ 

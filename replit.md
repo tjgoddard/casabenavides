@@ -114,7 +114,7 @@ Changelog:
   - Applied consistent font usage throughout all components
 - July 15, 2025. Production-ready deployment preparation
   - Fixed Contact page: working images, form submission, Google Maps integration
-  - Implemented full email functionality with nodemailer (sends to info@casabenavides.com)
+  - Implemented full email functionality with nodemailer (sends to casabena@taosnet.com)
   - Added Google Analytics tracking (G-TDTMB2DBTF) across all pages with event tracking
   - Enhanced mobile experience: improved touch targets for hero section buttons
   - Fixed page navigation: all pages now scroll to top on route changes

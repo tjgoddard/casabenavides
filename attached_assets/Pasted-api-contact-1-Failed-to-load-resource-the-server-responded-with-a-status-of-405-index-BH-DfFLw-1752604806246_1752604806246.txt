@@ -1,0 +1,27 @@
+api/contact:1 
+ Failed to load resource: the server responded with a status of 405 ()
+index-BH_DfFLw.js:143 Contact form error: Error: 405: 
+    at Cp (index-BH_DfFLw.js:48:32740)
+    at async Ax (index-BH_DfFLw.js:48:32941)
+Explanation
+
+Understanding the problem
+The console error "Contact form error: Error: 405" indicates that the server received a request using an HTTP method (like GET or POST) that is not supported for the specific resource (in this case, likely the contact form endpoint) [1]. The error originates from the contact form submission process. The error message includes a stack trace pointing to code within index-BH_DfFLw.js, specifically within functions Cp and Ax, and finally within the onError function where the console error is logged. The code you provided shows that when an error occurs during the contact form submission, it logs the error to the console and displays a user-friendly error message.
+
+How to verify
+You can verify this by checking the network tab in Chrome DevTools when you submit the contact form. Look for the request made to the server for the form submission. The status code for this request should be 405, and the "Method" used for the request (e.g., POST) will be the one that is not allowed by the server for that specific endpoint.
+
+Suggested fix
+The fix involves ensuring that the HTTP method used to submit the contact form is supported by the server endpoint. This might involve changing the method used in your client-side JavaScript or configuring the server to accept the method being used.
+
+If you are embedding the same form multiple times on a single page, this could also cause a 405 error [2]. In that case, you would need to ensure that each form has a unique identifier or configuration.
+
+Without knowing the server-side implementation and the exact code responsible for making the HTTP request, a specific code change is difficult to provide. However, here's a general idea of where to look in your code or server configuration:
+
+Check the HTTP method used in the fetch or AJAX request: Locate the code that sends the contact form data to the server. Ensure that the method property in the fetch or AJAX request is set to the correct HTTP method that the server expects (commonly POST for form submissions).
+Check server-side configuration: If you have control over the server, ensure that the endpoint handling contact form submissions is configured to accept the HTTP method being sent from the client.
+Summary
+A 405 Method Not Allowed error means the server understands the HTTP method used in the request but the target resource doesn't support it. To fix this, ensure the client-side code uses the correct HTTP method for the contact form submission endpoint and that the server is configured to accept that method. Also, avoid embedding the same form multiple times on a single page unless specifically supported by the form implementation.
+
+Sources and related content
+Data used to understand this message
