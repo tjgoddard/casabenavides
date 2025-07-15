@@ -31,16 +31,14 @@ export default function Navigation() {
               }`}
             />
           </a>
-          <a 
-            href="/"
-            className={`text-lg font-medium tracking-wide hover:opacity-80 smooth-transition py-2 px-4 text-center min-h-[40px] flex items-center justify-center border rounded-sm ${
-              isScrolled 
-                ? 'text-gray-900 border-gray-300 hover:border-gray-500 active:bg-gray-100' 
-                : 'text-white border-white/30 hover:border-white/60 active:bg-white/10'
-            }`}
-          >
-            HOME
-          </a>
+          {isScrolled && (
+            <a 
+              href="/"
+              className="text-lg font-medium tracking-wide hover:opacity-80 smooth-transition py-2 px-4 text-center min-h-[40px] flex items-center justify-center border rounded-sm text-gray-900 border-gray-300 hover:border-gray-500 active:bg-gray-100"
+            >
+              HOME
+            </a>
+          )}
         </div>
         
         <div className="flex flex-col space-y-2 items-end">
