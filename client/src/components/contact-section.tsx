@@ -6,8 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
+import emailjs from '@emailjs/browser';
 import exteriorImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
 
 export default function ContactSection() {
@@ -16,41 +15,44 @@ export default function ContactSection() {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const contactMutation = useMutation({
-    mutationFn: (data: typeof formData) => apiRequest("POST", "/api/contact", data),
-    onSuccess: async (response) => {
-      try {
-        const result = await response.json();
-        toast({
-          title: "Message Sent!",
-          description: result.message || "Thank you for your message! We will get back to you soon.",
-        });
-        setFormData({ name: '', email: '', message: '' });
-      } catch (parseError) {
-        console.error("Error parsing response:", parseError);
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for your message! We will get back to you soon.",
-        });
-        setFormData({ name: '', email: '', message: '' });
-      }
-    },
-    onError: (error) => {
-      console.error("Contact form error:", error);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formDataToSend = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formDataToSend,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then((result) => {
+      console.log("Email successfully sent!", result.text);
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message! We will get back to you soon.",
+      });
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch((error) => {
+      console.error("Email send error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
-    }
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Submitting contact form:", formData);
-    contactMutation.mutate(formData);
+    })
+    .finally(() => {
+      setIsSubmitting(false);
+    });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -185,9 +187,9 @@ export default function ContactSection() {
                   <Button 
                     type="submit" 
                     className="w-full bg-casa-blue hover:bg-casa-blue-light"
-                    disabled={contactMutation.isPending}
+                    disabled={isSubmitting}
                   >
-                    {contactMutation.isPending ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
