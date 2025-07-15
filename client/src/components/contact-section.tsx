@@ -75,11 +75,11 @@ export default function ContactSection() {
     
     console.log('Sending email with params:', templateParams);
 
-    // Debug: Let's test with the most basic EmailJS call
     console.log('Testing EmailJS configuration:');
     console.log('Service ID:', emailConfig.serviceId);
     console.log('Template ID:', emailConfig.templateId); 
     console.log('Public Key:', emailConfig.publicKey);
+    console.log('Current domain:', window.location.origin);
     
     // Initialize EmailJS properly (this is required for newer versions)
     emailjs.init(emailConfig.publicKey);
