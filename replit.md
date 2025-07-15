@@ -119,6 +119,10 @@ Changelog:
   - Enhanced mobile experience: improved touch targets for hero section buttons
   - Fixed page navigation: all pages now scroll to top on route changes
   - Contact form validates, stores submissions, and sends formatted emails
+  - Updated favicon with Casa Benavides logo in multiple sizes (ICO, PNG, Apple touch icon)
+  - DEPLOYMENT ISSUE: Contact form works perfectly in development but fails in production
+    - Root cause: Cloudflare Pages serves static files only, doesn't run Express server
+    - Solution needed: Switch to Node.js hosting or configure serverless functions
 ```
 
 ## User Preferences
