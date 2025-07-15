@@ -137,8 +137,10 @@ Changelog:
     - Emails sent with full form data and formatting to correct address
     - Enhanced Cloudflare Functions with proper environment variable handling
     - Added domain debugging for EmailJS security configuration
-    - FINAL SOLUTION: Replaced EmailJS with Formspree free email service due to persistent account issues
-    - Formspree provides reliable email delivery without complex configuration
+    - FINAL SOLUTION: Replaced EmailJS with Resend API due to persistent account issues
+    - Resend API provides reliable email delivery with proper API key authentication
+    - Currently configured to send test emails to travisjgoddard@gmail.com
+    - Will need domain verification to send to casabena@newmex.com
 ```
 
 ## User Preferences

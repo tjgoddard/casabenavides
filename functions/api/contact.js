@@ -21,7 +21,7 @@ const validateContactData = (data) => {
 const sendEmailNotification = async (env, submission) => {
   try {
     console.log("=== EMAIL NOTIFICATION ===");
-    console.log("TO: casabena@newmex.com");
+    console.log("TO: travisjgoddard@gmail.com (testing - change to casabena@newmex.com after domain verification)");
     console.log("SUBJECT: New Contact Form Submission from", submission.name);
     console.log("FROM:", submission.email);
     console.log("MESSAGE:", submission.message);
@@ -36,8 +36,8 @@ const sendEmailNotification = async (env, submission) => {
           'Authorization': `Bearer ${env.RESEND_API_KEY || 'demo-key'}`,
         },
         body: JSON.stringify({
-          from: 'Casa Benavides Contact Form <noreply@casabenavides.com>',
-          to: ['casabena@newmex.com'],
+          from: 'Casa Benavides Contact Form <onboarding@resend.dev>',
+          to: ['travisjgoddard@gmail.com'],
           subject: `New Contact Form Submission from ${submission.name}`,
           html: `
             <h2>New Contact Form Submission</h2>
@@ -72,7 +72,7 @@ const sendEmailNotification = async (env, submission) => {
         },
         body: new URLSearchParams({
           from: 'Casa Benavides <noreply@casabenavides.com>',
-          to: 'casabena@newmex.com',
+          to: 'travisjgoddard@gmail.com',
           subject: `New Contact Form Submission from ${submission.name}`,
           html: `
             <h2>New Contact Form Submission</h2>
