@@ -22,32 +22,17 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Debug logging
-    console.log('EmailJS Environment Variables:');
-    console.log('SERVICE_ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log('TEMPLATE_ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-    console.log('PUBLIC_KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
-    const formDataToSend = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    // Use the correct hardcoded values for now
-    const serviceId = 'service_zqnfqk6';
-    const templateId = 'template_28n7rp';
-    const publicKey = 'Zr0gq__GXcuv6SV7';
-
-    console.log('Using hardcoded values:', { serviceId, templateId, publicKey });
-
-    // Initialize EmailJS with the public key first
-    emailjs.init(publicKey);
 
     emailjs.send(
-      serviceId,
-      templateId,
-      formDataToSend
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then((result) => {
       console.log("Email successfully sent!", result.text);
