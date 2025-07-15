@@ -17,25 +17,55 @@ const validateContactData = (data) => {
   return errors;
 };
 
-// Simple email sending using EmailJS API or similar service
+// Email sending using EmailJS API (compatible with Cloudflare Functions)
 const sendEmailNotification = async (env, submission) => {
   try {
-    // For now, we'll log the email details and store the submission
+    // Log the email details
     console.log("=== EMAIL NOTIFICATION ===");
     console.log("To: casabena@taosnet.com");
     console.log("Subject: New Contact Form Submission from", submission.name);
     console.log("From:", submission.email);
     console.log("Message:", submission.message);
     console.log("Submitted:", submission.createdAt);
-    console.log("=== END EMAIL ===");
     
-    // In production, you would implement email sending here using:
-    // - EmailJS API
-    // - SendGrid API
-    // - Mailgun API
-    // - Or any other email service API
+    // Send email using EmailJS API
+    if (env.EMAILJS_SERVICE_ID && env.EMAILJS_TEMPLATE_ID && env.EMAILJS_PUBLIC_KEY) {
+      const emailjsData = {
+        service_id: env.EMAILJS_SERVICE_ID,
+        template_id: env.EMAILJS_TEMPLATE_ID,
+        user_id: env.EMAILJS_PUBLIC_KEY,
+        template_params: {
+          from_name: submission.name,
+          from_email: submission.email,
+          message: submission.message,
+          to_email: "casabena@taosnet.com",
+          reply_to: submission.email
+        }
+      };
+      
+      console.log("Sending email via EmailJS...");
+      
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailjsData)
+      });
+      
+      if (response.ok) {
+        console.log("Email sent successfully via EmailJS");
+        return true;
+      } else {
+        console.error("EmailJS API error:", response.status, response.statusText);
+        return false;
+      }
+    } else {
+      console.warn("EmailJS configuration missing - email will not be sent");
+      console.log("=== END EMAIL ===");
+      return true;
+    }
     
-    return true;
   } catch (error) {
     console.error("Email notification failed:", error);
     return false;
