@@ -22,17 +22,25 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Debug logging
+    console.log('EmailJS Environment Variables:');
+    console.log('SERVICE_ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log('TEMPLATE_ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log('PUBLIC_KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
     const formDataToSend = {
       name: formData.name,
       email: formData.email,
       message: formData.message,
     };
 
+    // Initialize EmailJS with the public key first
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      formDataToSend,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      formDataToSend
     )
     .then((result) => {
       console.log("Email successfully sent!", result.text);
