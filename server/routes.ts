@@ -25,20 +25,33 @@ const createTransporter = () => {
 };
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  console.log("Registering routes...");
+  console.log("=== REGISTERING ROUTES ===");
   console.log("NODE_ENV:", process.env.NODE_ENV);
+  console.log("Current time:", new Date().toISOString());
   
   // Test route to verify routes are working
   app.get("/api/health", (req, res) => {
     console.log("Health check endpoint hit");
-    res.json({ status: "ok", timestamp: new Date().toISOString() });
+    res.json({ 
+      status: "ok", 
+      timestamp: new Date().toISOString(),
+      environment: process.env.NODE_ENV,
+      routes: "API routes are working"
+    });
   });
   
   // Debug middleware to log all API requests
   app.use('/api/*', (req, res, next) => {
-    console.log(`API Request: ${req.method} ${req.originalUrl}`);
-    console.log('Headers:', req.headers);
+    console.log(`=== API REQUEST ===`);
+    console.log(`${req.method} ${req.originalUrl}`);
+    console.log('Content-Type:', req.headers['content-type']);
     console.log('Body:', req.body);
+    next();
+  });
+  
+  // Add a catch-all for API routes that don't exist
+  app.use('/api/*', (req, res, next) => {
+    console.log(`API route not found: ${req.method} ${req.originalUrl}`);
     next();
   });
   
