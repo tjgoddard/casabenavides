@@ -39,6 +39,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
       routes: "API routes are working"
     });
   });
+
+  // Configuration endpoint for frontend
+  app.get("/api/config", (req, res) => {
+    res.json({
+      emailjs: {
+        serviceId: process.env.VITE_EMAILJS_SERVICE_ID,
+        templateId: process.env.VITE_EMAILJS_TEMPLATE_ID,
+        publicKey: process.env.VITE_EMAILJS_PUBLIC_KEY,
+      }
+    });
+  });
   
   // Debug middleware to log all API requests
   app.use('/api/*', (req, res, next) => {

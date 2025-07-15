@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MapPin, Phone, Mail, Check, Calendar, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,39 +16,49 @@ export default function ContactSection() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailConfig, setEmailConfig] = useState(null);
   const { toast } = useToast();
+
+  // Fetch email configuration from backend
+  useEffect(() => {
+    fetch('/api/config')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Email config loaded:', data.emailjs);
+        setEmailConfig(data.emailjs);
+      })
+      .catch(error => {
+        console.error('Failed to load email config:', error);
+      });
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Use environment variables from Replit Secrets
-    console.log('EmailJS Environment Check:');
-    console.log('SERVICE_ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log('TEMPLATE_ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-    console.log('PUBLIC_KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-    
-    // Check if environment variables are available
-    if (!import.meta.env.VITE_EMAILJS_SERVICE_ID || !import.meta.env.VITE_EMAILJS_TEMPLATE_ID || !import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
-      console.error('Missing EmailJS environment variables!');
+    // Check if email configuration is loaded
+    if (!emailConfig) {
+      console.error('Email configuration not loaded!');
       toast({
         title: "Configuration Error",
-        description: "EmailJS is not properly configured. Please check environment variables.",
+        description: "Email configuration is not available. Please try again.",
         variant: "destructive",
       });
       setIsSubmitting(false);
       return;
     }
 
+    console.log('Using email config:', emailConfig);
+
     emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      emailConfig.serviceId,
+      emailConfig.templateId,
       {
         name: formData.name,
         email: formData.email,
         message: formData.message,
       },
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      emailConfig.publicKey
     )
     .then((result) => {
       console.log("Email successfully sent!", result.text);
