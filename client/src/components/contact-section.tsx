@@ -21,14 +21,24 @@ export default function ContactSection() {
   const contactMutation = useMutation({
     mutationFn: (data: typeof formData) => apiRequest("POST", "/api/contact", data),
     onSuccess: async (response) => {
-      const result = await response.json();
-      toast({
-        title: "Message Sent!",
-        description: result.message,
-      });
-      setFormData({ name: '', email: '', message: '' });
+      try {
+        const result = await response.json();
+        toast({
+          title: "Message Sent!",
+          description: result.message || "Thank you for your message! We will get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } catch (parseError) {
+        console.error("Error parsing response:", parseError);
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message! We will get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      }
     },
     onError: (error) => {
+      console.error("Contact form error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
@@ -39,6 +49,7 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Submitting contact form:", formData);
     contactMutation.mutate(formData);
   };
 
