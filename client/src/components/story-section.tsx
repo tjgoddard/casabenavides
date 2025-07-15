@@ -58,9 +58,19 @@ export default function StorySection() {
         <div className="mt-16 text-center">
           <div className="bg-white p-8 rounded-xl shadow-sm max-w-3xl mx-auto">
             <h3 className="text-xl font-semibold mb-4 text-gray-900">Continuing the Legacy</h3>
-            <p className="text-gray-900 text-sm leading-relaxed">
+            <p className="text-gray-900 text-sm leading-relaxed mb-8">
               Barbara McCarthy passed in June of 2016. Tom and a dedicated staff continue with the daily management of The Casa Benavides, preserving the warmth and hospitality that has made this inn a beloved destination for over three decades.
             </p>
+            <div className="mt-8">
+              <a 
+                href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#0682b3] text-white px-8 py-3 rounded-md luxury-body font-semibold hover:bg-[#0682b3]/90 smooth-transition shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                Check Availability
+              </a>
+            </div>
           </div>
         </div>
       </div>
