@@ -17,7 +17,7 @@ const validateContactData = (data) => {
   return errors;
 };
 
-// Email sending using Formspree (free, reliable email service)
+// Email sending using Resend API (verified domain email service)
 const sendEmailNotification = async (env, submission) => {
   try {
     console.log("=== EMAIL NOTIFICATION ===");

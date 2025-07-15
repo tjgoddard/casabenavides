@@ -24,7 +24,7 @@ export default function ContactSection() {
     try {
       console.log('Submitting contact form:', formData);
       
-      // Send to backend API instead of EmailJS
+      // Send to backend API with Resend email service
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
