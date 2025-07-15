@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
+import { trackEvent } from "@/lib/analytics";
 import heroImage1 from "@assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
 import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
 import heroImage3 from "@assets/IMG_4446_1752533547603.jpg";
@@ -73,6 +74,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
+                onClick={() => trackEvent('click', 'reservation', 'hero_stay_button')}
               >
                 STAY
               </a>

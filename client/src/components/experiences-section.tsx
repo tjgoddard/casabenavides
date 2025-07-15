@@ -1,3 +1,5 @@
+import { trackEvent } from '@/lib/analytics';
+
 export default function ExperiencesSection() {
   const experiences = [
     {
@@ -77,6 +79,7 @@ export default function ExperiencesSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-casa-blue px-12 py-4 rounded-md luxury-body font-semibold hover:bg-white/90 smooth-transition shadow-lg hover:shadow-xl transform hover:scale-105"
+              onClick={() => trackEvent('click', 'reservation', 'experiences_book_adventure')}
             >
               Book Your Taos Adventure
             </a>
