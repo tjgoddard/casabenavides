@@ -72,7 +72,7 @@ export default function Footer() {
               </p>
               <p>
                 <a href="mailto:info@casabenavides.com" className="hover:text-white transition-colors duration-200">
-                  Info@CasaBenavides.com
+                  info@casabenavides.com
                 </a>
               </p>
             </div>

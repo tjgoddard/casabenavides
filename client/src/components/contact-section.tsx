@@ -104,7 +104,7 @@ export default function ContactSection() {
                 <div>
                   <h3 className="luxury-subheading font-semibold text-casa-navy">Email</h3>
                   <a href="mailto:info@casabenavides.com" className="text-casa-blue hover:text-casa-blue-light">
-                    Info@CasaBenavides.com
+                    info@casabenavides.com
                   </a>
                 </div>
               </div>
