@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import exteriorImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -69,7 +70,7 @@ export default function ContactSection() {
           <div>
             <div className="mb-8">
               <img 
-                src="/attached_assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg" 
+                src={exteriorImage} 
                 alt="Casa Benavides Inn exterior" 
                 className="w-full h-64 object-cover rounded-xl shadow-lg"
               />
