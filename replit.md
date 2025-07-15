@@ -140,6 +140,11 @@ Changelog:
       - Optimized hero image loading with preload hint and priority attributes for better LCP
       - Enhanced Google Maps iframe with lazy loading (already implemented)
       - Improved image loading priorities (high for first hero image, low for carousel images)
+    - USABILITY IMPROVEMENTS: Fixed layout shifts, accessibility issues, and mobile zoom restrictions
+      - Removed maximum-scale=1 from viewport meta tag to allow mobile zoom (critical accessibility fix)
+      - Added aspect ratios to hero images and navigation logo to prevent layout shifts
+      - Fixed Facebook link accessibility by adding aria-label and aria-hidden attributes
+      - Improved color contrast for casa-blue-accent text on blue background for better readability
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 

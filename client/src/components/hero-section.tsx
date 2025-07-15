@@ -58,7 +58,8 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             } ${index === 0 ? 'object-cover object-center md:object-center' : 'object-cover object-center'}`}
             style={{
-              objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : index === 3 ? 'center center' : 'center center'
+              objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : index === 3 ? 'center center' : 'center center',
+              aspectRatio: '16/9'
             }}
             fetchpriority={index === 0 ? 'high' : 'low'}
           />

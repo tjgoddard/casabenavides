@@ -29,6 +29,7 @@ export default function Navigation() {
               className={`hover:opacity-80 transition-all duration-300 ${
                 isScrolled ? 'h-16 w-auto' : 'h-32 w-auto'
               }`}
+              style={{ aspectRatio: '1/1' }}
             />
           </a>
           {isScrolled && (
