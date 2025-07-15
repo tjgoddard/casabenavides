@@ -65,6 +65,7 @@ export default function BreakfastSection() {
               alt="Delicious breakfast spread at Casa Benavides" 
               className="w-full h-72 object-cover rounded-xl shadow-lg"
               style={{ objectPosition: 'center 65%' }}
+              loading="lazy"
             />
           </div>
           <div>
@@ -72,6 +73,7 @@ export default function BreakfastSection() {
               src={frenchToastImg} 
               alt="Gourmet French toast with fresh berries and banana" 
               className="w-full h-72 object-cover rounded-xl shadow-lg"
+              loading="lazy"
             />
           </div>
         </div>

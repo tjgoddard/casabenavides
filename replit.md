@@ -135,6 +135,11 @@ Changelog:
     - Email system fully functional in both development and production environments
     - Removed all EmailJS dependencies and cleaned up codebase for production deployment
     - Navigation improvements: HOME button now only appears when scrolling (cleaner UX)
+    - PERFORMANCE OPTIMIZATIONS: Applied safe performance improvements for better user experience
+      - Added lazy loading to all images below the fold (breakfast, about, contact sections)
+      - Optimized hero image loading with preload hint and priority attributes for better LCP
+      - Enhanced Google Maps iframe with lazy loading (already implemented)
+      - Improved image loading priorities (high for first hero image, low for carousel images)
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 

@@ -93,6 +93,7 @@ export default function ContactSection() {
                 src={exteriorImage} 
                 alt="Casa Benavides Inn exterior" 
                 className="w-full h-64 object-cover rounded-xl shadow-lg"
+                loading="lazy"
               />
             </div>
             

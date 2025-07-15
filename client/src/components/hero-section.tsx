@@ -60,6 +60,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
             style={{
               objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : index === 3 ? 'center center' : 'center center'
             }}
+            fetchpriority={index === 0 ? 'high' : 'low'}
           />
         ))}
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
