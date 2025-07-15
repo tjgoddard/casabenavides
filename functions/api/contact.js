@@ -29,11 +29,21 @@ const sendEmailNotification = async (env, submission) => {
     console.log("Submitted:", submission.createdAt);
     
     // Send email using EmailJS API
-    if (env.EMAILJS_SERVICE_ID && env.EMAILJS_TEMPLATE_ID && env.EMAILJS_PUBLIC_KEY) {
+    // Check for environment variables with VITE_ prefix (as shown in screenshot)
+    const serviceId = env.VITE_EMAILJS_SERVICE_ID || env.EMAILJS_SERVICE_ID;
+    const templateId = env.VITE_EMAILJS_TEMPLATE_ID || env.EMAILJS_TEMPLATE_ID;
+    const publicKey = env.VITE_EMAILJS_PUBLIC_KEY || env.EMAILJS_PUBLIC_KEY;
+    
+    console.log('EmailJS Config Check:');
+    console.log('Service ID:', serviceId);
+    console.log('Template ID:', templateId);
+    console.log('Public Key:', publicKey);
+    
+    if (serviceId && templateId && publicKey) {
       const emailjsData = {
-        service_id: env.EMAILJS_SERVICE_ID,
-        template_id: env.EMAILJS_TEMPLATE_ID,
-        user_id: env.EMAILJS_PUBLIC_KEY,
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: publicKey,
         template_params: {
           name: submission.name,
           email: submission.email,
@@ -43,6 +53,8 @@ const sendEmailNotification = async (env, submission) => {
       };
       
       console.log("Sending email via EmailJS...");
+      
+      console.log("Sending to EmailJS API with data:", JSON.stringify(emailjsData, null, 2));
       
       const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
@@ -56,11 +68,14 @@ const sendEmailNotification = async (env, submission) => {
         console.log("Email sent successfully via EmailJS");
         return true;
       } else {
+        const errorText = await response.text();
         console.error("EmailJS API error:", response.status, response.statusText);
+        console.error("EmailJS error response:", errorText);
         return false;
       }
     } else {
       console.warn("EmailJS configuration missing - email will not be sent");
+      console.log("Available env vars:", Object.keys(env));
       console.log("=== END EMAIL ===");
       return true;
     }
