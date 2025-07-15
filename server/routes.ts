@@ -13,7 +13,7 @@ const createTransporter = () => {
     return null;
   }
   
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT || "587"),
     secure: false,
@@ -28,8 +28,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission
   app.post("/api/contact", async (req, res) => {
     try {
+      console.log("Contact form request received:", req.body);
       const validatedData = insertContactSubmissionSchema.parse(req.body);
+      console.log("Validation successful:", validatedData);
       const submission = await storage.createContactSubmission(validatedData);
+      console.log("Submission created:", submission);
       
       // Send email notification
       const transporter = createTransporter();
@@ -60,6 +63,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: true 
       });
     } catch (error) {
+      console.error("Contact form error:", error);
       if (error instanceof z.ZodError) {
         const validationError = fromZodError(error);
         res.status(400).json({ 
