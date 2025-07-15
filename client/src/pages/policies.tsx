@@ -20,7 +20,7 @@ export default function Policies() {
                 <p>ROOM RATES are published on our "Rates & Reservations" page. Room Rates are guaranteed through the duration of your reservation. Applicable New Mexico Gross Receipts tax and Lodgers tax are added at check-out.</p>
                 <p><strong>ROOM RATES ARE BASED ON DOUBLE OCCUPANCY - TWO GUESTS</strong></p>
                 <p><strong>$20.00 ADDITIONAL FEE CHARGED PER GUEST PER NIGHT OVER TWO GUESTS</strong></p>
-                <p>Room rates & additional guest fees include the Casa Benavides gourmet breakfast each morning in our Guest Dining Room between the hours of 7:00 AM and 9:30 AM Mountain time. Entering the correct number of guests when completing your online reservation is required. You MUST call to reserve a room more than 7 nights.</p>
+                <p>Room rates & additional guest fees include the Casa Benavides breakfast each morning in our Guest Dining Room between the hours of 7:00 AM and 9:30 AM Mountain time. Entering the correct number of guests when completing your online reservation is required. You MUST call to reserve a room more than 7 nights.</p>
               </div>
             </section>
 

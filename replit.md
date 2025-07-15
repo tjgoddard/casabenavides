@@ -126,6 +126,8 @@ Changelog:
     - Fixed deployment failures: Removed nodemailer dependency and invalid wrangler.toml
     - New files: functions/api/contact.js, functions/api/health.js, _headers
     - Ready for deployment: Contact form logs submissions to Cloudflare Functions logs
+  - Navigation improvements: Added HOME button next to logo with matching hero section styling
+  - Content updates: Changed all "Gourmet Breakfast" references to "Breakfast Included" throughout site
 ```
 
 ## User Preferences

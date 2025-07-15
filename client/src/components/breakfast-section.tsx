@@ -34,7 +34,7 @@ export default function BreakfastSection() {
           
           <div>
             <h3 className="luxury-subheading text-2xl md:text-3xl font-light mb-8 text-casa-navy tracking-wide">
-              Casa Benavides offers a delicious variety of freshly prepared and served gourmet entrees including:
+              Casa Benavides offers a delicious variety of freshly prepared and served breakfast entrees including:
             </h3>
             <div className="space-y-4">
               {breakfastItems.map((item, index) => (

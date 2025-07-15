@@ -35,7 +35,7 @@ export default function GroupReservations() {
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Room Rates</h2>
               <div className="space-y-4 luxury-body text-gray-900">
-                <p>Group Reservations room prices are based upon double occupancy – Two (2) guests per room per night. Our room fees include our gourmet breakfast for each guest in our dining room, between the hours of 7:00 AM and 9:30 AM every morning. Any number of guests exceeding the double occupancy shall be charged an additional rate of $20 per person per night. If the number of room guests exceed the number of guests designated at the time the original reservation was made, then the additional charges will be collected at check-in.</p>
+                <p>Group Reservations room prices are based upon double occupancy – Two (2) guests per room per night. Our room fees include our breakfast for each guest in our dining room, between the hours of 7:00 AM and 9:30 AM every morning. Any number of guests exceeding the double occupancy shall be charged an additional rate of $20 per person per night. If the number of room guests exceed the number of guests designated at the time the original reservation was made, then the additional charges will be collected at check-in.</p>
               </div>
             </section>
 

@@ -26,7 +26,7 @@ export default function AboutSection() {
               Nestled in the heart of historic Taos, Casa Benavides Inn offers a peaceful retreat surrounded by classic adobe architecture and centuries-old cottonwood trees.
             </p>
             
-            <p className="luxury-body text-sm text-gray-900 leading-relaxed">Our award-winning bed and breakfast is known for its gourmet breakfasts - thoughtfully crafted with local and international flavors - and its warm, welcoming atmosphere rooted in Southwest charm. Guests enjoy the perfect blend of comfort, culture, and cuisine in an authentic Taos setting.</p>
+            <p className="luxury-body text-sm text-gray-900 leading-relaxed">Our award-winning bed and breakfast is known for its breakfast included - thoughtfully crafted with local and international flavors - and its warm, welcoming atmosphere rooted in Southwest charm. Guests enjoy the perfect blend of comfort, culture, and cuisine in an authentic Taos setting.</p>
             
             <p className="luxury-body text-sm text-gray-900 leading-relaxed">Casa Benavides has proudly been named one of the top bed and breakfasts in Taos for multiple years. With 36 individually styled rooms and suites, each space showcases artistic details, traditional New Mexican furnishings, and one-of-a-kind character - offering a truly unique Taos lodging experience.</p>
             

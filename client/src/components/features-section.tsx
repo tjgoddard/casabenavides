@@ -9,7 +9,7 @@ export default function FeaturesSection() {
     },
     {
       icon: Utensils,
-      title: "Gourmet Breakfast",
+      title: "Breakfast Included",
       description: "Full breakfast service daily from 7:00am to 9:30am, included in your stay"
     },
     {
