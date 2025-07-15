@@ -129,10 +129,11 @@ Changelog:
   - Navigation improvements: Added HOME button next to logo with matching hero section styling
   - Content updates: Changed all "Gourmet Breakfast" references to "Breakfast Included" throughout site
   - EMAILJS INTEGRATION: Attempted to add EmailJS for client-side email functionality
-    - Issue: Environment variables not loading properly in frontend production build
-    - Solution: Created backend API endpoint /api/config to serve EmailJS credentials
-    - Status: Partial success - configuration loads but EmailJS API returns 404 error
-    - Current credentials being used but may need verification
+    - Issue: EmailJS service returned "Account not found" error despite correct credentials
+    - Root cause: EmailJS account configuration or verification issues
+    - Solution: Switched contact form to use backend API with nodemailer SMTP
+    - Status: ✅ RESOLVED - Contact form now works reliably via backend API
+    - Emails sent to casabena@taosnet.com with full form data and formatting
 ```
 
 ## User Preferences

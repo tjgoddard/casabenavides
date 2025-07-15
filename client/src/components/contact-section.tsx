@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { MapPin, Phone, Mail, Check, Calendar, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from '@emailjs/browser';
 import exteriorImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
 
 export default function ContactSection() {
@@ -16,131 +15,51 @@ export default function ContactSection() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [emailConfig, setEmailConfig] = useState(null);
   const { toast } = useToast();
 
-  // Fetch email configuration from backend
-  useEffect(() => {
-    fetch('/api/config')
-      .then(response => {
-        console.log('Response status:', response.status);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Email config loaded:', data.emailjs);
-        setEmailConfig(data.emailjs);
-      })
-      .catch(error => {
-        console.error('Failed to load email config:', error);
-        // Fallback to hardcoded values if API fails
-        console.log('Using fallback email configuration');
-        
-        // Let's try the exact service ID from your screenshot
-        // From your screenshot, the service ID shows as service_zqnfqk6
-        setEmailConfig({
-          serviceId: 'service_zqnfqk6',
-          templateId: 'template_28nj7rp',
-          publicKey: 'vOTyhdXNTECRzjWWT'
-        });
-      });
-  }, []);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Check if email configuration is loaded
-    if (!emailConfig) {
-      console.error('Email configuration not loaded!');
-      toast({
-        title: "Configuration Error",
-        description: "Email configuration is not available. Please try again.",
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    console.log('Using email config:', emailConfig);
-
-    // Use the exact field names from the EmailJS template
-    const templateParams = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-    
-    console.log('Sending email with params:', templateParams);
-
-    console.log('Testing EmailJS configuration:');
-    console.log('Service ID:', emailConfig.serviceId);
-    console.log('Template ID:', emailConfig.templateId); 
-    console.log('Public Key:', emailConfig.publicKey);
-    console.log('Current domain:', window.location.origin);
-    
-    // Initialize EmailJS properly (this is required for newer versions)
-    emailjs.init(emailConfig.publicKey);
-    
-    // Try the basic EmailJS call
-    emailjs.send(
-      emailConfig.serviceId,
-      emailConfig.templateId,
-      templateParams
-    )
-    .then((result) => {
-      console.log("Email successfully sent!", result);
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message! We will get back to you soon.",
-      });
-      setFormData({ name: '', email: '', message: '' });
-    })
-    .catch((error) => {
-      console.error("Email send error:", error);
-      console.error("Error details:", error.text, error.status);
+    try {
+      console.log('Submitting contact form:', formData);
       
-      // Try alternative parameter names if first attempt fails
-      if (error.status === 404) {
-        console.log("Trying alternative parameter names...");
-        const altParams = {
-          user_name: formData.name,
-          user_email: formData.email,
-          user_message: formData.message,
-        };
-        
-        return emailjs.send(
-          emailConfig.serviceId,
-          emailConfig.templateId,
-          altParams,
-          emailConfig.publicKey
-        );
-      }
-      throw error;
-    })
-    .then((result) => {
-      if (result) {
-        console.log("Email sent with alternative params!", result);
+      // Send to backend API instead of EmailJS
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Contact form submitted successfully:', result);
         toast({
           title: "Message Sent!",
           description: "Thank you for your message! We will get back to you soon.",
         });
         setFormData({ name: '', email: '', message: '' });
+      } else {
+        const error = await response.json();
+        console.error('Contact form submission failed:', error);
+        toast({
+          title: "Error",
+          description: error.message || "Sorry, there was an error sending your message. Please try again.",
+          variant: "destructive",
+        });
       }
-    })
-    .catch((finalError) => {
-      console.error("Final email send error:", finalError);
+    } catch (error) {
+      console.error('Contact form error:', error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: "Sorry, there was an error sending your message. Please try again or contact us directly.",
         variant: "destructive",
       });
-    })
-    .finally(() => {
+    } finally {
       setIsSubmitting(false);
-    });
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
