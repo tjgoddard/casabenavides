@@ -123,8 +123,9 @@ Changelog:
   - DEPLOYMENT ISSUE: Contact form works perfectly in development but fails in production
     - Root cause: Cloudflare Pages serves static files only, doesn't run Express server
     - Solution implemented: Created Cloudflare Functions for API routes
-    - New files: functions/api/contact.js, functions/api/health.js, wrangler.toml, _headers
-    - Ready for deployment: Contact form will work with Cloudflare Pages + Functions
+    - Fixed deployment failures: Removed nodemailer dependency and invalid wrangler.toml
+    - New files: functions/api/contact.js, functions/api/health.js, _headers
+    - Ready for deployment: Contact form logs submissions to Cloudflare Functions logs
 ```
 
 ## User Preferences
