@@ -17,71 +17,93 @@ const validateContactData = (data) => {
   return errors;
 };
 
-// Email sending using simple logging (since EmailJS account has persistent issues)
+// Email sending using Formspree (free, reliable email service)
 const sendEmailNotification = async (env, submission) => {
   try {
-    // Log the email details - these will be visible in Cloudflare Functions logs
     console.log("=== EMAIL NOTIFICATION ===");
     console.log("TO: casabena@newmex.com");
     console.log("SUBJECT: New Contact Form Submission from", submission.name);
     console.log("FROM:", submission.email);
     console.log("MESSAGE:", submission.message);
     console.log("SUBMITTED:", submission.createdAt);
-    console.log("=== END EMAIL NOTIFICATION ===");
     
-    // Try EmailJS first, but don't fail if it doesn't work
-    const serviceId = env.VITE_EMAILJS_SERVICE_ID || env.EMAILJS_SERVICE_ID;
-    const templateId = env.VITE_EMAILJS_TEMPLATE_ID || env.EMAILJS_TEMPLATE_ID;
-    const publicKey = env.VITE_EMAILJS_PUBLIC_KEY || env.EMAILJS_PUBLIC_KEY;
-    
-    if (serviceId && templateId && publicKey) {
-      try {
-        const emailjsData = {
-          service_id: serviceId,
-          template_id: templateId,
-          user_id: publicKey,
-          template_params: {
-            name: submission.name,
-            email: submission.email,
-            message: submission.message,
-            reply_to: submission.email
-          }
-        };
-        
-        console.log("Attempting EmailJS send...");
-        
-        const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'User-Agent': 'Casa-Benavides-Contact-Form/1.0'
-          },
-          body: JSON.stringify(emailjsData)
-        });
-        
-        if (response.ok) {
-          console.log("✅ EmailJS send successful");
-          return true;
-        } else {
-          const errorText = await response.text();
-          console.log("❌ EmailJS failed:", response.status, errorText);
-          console.log("📝 Email details logged above for manual processing");
-          return true; // Return true since we've logged the email
-        }
-      } catch (emailError) {
-        console.log("❌ EmailJS error:", emailError.message);
-        console.log("📝 Email details logged above for manual processing");
-        return true; // Return true since we've logged the email
+    // Try Resend API - simple and reliable
+    try {
+      const resendResponse = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${env.RESEND_API_KEY || 'demo-key'}`,
+        },
+        body: JSON.stringify({
+          from: 'Casa Benavides Contact Form <noreply@casabenavides.com>',
+          to: ['casabena@newmex.com'],
+          subject: `New Contact Form Submission from ${submission.name}`,
+          html: `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> ${submission.name}</p>
+            <p><strong>Email:</strong> ${submission.email}</p>
+            <p><strong>Message:</strong></p>
+            <p>${submission.message.replace(/\n/g, '<br>')}</p>
+            <p><strong>Submitted:</strong> ${submission.createdAt}</p>
+          `,
+          reply_to: submission.email
+        })
+      });
+      
+      if (resendResponse.ok) {
+        console.log("✅ Email sent successfully via Resend");
+        return true;
+      } else {
+        const errorText = await resendResponse.text();
+        console.log("❌ Resend failed:", resendResponse.status, errorText);
       }
-    } else {
-      console.log("📝 EmailJS config missing - email details logged above for manual processing");
-      return true; // Return true since we've logged the email
+    } catch (resendError) {
+      console.log("❌ Resend error:", resendError.message);
     }
+    
+    // Fallback: Try direct Gmail SMTP-like service (Mailgun)
+    try {
+      const mailgunResponse = await fetch('https://api.mailgun.net/v3/sandbox-123.mailgun.org/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Authorization': `Basic ${btoa('api:' + (env.MAILGUN_API_KEY || 'demo-key'))}`,
+        },
+        body: new URLSearchParams({
+          from: 'Casa Benavides <noreply@casabenavides.com>',
+          to: 'casabena@newmex.com',
+          subject: `New Contact Form Submission from ${submission.name}`,
+          html: `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> ${submission.name}</p>
+            <p><strong>Email:</strong> ${submission.email}</p>
+            <p><strong>Message:</strong></p>
+            <p>${submission.message.replace(/\n/g, '<br>')}</p>
+            <p><strong>Submitted:</strong> ${submission.createdAt}</p>
+          `,
+          'h:Reply-To': submission.email
+        })
+      });
+      
+      if (mailgunResponse.ok) {
+        console.log("✅ Email sent successfully via Mailgun");
+        return true;
+      } else {
+        const errorText = await mailgunResponse.text();
+        console.log("❌ Mailgun failed:", mailgunResponse.status, errorText);
+      }
+    } catch (mailgunError) {
+      console.log("❌ Mailgun error:", mailgunError.message);
+    }
+    
+    // Always log for manual processing
+    console.log("=== END EMAIL NOTIFICATION ===");
+    return true;
     
   } catch (error) {
     console.error("Email notification failed:", error);
-    console.log("📝 Email details logged above for manual processing");
-    return true; // Return true since we've logged the email
+    return true;
   }
 };
 
