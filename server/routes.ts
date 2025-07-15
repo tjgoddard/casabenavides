@@ -44,9 +44,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/config", (req, res) => {
     res.json({
       emailjs: {
-        serviceId: process.env.VITE_EMAILJS_SERVICE_ID,
-        templateId: process.env.VITE_EMAILJS_TEMPLATE_ID,
-        publicKey: process.env.VITE_EMAILJS_PUBLIC_KEY,
+        serviceId: process.env.VITE_EMAILJS_SERVICE_ID || 'service_zqnfqk6',
+        templateId: process.env.VITE_EMAILJS_TEMPLATE_ID || 'template_28nj7rp',
+        publicKey: process.env.VITE_EMAILJS_PUBLIC_KEY || 'vOTyhdXNTECRzjWWT',
       }
     });
   });

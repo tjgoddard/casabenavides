@@ -40,7 +40,7 @@ export default function ContactSection() {
         setEmailConfig({
           serviceId: 'service_zqnfqk6',
           templateId: 'template_28nj7rp',
-          publicKey: 'ZrGgq__GXcjuv65V7'
+          publicKey: 'vOTyhdXNTECRzjWWT'
         });
       });
   }, []);
