@@ -81,11 +81,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         try {
           console.log("Attempting to send email...");
           console.log("From:", process.env.EMAIL_FROM || process.env.SMTP_USER);
-          console.log("To: casabena@taosnet.com");
+          console.log("To: casabena@newmex.com");
           
           await transporter.sendMail({
             from: process.env.EMAIL_FROM || process.env.SMTP_USER,
-            to: "casabena@taosnet.com",
+            to: "casabena@newmex.com",
             subject: `New Contact Form Submission from ${submission.name}`,
             html: `
               <h3>New Contact Form Submission</h3>

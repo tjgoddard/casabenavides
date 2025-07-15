@@ -22,7 +22,7 @@ const sendEmailNotification = async (env, submission) => {
   try {
     // Log the email details
     console.log("=== EMAIL NOTIFICATION ===");
-    console.log("To: casabena@taosnet.com");
+    console.log("To: casabena@newmex.com");
     console.log("Subject: New Contact Form Submission from", submission.name);
     console.log("From:", submission.email);
     console.log("Message:", submission.message);
@@ -35,10 +35,9 @@ const sendEmailNotification = async (env, submission) => {
         template_id: env.EMAILJS_TEMPLATE_ID,
         user_id: env.EMAILJS_PUBLIC_KEY,
         template_params: {
-          from_name: submission.name,
-          from_email: submission.email,
+          name: submission.name,
+          email: submission.email,
           message: submission.message,
-          to_email: "casabena@taosnet.com",
           reply_to: submission.email
         }
       };

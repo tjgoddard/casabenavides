@@ -133,7 +133,8 @@ Changelog:
     - Root cause: EmailJS account configuration or verification issues
     - Solution: Switched contact form to use backend API with nodemailer SMTP
     - Status: ✅ RESOLVED - Contact form now works reliably via backend API
-    - Emails sent to casabena@taosnet.com with full form data and formatting
+    - Updated email recipient to casabena@newmex.com (matching EmailJS template configuration)
+    - Emails sent with full form data and formatting to correct address
 ```
 
 ## User Preferences
