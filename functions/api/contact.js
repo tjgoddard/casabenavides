@@ -40,6 +40,7 @@ const sendEmailNotification = async (env, submission) => {
     console.log('Public Key:', publicKey);
     console.log('Request origin:', context.request.headers.get('origin'));
     console.log('Request host:', context.request.headers.get('host'));
+    console.log('User Agent:', context.request.headers.get('user-agent'));
     
     if (serviceId && templateId && publicKey) {
       const emailjsData = {
@@ -62,6 +63,7 @@ const sendEmailNotification = async (env, submission) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'User-Agent': 'Casa-Benavides-Contact-Form/1.0'
         },
         body: JSON.stringify(emailjsData)
       });
