@@ -128,6 +128,11 @@ Changelog:
     - Ready for deployment: Contact form logs submissions to Cloudflare Functions logs
   - Navigation improvements: Added HOME button next to logo with matching hero section styling
   - Content updates: Changed all "Gourmet Breakfast" references to "Breakfast Included" throughout site
+  - EMAILJS INTEGRATION: Attempted to add EmailJS for client-side email functionality
+    - Issue: Environment variables not loading properly in frontend production build
+    - Solution: Created backend API endpoint /api/config to serve EmailJS credentials
+    - Status: Partial success - configuration loads but EmailJS API returns 404 error
+    - Current credentials being used but may need verification
 ```
 
 ## User Preferences
