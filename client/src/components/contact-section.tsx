@@ -22,13 +22,26 @@ export default function ContactSection() {
   // Fetch email configuration from backend
   useEffect(() => {
     fetch('/api/config')
-      .then(response => response.json())
+      .then(response => {
+        console.log('Response status:', response.status);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
         console.log('Email config loaded:', data.emailjs);
         setEmailConfig(data.emailjs);
       })
       .catch(error => {
         console.error('Failed to load email config:', error);
+        // Fallback to hardcoded values if API fails
+        console.log('Using fallback email configuration');
+        setEmailConfig({
+          serviceId: 'service_zqnfqk6',
+          templateId: 'template_28nj7rp',
+          publicKey: 'ZrGgq__GXcjuv65V7'
+        });
       });
   }, []);
 
