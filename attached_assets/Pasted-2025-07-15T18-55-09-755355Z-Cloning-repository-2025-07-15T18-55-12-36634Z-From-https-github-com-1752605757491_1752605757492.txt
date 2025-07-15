@@ -1,0 +1,1143 @@
+2025-07-15T18:55:09.755355Z	Cloning repository...
+2025-07-15T18:55:12.36634Z	From https://github.com/tjgoddard/casabenavides
+2025-07-15T18:55:12.366915Z	 * branch            f34e8b6204fbbebef7f3a5a92bff3ffdb49a68b9 -> FETCH_HEAD
+2025-07-15T18:55:12.367111Z	
+2025-07-15T18:55:12.700072Z	HEAD is now at f34e8b6 Enable contact form functionality on the live Casa Benavides website
+2025-07-15T18:55:12.700608Z	
+2025-07-15T18:55:12.781877Z	
+2025-07-15T18:55:12.782383Z	Using v2 root directory strategy
+2025-07-15T18:55:12.804447Z	Success: Finished cloning repository files
+2025-07-15T18:55:14.523801Z	Checking for configuration in a Wrangler configuration file (BETA)
+2025-07-15T18:55:14.524506Z	
+2025-07-15T18:55:14.526199Z	Found wrangler.toml file. Reading build configuration...
+2025-07-15T18:55:15.62866Z	A wrangler.toml file was found but it does not appear to be valid. Did you mean to use wrangler.toml to configure Pages? If so, then make sure the file is valid and contains the `pages_build_output_dir` property. Skipping file and continuing.
+2025-07-15T18:55:15.697517Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2025-07-15T18:55:15.698148Z	Installing project dependencies: npm clean-install --progress=false
+2025-07-15T18:55:19.95697Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2025-07-15T18:55:19.974751Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2025-07-15T18:55:24.876112Z	
+2025-07-15T18:55:24.876761Z	added 484 packages, and audited 485 packages in 9s
+2025-07-15T18:55:24.876902Z	
+2025-07-15T18:55:24.876978Z	65 packages are looking for funding
+2025-07-15T18:55:24.877042Z	  run `npm fund` for details
+2025-07-15T18:55:24.902597Z	
+2025-07-15T18:55:24.902948Z	9 vulnerabilities (1 low, 8 moderate)
+2025-07-15T18:55:24.903235Z	
+2025-07-15T18:55:24.90337Z	To address issues that do not require attention, run:
+2025-07-15T18:55:24.903517Z	  npm audit fix
+2025-07-15T18:55:24.903728Z	
+2025-07-15T18:55:24.903855Z	To address all issues (including breaking changes), run:
+2025-07-15T18:55:24.904006Z	  npm audit fix --force
+2025-07-15T18:55:24.904157Z	
+2025-07-15T18:55:24.904623Z	Run `npm audit` for details.
+2025-07-15T18:55:24.933484Z	Executing user command: npm run build
+2025-07-15T18:55:25.3255Z	
+2025-07-15T18:55:25.325818Z	> rest-express@1.0.0 build
+2025-07-15T18:55:25.325992Z	> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2025-07-15T18:55:25.326203Z	
+2025-07-15T18:55:25.591294Z	[36mvite v5.4.19 [32mbuilding for production...[36m[39m
+2025-07-15T18:55:25.653256Z	transforming...
+2025-07-15T18:55:26.052349Z	Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+2025-07-15T18:55:26.052669Z	  npx update-browserslist-db@latest
+2025-07-15T18:55:26.052942Z	  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2025-07-15T18:55:28.800957Z	[32m✓[39m 1696 modules transformed.
+2025-07-15T18:55:29.004822Z	rendering chunks...
+2025-07-15T18:55:29.027635Z	computing gzip size...
+2025-07-15T18:55:29.038622Z	[2m../dist/public/[22m[32mindex.html                                                                              [39m[1m[2m     2.62 kB[22m[1m[22m[2m │ gzip:  0.98 kB[22m
+2025-07-15T18:55:29.039039Z	[2m../dist/public/[22m[2massets/[22m[32m94178027_1__1752361258523-aYmhrcH8.jpeg                                          [39m[1m[2m   142.95 kB[22m[1m[22m
+2025-07-15T18:55:29.039219Z	[2m../dist/public/[22m[2massets/[22m[32mcasa-benavides-your-front-Photoroom-removebg-preview_1752360228306-C9Y8Sc1O.png  [39m[1m[2m   149.93 kB[22m[1m[22m
+2025-07-15T18:55:29.039357Z	[2m../dist/public/[22m[2massets/[22m[32mExterior-Front-Homepage-Alt-1_1751842464150-CbyHyNot.jpeg                        [39m[1m[2m   160.86 kB[22m[1m[22m
+2025-07-15T18:55:29.039488Z	[2m../dist/public/[22m[2massets/[22m[32munnamed (2)_1752361773590-Bn_xKkF9.webp                                          [39m[1m[2m   175.94 kB[22m[1m[22m
+2025-07-15T18:55:29.039646Z	[2m../dist/public/[22m[2massets/[22m[32mKitchen-1072-2a-cropped-web (1)_1752361224342-DpPjESQx.jpeg                      [39m[1m[2m   205.47 kB[22m[1m[22m
+2025-07-15T18:55:29.039799Z	[2m../dist/public/[22m[2massets/[22m[32mIMG_4448 edit no sky_(2)_1752537525049-4aElYYZ7.jpg                              [39m[1m[2m   484.47 kB[22m[1m[22m
+2025-07-15T18:55:29.039927Z	[2m../dist/public/[22m[2massets/[22m[32mIMG_3403-BnbVmkWq.png                                                            [39m[1m[2m 1,889.56 kB[22m[1m[22m
+2025-07-15T18:55:29.040075Z	[2m../dist/public/[22m[2massets/[22m[32miStock-1458935906_1752360314185-Bxc3l4pj.jpg                                     [39m[1m[2m 1,927.81 kB[22m[1m[22m
+2025-07-15T18:55:29.040171Z	[2m../dist/public/[22m[2massets/[22m[32mIMG_4446_1752533547603-BbqnMvDM.jpg                                              [39m[1m[2m 7,436.87 kB[22m[1m[22m
+2025-07-15T18:55:29.040263Z	[2m../dist/public/[22m[2massets/[22m[32mIMG_4445_1752533547607-CngD4FXO.jpg                                              [39m[1m[2m11,900.44 kB[22m[1m[22m
+2025-07-15T18:55:29.040356Z	[2m../dist/public/[22m[2massets/[22m[35mindex-i35nEbiM.css                                                               [39m[1m[2m    66.42 kB[22m[1m[22m[2m │ gzip: 11.89 kB[22m
+2025-07-15T18:55:29.040455Z	[2m../dist/public/[22m[2massets/[22m[36mindex-BH_DfFLw.js                                                                [39m[1m[2m   318.61 kB[22m[1m[22m[2m │ gzip: 99.73 kB[22m
+2025-07-15T18:55:29.040549Z	[32m✓ built in 3.42s[39m
+2025-07-15T18:55:29.085797Z	
+2025-07-15T18:55:29.086116Z	  dist/index.js  10.3kb
+2025-07-15T18:55:29.086269Z	
+2025-07-15T18:55:29.086406Z	⚡ Done in 9ms
+2025-07-15T18:55:29.106491Z	Finished
+2025-07-15T18:55:30.051526Z	Checking for configuration in a Wrangler configuration file (BETA)
+2025-07-15T18:55:30.052145Z	
+2025-07-15T18:55:30.052745Z	Found wrangler.toml file. Reading build configuration...
+2025-07-15T18:55:31.155369Z	A wrangler.toml file was found but it does not appear to be valid. Did you mean to use wrangler.toml to configure Pages? If so, then make sure the file is valid and contains the `pages_build_output_dir` property. Skipping file and continuing.
+2025-07-15T18:55:31.156352Z	Found Functions directory at /functions. Uploading.
+2025-07-15T18:55:31.162397Z	 ⛅️ wrangler 3.101.0
+2025-07-15T18:55:31.162598Z	-------------------
+2025-07-15T18:55:32.247992Z	[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 53 errors:[0m
+2025-07-15T18:55:32.248729Z	
+2025-07-15T18:55:32.248941Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.249263Z	  
+2025-07-15T18:55:32.249541Z	      ../node_modules/nodemailer/lib/base64/index.js:3:26:
+2025-07-15T18:55:32.249733Z	  [37m      3 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.24985Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.250107Z	  
+2025-07-15T18:55:32.250238Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.250551Z	  
+2025-07-15T18:55:32.250679Z	  
+2025-07-15T18:55:32.250868Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.250991Z	  
+2025-07-15T18:55:32.251139Z	      ../node_modules/nodemailer/lib/dkim/index.js:9:28:
+2025-07-15T18:55:32.251281Z	  [37m      9 │ const PassThrough = require([32m'stream'[37m).PassThrough;
+2025-07-15T18:55:32.251389Z	          ╵                             [32m~~~~~~~~[0m
+2025-07-15T18:55:32.251495Z	  
+2025-07-15T18:55:32.251633Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.251832Z	  
+2025-07-15T18:55:32.251934Z	  
+2025-07-15T18:55:32.252039Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "fs"[0m
+2025-07-15T18:55:32.252141Z	  
+2025-07-15T18:55:32.252244Z	      ../node_modules/nodemailer/lib/dkim/index.js:10:19:
+2025-07-15T18:55:32.252351Z	  [37m      10 │ const fs = require([32m'fs'[37m);
+2025-07-15T18:55:32.252458Z	           ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.252564Z	  
+2025-07-15T18:55:32.252676Z	    The package "fs" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.252768Z	  
+2025-07-15T18:55:32.25283Z	  
+2025-07-15T18:55:32.252887Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "path"[0m
+2025-07-15T18:55:32.252977Z	  
+2025-07-15T18:55:32.253081Z	      ../node_modules/nodemailer/lib/dkim/index.js:11:21:
+2025-07-15T18:55:32.253171Z	  [37m      11 │ const path = require([32m'path'[37m);
+2025-07-15T18:55:32.253274Z	           ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.253376Z	  
+2025-07-15T18:55:32.253475Z	    The package "path" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.25369Z	  
+2025-07-15T18:55:32.253802Z	  
+2025-07-15T18:55:32.25391Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.254021Z	  
+2025-07-15T18:55:32.254124Z	      ../node_modules/nodemailer/lib/dkim/index.js:12:23:
+2025-07-15T18:55:32.254218Z	  [37m      12 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.254317Z	           ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.254415Z	  
+2025-07-15T18:55:32.254508Z	    The package "crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.25466Z	  
+2025-07-15T18:55:32.254785Z	  
+2025-07-15T18:55:32.254864Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.254975Z	  
+2025-07-15T18:55:32.255185Z	      ../node_modules/nodemailer/lib/dkim/message-parser.js:3:26:
+2025-07-15T18:55:32.255267Z	  [37m      3 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.255411Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.255627Z	  
+2025-07-15T18:55:32.255714Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.25602Z	  
+2025-07-15T18:55:32.256132Z	  
+2025-07-15T18:55:32.256412Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.256495Z	  
+2025-07-15T18:55:32.256592Z	      ../node_modules/nodemailer/lib/dkim/relaxed-body.js:5:26:
+2025-07-15T18:55:32.256703Z	  [37m      5 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.256789Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.256852Z	  
+2025-07-15T18:55:32.256951Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.257053Z	  
+2025-07-15T18:55:32.257116Z	  
+2025-07-15T18:55:32.257176Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.25724Z	  
+2025-07-15T18:55:32.257326Z	      ../node_modules/nodemailer/lib/dkim/relaxed-body.js:6:23:
+2025-07-15T18:55:32.257423Z	  [37m      6 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.257532Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.257661Z	  
+2025-07-15T18:55:32.257767Z	    The package "crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.257875Z	  
+2025-07-15T18:55:32.257981Z	  
+2025-07-15T18:55:32.258088Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.25822Z	  
+2025-07-15T18:55:32.258316Z	      ../node_modules/nodemailer/lib/dkim/sign.js:5:23:
+2025-07-15T18:55:32.25841Z	  [37m      5 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.258526Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.258689Z	  
+2025-07-15T18:55:32.258842Z	    The package "crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.258971Z	  
+2025-07-15T18:55:32.259074Z	  
+2025-07-15T18:55:32.259177Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.259286Z	  
+2025-07-15T18:55:32.259388Z	      ../node_modules/nodemailer/lib/fetch/cookies.js:5:23:
+2025-07-15T18:55:32.25949Z	  [37m      5 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.259636Z	          ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.259744Z	  
+2025-07-15T18:55:32.259833Z	    The package "url" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.260136Z	  
+2025-07-15T18:55:32.260249Z	  
+2025-07-15T18:55:32.260348Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "http"[0m
+2025-07-15T18:55:32.260439Z	  
+2025-07-15T18:55:32.26053Z	      ../node_modules/nodemailer/lib/fetch/index.js:3:21:
+2025-07-15T18:55:32.260679Z	  [37m      3 │ const http = require([32m'http'[37m);
+2025-07-15T18:55:32.260786Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.260941Z	  
+2025-07-15T18:55:32.261062Z	    The package "http" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.261157Z	  
+2025-07-15T18:55:32.261258Z	  
+2025-07-15T18:55:32.261356Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "https"[0m
+2025-07-15T18:55:32.261456Z	  
+2025-07-15T18:55:32.26156Z	      ../node_modules/nodemailer/lib/fetch/index.js:4:22:
+2025-07-15T18:55:32.261682Z	  [37m      4 │ const https = require([32m'https'[37m);
+2025-07-15T18:55:32.261791Z	          ╵                       [32m~~~~~~~[0m
+2025-07-15T18:55:32.261887Z	  
+2025-07-15T18:55:32.262018Z	    The package "https" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.262119Z	  
+2025-07-15T18:55:32.262227Z	  
+2025-07-15T18:55:32.262319Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.262413Z	  
+2025-07-15T18:55:32.262504Z	      ../node_modules/nodemailer/lib/fetch/index.js:5:23:
+2025-07-15T18:55:32.262614Z	  [37m      5 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.262717Z	          ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.262823Z	  
+2025-07-15T18:55:32.26293Z	    The package "url" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.263047Z	  
+2025-07-15T18:55:32.263156Z	  
+2025-07-15T18:55:32.263261Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "zlib"[0m
+2025-07-15T18:55:32.263361Z	  
+2025-07-15T18:55:32.263469Z	      ../node_modules/nodemailer/lib/fetch/index.js:6:21:
+2025-07-15T18:55:32.263587Z	  [37m      6 │ const zlib = require([32m'zlib'[37m);
+2025-07-15T18:55:32.263721Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.263839Z	  
+2025-07-15T18:55:32.263934Z	    The package "zlib" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.264083Z	  
+2025-07-15T18:55:32.264189Z	  
+2025-07-15T18:55:32.264302Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.264402Z	  
+2025-07-15T18:55:32.2645Z	      ../node_modules/nodemailer/lib/fetch/index.js:7:28:
+2025-07-15T18:55:32.264627Z	  [37m      7 │ const PassThrough = require([32m'stream'[37m).PassThrough;
+2025-07-15T18:55:32.264744Z	          ╵                             [32m~~~~~~~~[0m
+2025-07-15T18:55:32.264853Z	  
+2025-07-15T18:55:32.264948Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.265043Z	  
+2025-07-15T18:55:32.265142Z	  
+2025-07-15T18:55:32.265256Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.265354Z	  
+2025-07-15T18:55:32.265452Z	      ../node_modules/nodemailer/lib/fetch/index.js:10:20:
+2025-07-15T18:55:32.265548Z	  [37m      10 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.265665Z	           ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.265771Z	  
+2025-07-15T18:55:32.265937Z	    The package "net" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.26605Z	  
+2025-07-15T18:55:32.266152Z	  
+2025-07-15T18:55:32.266262Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.266358Z	  
+2025-07-15T18:55:32.266463Z	      ../node_modules/nodemailer/lib/mailer/index.js:3:29:
+2025-07-15T18:55:32.266571Z	  [37m      3 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.266715Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.266828Z	  
+2025-07-15T18:55:32.266929Z	    The package "events" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.267037Z	  
+2025-07-15T18:55:32.267127Z	  
+2025-07-15T18:55:32.267233Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "util"[0m
+2025-07-15T18:55:32.267331Z	  
+2025-07-15T18:55:32.267431Z	      ../node_modules/nodemailer/lib/mailer/index.js:9:21:
+2025-07-15T18:55:32.267529Z	  [37m      9 │ const util = require([32m'util'[37m);
+2025-07-15T18:55:32.267653Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.267758Z	  
+2025-07-15T18:55:32.267868Z	    The package "util" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.267971Z	  
+2025-07-15T18:55:32.2681Z	  
+2025-07-15T18:55:32.268196Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.268304Z	  
+2025-07-15T18:55:32.268411Z	      ../node_modules/nodemailer/lib/mailer/index.js:10:23:
+2025-07-15T18:55:32.268508Z	  [37m      10 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.268696Z	           ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.268834Z	  
+2025-07-15T18:55:32.268937Z	    The package "url" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.269066Z	  
+2025-07-15T18:55:32.269197Z	  
+2025-07-15T18:55:32.269287Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.269472Z	  
+2025-07-15T18:55:32.269553Z	      ../node_modules/nodemailer/lib/mailer/index.js:13:20:
+2025-07-15T18:55:32.269664Z	  [37m      13 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.269791Z	           ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.269871Z	  
+2025-07-15T18:55:32.269937Z	    The package "net" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.270118Z	  
+2025-07-15T18:55:32.270346Z	  
+2025-07-15T18:55:32.270582Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "dns"[0m
+2025-07-15T18:55:32.270789Z	  
+2025-07-15T18:55:32.270983Z	      ../node_modules/nodemailer/lib/mailer/index.js:14:20:
+2025-07-15T18:55:32.271156Z	  [37m      14 │ const dns = require([32m'dns'[37m);
+2025-07-15T18:55:32.271372Z	           ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.271488Z	  
+2025-07-15T18:55:32.271604Z	    The package "dns" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.271713Z	  
+2025-07-15T18:55:32.271818Z	  
+2025-07-15T18:55:32.271984Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.272153Z	  
+2025-07-15T18:55:32.272324Z	      ../node_modules/nodemailer/lib/mailer/index.js:15:23:
+2025-07-15T18:55:32.272458Z	  [37m      15 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.272597Z	           ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.272703Z	  
+2025-07-15T18:55:32.272806Z	    The package "crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.272918Z	  
+2025-07-15T18:55:32.273028Z	  
+2025-07-15T18:55:32.273129Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "path"[0m
+2025-07-15T18:55:32.27324Z	  
+2025-07-15T18:55:32.273341Z	      ../node_modules/nodemailer/lib/mime-funcs/mime-types.js:5:21:
+2025-07-15T18:55:32.273453Z	  [37m      5 │ const path = require([32m'path'[37m);
+2025-07-15T18:55:32.273555Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.273679Z	  
+2025-07-15T18:55:32.273783Z	    The package "path" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.273892Z	  
+2025-07-15T18:55:32.273993Z	  
+2025-07-15T18:55:32.274092Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.274215Z	  
+2025-07-15T18:55:32.274376Z	      ../node_modules/nodemailer/lib/mime-node/index.js:5:23:
+2025-07-15T18:55:32.274531Z	  [37m      5 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.274708Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.274816Z	  
+2025-07-15T18:55:32.274912Z	    The package "crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.275008Z	  
+2025-07-15T18:55:32.275121Z	  
+2025-07-15T18:55:32.275229Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "fs"[0m
+2025-07-15T18:55:32.275352Z	  
+2025-07-15T18:55:32.275464Z	      ../node_modules/nodemailer/lib/mime-node/index.js:6:19:
+2025-07-15T18:55:32.27559Z	  [37m      6 │ const fs = require([32m'fs'[37m);
+2025-07-15T18:55:32.275715Z	          ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.275837Z	  
+2025-07-15T18:55:32.275949Z	    The package "fs" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.276054Z	  
+2025-07-15T18:55:32.276172Z	  
+2025-07-15T18:55:32.276291Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.276393Z	  
+2025-07-15T18:55:32.276494Z	      ../node_modules/nodemailer/lib/mime-node/index.js:8:28:
+2025-07-15T18:55:32.276608Z	  [37m      8 │ const PassThrough = require([32m'stream'[37m).PassThrough;
+2025-07-15T18:55:32.277399Z	          ╵                             [32m~~~~~~~~[0m
+2025-07-15T18:55:32.277856Z	  
+2025-07-15T18:55:32.278047Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.278136Z	  
+2025-07-15T18:55:32.278271Z	  
+2025-07-15T18:55:32.278465Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.278658Z	  
+2025-07-15T18:55:32.278763Z	      ../node_modules/nodemailer/lib/mime-node/last-newline.js:3:26:
+2025-07-15T18:55:32.27891Z	  [37m      3 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.279043Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.279124Z	  
+2025-07-15T18:55:32.279356Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.27949Z	  
+2025-07-15T18:55:32.279615Z	  
+2025-07-15T18:55:32.279778Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.279963Z	  
+2025-07-15T18:55:32.280105Z	      ../node_modules/nodemailer/lib/mime-node/le-unix.js:3:23:
+2025-07-15T18:55:32.280232Z	  [37m      3 │ const stream = require([32m'stream'[37m);
+2025-07-15T18:55:32.280368Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.280501Z	  
+2025-07-15T18:55:32.280671Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.28075Z	  
+2025-07-15T18:55:32.280851Z	  
+2025-07-15T18:55:32.281046Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.281204Z	  
+2025-07-15T18:55:32.281381Z	      ../node_modules/nodemailer/lib/mime-node/le-windows.js:3:23:
+2025-07-15T18:55:32.281506Z	  [37m      3 │ const stream = require([32m'stream'[37m);
+2025-07-15T18:55:32.281645Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.281759Z	  
+2025-07-15T18:55:32.281849Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.281952Z	  
+2025-07-15T18:55:32.28213Z	  
+2025-07-15T18:55:32.282247Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.282358Z	  
+2025-07-15T18:55:32.282455Z	      ../node_modules/nodemailer/lib/qp/index.js:3:26:
+2025-07-15T18:55:32.282556Z	  [37m      3 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.282671Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.282767Z	  
+2025-07-15T18:55:32.282862Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.282961Z	  
+2025-07-15T18:55:32.283048Z	  
+2025-07-15T18:55:32.283145Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "child_process"[0m
+2025-07-15T18:55:32.283263Z	  
+2025-07-15T18:55:32.283395Z	      ../node_modules/nodemailer/lib/sendmail-transport/index.js:3:22:
+2025-07-15T18:55:32.283514Z	  [37m      3 │ const spawn = require([32m'child_process'[37m).spawn;
+2025-07-15T18:55:32.283623Z	          ╵                       [32m~~~~~~~~~~~~~~~[0m
+2025-07-15T18:55:32.283739Z	  
+2025-07-15T18:55:32.283845Z	    The package "child_process" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.283978Z	  
+2025-07-15T18:55:32.284111Z	  
+2025-07-15T18:55:32.284212Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.284323Z	  
+2025-07-15T18:55:32.284421Z	      ../node_modules/nodemailer/lib/ses-transport/index.js:3:29:
+2025-07-15T18:55:32.284539Z	  [37m      3 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.284666Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.284772Z	  
+2025-07-15T18:55:32.284863Z	    The package "events" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.284929Z	  
+2025-07-15T18:55:32.284988Z	  
+2025-07-15T18:55:32.285072Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.285183Z	  
+2025-07-15T18:55:32.285298Z	      ../node_modules/nodemailer/lib/shared/index.js:5:23:
+2025-07-15T18:55:32.285403Z	  [37m      5 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.285498Z	          ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.28562Z	  
+2025-07-15T18:55:32.285734Z	    The package "url" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.285838Z	  
+2025-07-15T18:55:32.285933Z	  
+2025-07-15T18:55:32.285997Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "util"[0m
+2025-07-15T18:55:32.286096Z	  
+2025-07-15T18:55:32.286186Z	      ../node_modules/nodemailer/lib/shared/index.js:6:21:
+2025-07-15T18:55:32.286297Z	  [37m      6 │ const util = require([32m'util'[37m);
+2025-07-15T18:55:32.286426Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.286532Z	  
+2025-07-15T18:55:32.286659Z	    The package "util" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.286762Z	  
+2025-07-15T18:55:32.286856Z	  
+2025-07-15T18:55:32.286967Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "fs"[0m
+2025-07-15T18:55:32.287082Z	  
+2025-07-15T18:55:32.287183Z	      ../node_modules/nodemailer/lib/shared/index.js:7:19:
+2025-07-15T18:55:32.287297Z	  [37m      7 │ const fs = require([32m'fs'[37m);
+2025-07-15T18:55:32.287388Z	          ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.287448Z	  
+2025-07-15T18:55:32.287524Z	    The package "fs" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.287667Z	  
+2025-07-15T18:55:32.287784Z	  
+2025-07-15T18:55:32.287877Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "dns"[0m
+2025-07-15T18:55:32.28797Z	  
+2025-07-15T18:55:32.288065Z	      ../node_modules/nodemailer/lib/shared/index.js:9:20:
+2025-07-15T18:55:32.288178Z	  [37m      9 │ const dns = require([32m'dns'[37m);
+2025-07-15T18:55:32.288281Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.288439Z	  
+2025-07-15T18:55:32.288634Z	    The package "dns" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.288771Z	  
+2025-07-15T18:55:32.288887Z	  
+2025-07-15T18:55:32.289031Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.289114Z	  
+2025-07-15T18:55:32.289174Z	      ../node_modules/nodemailer/lib/shared/index.js:10:20:
+2025-07-15T18:55:32.289287Z	  [37m      10 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.289583Z	           ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.28973Z	  
+2025-07-15T18:55:32.289841Z	    The package "net" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.289976Z	  
+2025-07-15T18:55:32.290092Z	  
+2025-07-15T18:55:32.29023Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "os"[0m
+2025-07-15T18:55:32.290339Z	  
+2025-07-15T18:55:32.290437Z	      ../node_modules/nodemailer/lib/shared/index.js:11:19:
+2025-07-15T18:55:32.290696Z	  [37m      11 │ const os = require([32m'os'[37m);
+2025-07-15T18:55:32.290884Z	           ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.29103Z	  
+2025-07-15T18:55:32.291116Z	    The package "os" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.291238Z	  
+2025-07-15T18:55:32.291385Z	  
+2025-07-15T18:55:32.291602Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.291736Z	  
+2025-07-15T18:55:32.291845Z	      ../node_modules/nodemailer/lib/smtp-connection/data-stream.js:3:23:
+2025-07-15T18:55:32.291961Z	  [37m      3 │ const stream = require([32m'stream'[37m);
+2025-07-15T18:55:32.292092Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.292213Z	  
+2025-07-15T18:55:32.292329Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.292458Z	  
+2025-07-15T18:55:32.292558Z	  
+2025-07-15T18:55:32.292691Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.292777Z	  
+2025-07-15T18:55:32.292878Z	      ../node_modules/nodemailer/lib/smtp-connection/http-proxy-client.js:7:20:
+2025-07-15T18:55:32.293005Z	  [37m      7 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.293128Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.293244Z	  
+2025-07-15T18:55:32.293366Z	    The package "net" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.29349Z	  
+2025-07-15T18:55:32.293609Z	  
+2025-07-15T18:55:32.293732Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "tls"[0m
+2025-07-15T18:55:32.293881Z	  
+2025-07-15T18:55:32.29396Z	      ../node_modules/nodemailer/lib/smtp-connection/http-proxy-client.js:8:20:
+2025-07-15T18:55:32.29403Z	  [37m      8 │ const tls = require([32m'tls'[37m);
+2025-07-15T18:55:32.294194Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.294313Z	  
+2025-07-15T18:55:32.294446Z	    The package "tls" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.294622Z	  
+2025-07-15T18:55:32.294702Z	  
+2025-07-15T18:55:32.294837Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.294991Z	  
+2025-07-15T18:55:32.295073Z	      ../node_modules/nodemailer/lib/smtp-connection/http-proxy-client.js:9:23:
+2025-07-15T18:55:32.295219Z	  [37m      9 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.295301Z	          ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.295427Z	  
+2025-07-15T18:55:32.295513Z	    The package "url" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.295724Z	  
+2025-07-15T18:55:32.295791Z	  
+2025-07-15T18:55:32.295893Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.295991Z	  
+2025-07-15T18:55:32.296129Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:4:29:
+2025-07-15T18:55:32.296262Z	  [37m      4 │ const EventEmitter = require([32m'events'[37m).EventEmitter;
+2025-07-15T18:55:32.296408Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.296539Z	  
+2025-07-15T18:55:32.296847Z	    The package "events" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.296983Z	  
+2025-07-15T18:55:32.297103Z	  
+2025-07-15T18:55:32.29721Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.297321Z	  
+2025-07-15T18:55:32.297421Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:5:20:
+2025-07-15T18:55:32.297684Z	  [37m      5 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.297772Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.297834Z	  
+2025-07-15T18:55:32.298087Z	    The package "net" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.298166Z	  
+2025-07-15T18:55:32.298235Z	  
+2025-07-15T18:55:32.298488Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "tls"[0m
+2025-07-15T18:55:32.29857Z	  
+2025-07-15T18:55:32.298794Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:6:20:
+2025-07-15T18:55:32.299012Z	  [37m      6 │ const tls = require([32m'tls'[37m);
+2025-07-15T18:55:32.299103Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.29931Z	  
+2025-07-15T18:55:32.299416Z	    The package "tls" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.299751Z	  
+2025-07-15T18:55:32.29984Z	  
+2025-07-15T18:55:32.300134Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "os"[0m
+2025-07-15T18:55:32.300261Z	  
+2025-07-15T18:55:32.300486Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:7:19:
+2025-07-15T18:55:32.300747Z	  [37m      7 │ const os = require([32m'os'[37m);
+2025-07-15T18:55:32.300832Z	          ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.300894Z	  
+2025-07-15T18:55:32.30111Z	    The package "os" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.301189Z	  
+2025-07-15T18:55:32.301255Z	  
+2025-07-15T18:55:32.301319Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.301381Z	  
+2025-07-15T18:55:32.301443Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:8:23:
+2025-07-15T18:55:32.301507Z	  [37m      8 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.301565Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.301638Z	  
+2025-07-15T18:55:32.301701Z	    The package "crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.301762Z	  
+2025-07-15T18:55:32.301823Z	  
+2025-07-15T18:55:32.301886Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.301952Z	  
+2025-07-15T18:55:32.302248Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:10:28:
+2025-07-15T18:55:32.302348Z	  [37m      10 │ const PassThrough = require([32m'stream'[37m).PassThrough;
+2025-07-15T18:55:32.302589Z	           ╵                             [32m~~~~~~~~[0m
+2025-07-15T18:55:32.302688Z	  
+2025-07-15T18:55:32.30299Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.303086Z	  
+2025-07-15T18:55:32.303335Z	  
+2025-07-15T18:55:32.303476Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.303631Z	  
+2025-07-15T18:55:32.303738Z	      ../node_modules/nodemailer/lib/smtp-pool/index.js:3:29:
+2025-07-15T18:55:32.303863Z	  [37m      3 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.304025Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.304113Z	  
+2025-07-15T18:55:32.304232Z	    The package "events" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.304337Z	  
+2025-07-15T18:55:32.304537Z	  
+2025-07-15T18:55:32.304688Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.30481Z	  
+2025-07-15T18:55:32.304919Z	      ../node_modules/nodemailer/lib/smtp-pool/pool-resource.js:6:29:
+2025-07-15T18:55:32.305166Z	  [37m      6 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.305269Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.305347Z	  
+2025-07-15T18:55:32.30541Z	    The package "events" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.30547Z	  
+2025-07-15T18:55:32.305527Z	  
+2025-07-15T18:55:32.305619Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.305694Z	  
+2025-07-15T18:55:32.305759Z	      ../node_modules/nodemailer/lib/smtp-transport/index.js:3:29:
+2025-07-15T18:55:32.305819Z	  [37m      3 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.305883Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.305941Z	  
+2025-07-15T18:55:32.306004Z	    The package "events" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.306074Z	  
+2025-07-15T18:55:32.306133Z	  
+2025-07-15T18:55:32.3062Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.306608Z	  
+2025-07-15T18:55:32.306714Z	      ../node_modules/nodemailer/lib/xoauth2/index.js:3:23:
+2025-07-15T18:55:32.306999Z	  [37m      3 │ const Stream = require([32m'stream'[37m).Stream;
+2025-07-15T18:55:32.307198Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.307308Z	  
+2025-07-15T18:55:32.307436Z	    The package "stream" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.307514Z	  
+2025-07-15T18:55:32.307608Z	  
+2025-07-15T18:55:32.307772Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.307877Z	  
+2025-07-15T18:55:32.308001Z	      ../node_modules/nodemailer/lib/xoauth2/index.js:5:23:
+2025-07-15T18:55:32.308079Z	  [37m      5 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.30821Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.308339Z	  
+2025-07-15T18:55:32.308454Z	    The package "crypto" wasn't found on the file system but is built into node. Are you trying to bundle for node? You can use "platform: 'node'" to do that, which will remove this error.
+2025-07-15T18:55:32.308598Z	  
+2025-07-15T18:55:32.308726Z	  
+2025-07-15T18:55:32.308844Z	
+2025-07-15T18:55:32.308917Z	
+2025-07-15T18:55:32.30902Z	
+2025-07-15T18:55:32.309133Z	[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 53 errors:[0m
+2025-07-15T18:55:32.309229Z	
+2025-07-15T18:55:32.309362Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.309493Z	  
+2025-07-15T18:55:32.309564Z	      ../node_modules/nodemailer/lib/base64/index.js:3:26:
+2025-07-15T18:55:32.309703Z	  [37m      3 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.30985Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.310212Z	  
+2025-07-15T18:55:32.310295Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.310538Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.310699Z	    
+2025-07-15T18:55:32.310841Z	  
+2025-07-15T18:55:32.310911Z	  
+2025-07-15T18:55:32.311071Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.31132Z	  
+2025-07-15T18:55:32.311449Z	      ../node_modules/nodemailer/lib/dkim/index.js:9:28:
+2025-07-15T18:55:32.311739Z	  [37m      9 │ const PassThrough = require([32m'stream'[37m).PassThrough;
+2025-07-15T18:55:32.311823Z	          ╵                             [32m~~~~~~~~[0m
+2025-07-15T18:55:32.31206Z	  
+2025-07-15T18:55:32.312312Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.312399Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.312547Z	    
+2025-07-15T18:55:32.31267Z	  
+2025-07-15T18:55:32.312919Z	  
+2025-07-15T18:55:32.313157Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "fs"[0m
+2025-07-15T18:55:32.313274Z	  
+2025-07-15T18:55:32.313522Z	      ../node_modules/nodemailer/lib/dkim/index.js:10:19:
+2025-07-15T18:55:32.313684Z	  [37m      10 │ const fs = require([32m'fs'[37m);
+2025-07-15T18:55:32.313843Z	           ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.31408Z	  
+2025-07-15T18:55:32.314239Z	    The package "fs" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.314397Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.314597Z	    
+2025-07-15T18:55:32.314763Z	  
+2025-07-15T18:55:32.314908Z	  
+2025-07-15T18:55:32.315019Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "path"[0m
+2025-07-15T18:55:32.315139Z	  
+2025-07-15T18:55:32.315318Z	      ../node_modules/nodemailer/lib/dkim/index.js:11:21:
+2025-07-15T18:55:32.315846Z	  [37m      11 │ const path = require([32m'path'[37m);
+2025-07-15T18:55:32.315969Z	           ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.316131Z	  
+2025-07-15T18:55:32.316245Z	    The package "path" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.316342Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.316491Z	    
+2025-07-15T18:55:32.316654Z	  
+2025-07-15T18:55:32.316867Z	  
+2025-07-15T18:55:32.317083Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.317236Z	  
+2025-07-15T18:55:32.317351Z	      ../node_modules/nodemailer/lib/dkim/index.js:12:23:
+2025-07-15T18:55:32.317458Z	  [37m      12 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.317571Z	           ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.317693Z	  
+2025-07-15T18:55:32.317796Z	    The package "crypto" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.317895Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.317999Z	    
+2025-07-15T18:55:32.318099Z	  
+2025-07-15T18:55:32.318189Z	  
+2025-07-15T18:55:32.31829Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.318385Z	  
+2025-07-15T18:55:32.318484Z	      ../node_modules/nodemailer/lib/dkim/message-parser.js:3:26:
+2025-07-15T18:55:32.318598Z	  [37m      3 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.318709Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.318823Z	  
+2025-07-15T18:55:32.318919Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.319016Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.319122Z	    
+2025-07-15T18:55:32.319224Z	  
+2025-07-15T18:55:32.319355Z	  
+2025-07-15T18:55:32.319438Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.319498Z	  
+2025-07-15T18:55:32.319644Z	      ../node_modules/nodemailer/lib/dkim/relaxed-body.js:5:26:
+2025-07-15T18:55:32.319731Z	  [37m      5 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.319831Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.319934Z	  
+2025-07-15T18:55:32.320031Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.320152Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.320261Z	    
+2025-07-15T18:55:32.320342Z	  
+2025-07-15T18:55:32.320424Z	  
+2025-07-15T18:55:32.32052Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.320637Z	  
+2025-07-15T18:55:32.32074Z	      ../node_modules/nodemailer/lib/dkim/relaxed-body.js:6:23:
+2025-07-15T18:55:32.320837Z	  [37m      6 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.320941Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.321061Z	  
+2025-07-15T18:55:32.321171Z	    The package "crypto" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.321301Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.321429Z	    
+2025-07-15T18:55:32.321553Z	  
+2025-07-15T18:55:32.321694Z	  
+2025-07-15T18:55:32.321787Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.322008Z	  
+2025-07-15T18:55:32.322193Z	      ../node_modules/nodemailer/lib/dkim/sign.js:5:23:
+2025-07-15T18:55:32.32233Z	  [37m      5 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.322435Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.322546Z	  
+2025-07-15T18:55:32.322665Z	    The package "crypto" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.322777Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.322881Z	    
+2025-07-15T18:55:32.323004Z	  
+2025-07-15T18:55:32.323118Z	  
+2025-07-15T18:55:32.323216Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.323329Z	  
+2025-07-15T18:55:32.323435Z	      ../node_modules/nodemailer/lib/fetch/cookies.js:5:23:
+2025-07-15T18:55:32.323569Z	  [37m      5 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.323818Z	          ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.323927Z	  
+2025-07-15T18:55:32.324036Z	    The package "url" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.324129Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.324288Z	    
+2025-07-15T18:55:32.324383Z	  
+2025-07-15T18:55:32.324547Z	  
+2025-07-15T18:55:32.324683Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "http"[0m
+2025-07-15T18:55:32.324796Z	  
+2025-07-15T18:55:32.324903Z	      ../node_modules/nodemailer/lib/fetch/index.js:3:21:
+2025-07-15T18:55:32.325018Z	  [37m      3 │ const http = require([32m'http'[37m);
+2025-07-15T18:55:32.325118Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.325212Z	  
+2025-07-15T18:55:32.325303Z	    The package "http" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.325396Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.325735Z	    
+2025-07-15T18:55:32.325842Z	  
+2025-07-15T18:55:32.326065Z	  
+2025-07-15T18:55:32.326165Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "https"[0m
+2025-07-15T18:55:32.326265Z	  
+2025-07-15T18:55:32.326366Z	      ../node_modules/nodemailer/lib/fetch/index.js:4:22:
+2025-07-15T18:55:32.32646Z	  [37m      4 │ const https = require([32m'https'[37m);
+2025-07-15T18:55:32.326572Z	          ╵                       [32m~~~~~~~[0m
+2025-07-15T18:55:32.326762Z	  
+2025-07-15T18:55:32.32686Z	    The package "https" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.326971Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.327076Z	    
+2025-07-15T18:55:32.327166Z	  
+2025-07-15T18:55:32.327266Z	  
+2025-07-15T18:55:32.327369Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.327477Z	  
+2025-07-15T18:55:32.327584Z	      ../node_modules/nodemailer/lib/fetch/index.js:5:23:
+2025-07-15T18:55:32.327682Z	  [37m      5 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.327789Z	          ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.327883Z	  
+2025-07-15T18:55:32.32799Z	    The package "url" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.328081Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.328181Z	    
+2025-07-15T18:55:32.328279Z	  
+2025-07-15T18:55:32.328375Z	  
+2025-07-15T18:55:32.328477Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "zlib"[0m
+2025-07-15T18:55:32.328865Z	  
+2025-07-15T18:55:32.329022Z	      ../node_modules/nodemailer/lib/fetch/index.js:6:21:
+2025-07-15T18:55:32.329173Z	  [37m      6 │ const zlib = require([32m'zlib'[37m);
+2025-07-15T18:55:32.329289Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.329438Z	  
+2025-07-15T18:55:32.329562Z	    The package "zlib" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.329709Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.32983Z	    
+2025-07-15T18:55:32.329989Z	  
+2025-07-15T18:55:32.330076Z	  
+2025-07-15T18:55:32.330156Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.330234Z	  
+2025-07-15T18:55:32.330314Z	      ../node_modules/nodemailer/lib/fetch/index.js:7:28:
+2025-07-15T18:55:32.330416Z	  [37m      7 │ const PassThrough = require([32m'stream'[37m).PassThrough;
+2025-07-15T18:55:32.330523Z	          ╵                             [32m~~~~~~~~[0m
+2025-07-15T18:55:32.330642Z	  
+2025-07-15T18:55:32.330743Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.330837Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.330971Z	    
+2025-07-15T18:55:32.331096Z	  
+2025-07-15T18:55:32.331193Z	  
+2025-07-15T18:55:32.331297Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.331416Z	  
+2025-07-15T18:55:32.331515Z	      ../node_modules/nodemailer/lib/fetch/index.js:10:20:
+2025-07-15T18:55:32.331858Z	  [37m      10 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.331974Z	           ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.332291Z	  
+2025-07-15T18:55:32.332415Z	    The package "net" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.332537Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.332658Z	    
+2025-07-15T18:55:32.332811Z	  
+2025-07-15T18:55:32.332945Z	  
+2025-07-15T18:55:32.333063Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.333263Z	  
+2025-07-15T18:55:32.333373Z	      ../node_modules/nodemailer/lib/mailer/index.js:3:29:
+2025-07-15T18:55:32.333649Z	  [37m      3 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.333744Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.334074Z	  
+2025-07-15T18:55:32.334302Z	    The package "events" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.334539Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.334737Z	    
+2025-07-15T18:55:32.334813Z	  
+2025-07-15T18:55:32.334936Z	  
+2025-07-15T18:55:32.335069Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "util"[0m
+2025-07-15T18:55:32.33515Z	  
+2025-07-15T18:55:32.33522Z	      ../node_modules/nodemailer/lib/mailer/index.js:9:21:
+2025-07-15T18:55:32.335476Z	  [37m      9 │ const util = require([32m'util'[37m);
+2025-07-15T18:55:32.335569Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.335704Z	  
+2025-07-15T18:55:32.335807Z	    The package "util" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.336172Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.336332Z	    
+2025-07-15T18:55:32.336507Z	  
+2025-07-15T18:55:32.33667Z	  
+2025-07-15T18:55:32.336749Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.337154Z	  
+2025-07-15T18:55:32.337255Z	      ../node_modules/nodemailer/lib/mailer/index.js:10:23:
+2025-07-15T18:55:32.33741Z	  [37m      10 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.337563Z	           ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.337741Z	  
+2025-07-15T18:55:32.337817Z	    The package "url" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.33801Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.338164Z	    
+2025-07-15T18:55:32.338324Z	  
+2025-07-15T18:55:32.338402Z	  
+2025-07-15T18:55:32.338519Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.338682Z	  
+2025-07-15T18:55:32.338762Z	      ../node_modules/nodemailer/lib/mailer/index.js:13:20:
+2025-07-15T18:55:32.3389Z	  [37m      13 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.338991Z	           ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.339134Z	  
+2025-07-15T18:55:32.339251Z	    The package "net" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.339318Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.339436Z	    
+2025-07-15T18:55:32.339543Z	  
+2025-07-15T18:55:32.339719Z	  
+2025-07-15T18:55:32.339832Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "dns"[0m
+2025-07-15T18:55:32.340005Z	  
+2025-07-15T18:55:32.340127Z	      ../node_modules/nodemailer/lib/mailer/index.js:14:20:
+2025-07-15T18:55:32.340273Z	  [37m      14 │ const dns = require([32m'dns'[37m);
+2025-07-15T18:55:32.340353Z	           ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.340475Z	  
+2025-07-15T18:55:32.340558Z	    The package "dns" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.340814Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.340895Z	    
+2025-07-15T18:55:32.34104Z	  
+2025-07-15T18:55:32.341177Z	  
+2025-07-15T18:55:32.341267Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.34141Z	  
+2025-07-15T18:55:32.341568Z	      ../node_modules/nodemailer/lib/mailer/index.js:15:23:
+2025-07-15T18:55:32.341751Z	  [37m      15 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.341903Z	           ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.342056Z	  
+2025-07-15T18:55:32.342196Z	    The package "crypto" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.342365Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.342517Z	    
+2025-07-15T18:55:32.342674Z	  
+2025-07-15T18:55:32.342844Z	  
+2025-07-15T18:55:32.342985Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "path"[0m
+2025-07-15T18:55:32.343148Z	  
+2025-07-15T18:55:32.343304Z	      ../node_modules/nodemailer/lib/mime-funcs/mime-types.js:5:21:
+2025-07-15T18:55:32.343469Z	  [37m      5 │ const path = require([32m'path'[37m);
+2025-07-15T18:55:32.34361Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.343764Z	  
+2025-07-15T18:55:32.343896Z	    The package "path" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.344021Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.344124Z	    
+2025-07-15T18:55:32.344224Z	  
+2025-07-15T18:55:32.34432Z	  
+2025-07-15T18:55:32.344392Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.344477Z	  
+2025-07-15T18:55:32.344599Z	      ../node_modules/nodemailer/lib/mime-node/index.js:5:23:
+2025-07-15T18:55:32.344718Z	  [37m      5 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.344832Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.34494Z	  
+2025-07-15T18:55:32.345075Z	    The package "crypto" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.345161Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.345285Z	    
+2025-07-15T18:55:32.345402Z	  
+2025-07-15T18:55:32.34567Z	  
+2025-07-15T18:55:32.345931Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "fs"[0m
+2025-07-15T18:55:32.346098Z	  
+2025-07-15T18:55:32.346241Z	      ../node_modules/nodemailer/lib/mime-node/index.js:6:19:
+2025-07-15T18:55:32.346419Z	  [37m      6 │ const fs = require([32m'fs'[37m);
+2025-07-15T18:55:32.346493Z	          ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.346719Z	  
+2025-07-15T18:55:32.346983Z	    The package "fs" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.347148Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.34724Z	    
+2025-07-15T18:55:32.34741Z	  
+2025-07-15T18:55:32.347485Z	  
+2025-07-15T18:55:32.347618Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.347926Z	  
+2025-07-15T18:55:32.348095Z	      ../node_modules/nodemailer/lib/mime-node/index.js:8:28:
+2025-07-15T18:55:32.348179Z	  [37m      8 │ const PassThrough = require([32m'stream'[37m).PassThrough;
+2025-07-15T18:55:32.34831Z	          ╵                             [32m~~~~~~~~[0m
+2025-07-15T18:55:32.348549Z	  
+2025-07-15T18:55:32.348749Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.348995Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.349255Z	    
+2025-07-15T18:55:32.349352Z	  
+2025-07-15T18:55:32.349613Z	  
+2025-07-15T18:55:32.349716Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.349972Z	  
+2025-07-15T18:55:32.350226Z	      ../node_modules/nodemailer/lib/mime-node/last-newline.js:3:26:
+2025-07-15T18:55:32.350317Z	  [37m      3 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.350563Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.350826Z	  
+2025-07-15T18:55:32.350906Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.351013Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.351367Z	    
+2025-07-15T18:55:32.351615Z	  
+2025-07-15T18:55:32.351933Z	  
+2025-07-15T18:55:32.352064Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.352214Z	  
+2025-07-15T18:55:32.352292Z	      ../node_modules/nodemailer/lib/mime-node/le-unix.js:3:23:
+2025-07-15T18:55:32.352384Z	  [37m      3 │ const stream = require([32m'stream'[37m);
+2025-07-15T18:55:32.352722Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.352802Z	  
+2025-07-15T18:55:32.352869Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.353049Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.353187Z	    
+2025-07-15T18:55:32.353294Z	  
+2025-07-15T18:55:32.353454Z	  
+2025-07-15T18:55:32.353606Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.353729Z	  
+2025-07-15T18:55:32.353984Z	      ../node_modules/nodemailer/lib/mime-node/le-windows.js:3:23:
+2025-07-15T18:55:32.354084Z	  [37m      3 │ const stream = require([32m'stream'[37m);
+2025-07-15T18:55:32.354377Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.354466Z	  
+2025-07-15T18:55:32.354527Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.354822Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.354899Z	    
+2025-07-15T18:55:32.354957Z	  
+2025-07-15T18:55:32.355251Z	  
+2025-07-15T18:55:32.355336Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.355403Z	  
+2025-07-15T18:55:32.355652Z	      ../node_modules/nodemailer/lib/qp/index.js:3:26:
+2025-07-15T18:55:32.355747Z	  [37m      3 │ const Transform = require([32m'stream'[37m).Transform;
+2025-07-15T18:55:32.355974Z	          ╵                           [32m~~~~~~~~[0m
+2025-07-15T18:55:32.3561Z	  
+2025-07-15T18:55:32.356218Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.356379Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.356457Z	    
+2025-07-15T18:55:32.356523Z	  
+2025-07-15T18:55:32.356681Z	  
+2025-07-15T18:55:32.356796Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "child_process"[0m
+2025-07-15T18:55:32.356922Z	  
+2025-07-15T18:55:32.357048Z	      ../node_modules/nodemailer/lib/sendmail-transport/index.js:3:22:
+2025-07-15T18:55:32.35717Z	  [37m      3 │ const spawn = require([32m'child_process'[37m).spawn;
+2025-07-15T18:55:32.357283Z	          ╵                       [32m~~~~~~~~~~~~~~~[0m
+2025-07-15T18:55:32.357393Z	  
+2025-07-15T18:55:32.35751Z	    The package "child_process" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.357759Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.358003Z	    
+2025-07-15T18:55:32.358083Z	  
+2025-07-15T18:55:32.358277Z	  
+2025-07-15T18:55:32.358474Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.35872Z	  
+2025-07-15T18:55:32.358802Z	      ../node_modules/nodemailer/lib/ses-transport/index.js:3:29:
+2025-07-15T18:55:32.359029Z	  [37m      3 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.359252Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.359343Z	  
+2025-07-15T18:55:32.359406Z	    The package "events" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.359662Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.359741Z	    
+2025-07-15T18:55:32.359802Z	  
+2025-07-15T18:55:32.360043Z	  
+2025-07-15T18:55:32.360129Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.360435Z	  
+2025-07-15T18:55:32.360523Z	      ../node_modules/nodemailer/lib/shared/index.js:5:23:
+2025-07-15T18:55:32.360776Z	  [37m      5 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.360853Z	          ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.360922Z	  
+2025-07-15T18:55:32.36123Z	    The package "url" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.361398Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.361532Z	    
+2025-07-15T18:55:32.361686Z	  
+2025-07-15T18:55:32.361762Z	  
+2025-07-15T18:55:32.361906Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "util"[0m
+2025-07-15T18:55:32.362068Z	  
+2025-07-15T18:55:32.362147Z	      ../node_modules/nodemailer/lib/shared/index.js:6:21:
+2025-07-15T18:55:32.362207Z	  [37m      6 │ const util = require([32m'util'[37m);
+2025-07-15T18:55:32.362468Z	          ╵                      [32m~~~~~~[0m
+2025-07-15T18:55:32.362551Z	  
+2025-07-15T18:55:32.36281Z	    The package "util" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.362884Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.362952Z	    
+2025-07-15T18:55:32.363222Z	  
+2025-07-15T18:55:32.363292Z	  
+2025-07-15T18:55:32.363348Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "fs"[0m
+2025-07-15T18:55:32.363444Z	  
+2025-07-15T18:55:32.363536Z	      ../node_modules/nodemailer/lib/shared/index.js:7:19:
+2025-07-15T18:55:32.363699Z	  [37m      7 │ const fs = require([32m'fs'[37m);
+2025-07-15T18:55:32.363851Z	          ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.363979Z	  
+2025-07-15T18:55:32.364062Z	    The package "fs" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.364162Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.364263Z	    
+2025-07-15T18:55:32.364374Z	  
+2025-07-15T18:55:32.364481Z	  
+2025-07-15T18:55:32.364672Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "dns"[0m
+2025-07-15T18:55:32.364776Z	  
+2025-07-15T18:55:32.36489Z	      ../node_modules/nodemailer/lib/shared/index.js:9:20:
+2025-07-15T18:55:32.365067Z	  [37m      9 │ const dns = require([32m'dns'[37m);
+2025-07-15T18:55:32.365159Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.365293Z	  
+2025-07-15T18:55:32.3654Z	    The package "dns" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.365515Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.36564Z	    
+2025-07-15T18:55:32.365713Z	  
+2025-07-15T18:55:32.365817Z	  
+2025-07-15T18:55:32.365938Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.366106Z	  
+2025-07-15T18:55:32.366233Z	      ../node_modules/nodemailer/lib/shared/index.js:10:20:
+2025-07-15T18:55:32.366373Z	  [37m      10 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.366501Z	           ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.36663Z	  
+2025-07-15T18:55:32.366745Z	    The package "net" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.36686Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.366979Z	    
+2025-07-15T18:55:32.367102Z	  
+2025-07-15T18:55:32.367208Z	  
+2025-07-15T18:55:32.36733Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "os"[0m
+2025-07-15T18:55:32.367444Z	  
+2025-07-15T18:55:32.367612Z	      ../node_modules/nodemailer/lib/shared/index.js:11:19:
+2025-07-15T18:55:32.367751Z	  [37m      11 │ const os = require([32m'os'[37m);
+2025-07-15T18:55:32.36787Z	           ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.368007Z	  
+2025-07-15T18:55:32.368135Z	    The package "os" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.368251Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.368378Z	    
+2025-07-15T18:55:32.368511Z	  
+2025-07-15T18:55:32.368641Z	  
+2025-07-15T18:55:32.368759Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.368872Z	  
+2025-07-15T18:55:32.368995Z	      ../node_modules/nodemailer/lib/smtp-connection/data-stream.js:3:23:
+2025-07-15T18:55:32.369118Z	  [37m      3 │ const stream = require([32m'stream'[37m);
+2025-07-15T18:55:32.369265Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.369368Z	  
+2025-07-15T18:55:32.369486Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.369873Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.3701Z	    
+2025-07-15T18:55:32.370321Z	  
+2025-07-15T18:55:32.370554Z	  
+2025-07-15T18:55:32.370783Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.371004Z	  
+2025-07-15T18:55:32.371142Z	      ../node_modules/nodemailer/lib/smtp-connection/http-proxy-client.js:7:20:
+2025-07-15T18:55:32.37123Z	  [37m      7 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.371298Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.371355Z	  
+2025-07-15T18:55:32.37143Z	    The package "net" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.371493Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.371551Z	    
+2025-07-15T18:55:32.371641Z	  
+2025-07-15T18:55:32.371709Z	  
+2025-07-15T18:55:32.371772Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "tls"[0m
+2025-07-15T18:55:32.37183Z	  
+2025-07-15T18:55:32.371926Z	      ../node_modules/nodemailer/lib/smtp-connection/http-proxy-client.js:8:20:
+2025-07-15T18:55:32.372011Z	  [37m      8 │ const tls = require([32m'tls'[37m);
+2025-07-15T18:55:32.372077Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.372134Z	  
+2025-07-15T18:55:32.372191Z	    The package "tls" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.372262Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.372319Z	    
+2025-07-15T18:55:32.372375Z	  
+2025-07-15T18:55:32.372431Z	  
+2025-07-15T18:55:32.372487Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "url"[0m
+2025-07-15T18:55:32.372544Z	  
+2025-07-15T18:55:32.372628Z	      ../node_modules/nodemailer/lib/smtp-connection/http-proxy-client.js:9:23:
+2025-07-15T18:55:32.372697Z	  [37m      9 │ const urllib = require([32m'url'[37m);
+2025-07-15T18:55:32.372763Z	          ╵                        [32m~~~~~[0m
+2025-07-15T18:55:32.372826Z	  
+2025-07-15T18:55:32.372887Z	    The package "url" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.372949Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.373018Z	    
+2025-07-15T18:55:32.373075Z	  
+2025-07-15T18:55:32.373132Z	  
+2025-07-15T18:55:32.373188Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.373636Z	  
+2025-07-15T18:55:32.373785Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:4:29:
+2025-07-15T18:55:32.373862Z	  [37m      4 │ const EventEmitter = require([32m'events'[37m).EventEmitter;
+2025-07-15T18:55:32.374004Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.374089Z	  
+2025-07-15T18:55:32.374229Z	    The package "events" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.374304Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.37448Z	    
+2025-07-15T18:55:32.374551Z	  
+2025-07-15T18:55:32.374698Z	  
+2025-07-15T18:55:32.374783Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "net"[0m
+2025-07-15T18:55:32.374843Z	  
+2025-07-15T18:55:32.374964Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:5:20:
+2025-07-15T18:55:32.375129Z	  [37m      5 │ const net = require([32m'net'[37m);
+2025-07-15T18:55:32.375208Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.375332Z	  
+2025-07-15T18:55:32.375399Z	    The package "net" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.375495Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.375664Z	    
+2025-07-15T18:55:32.375737Z	  
+2025-07-15T18:55:32.375851Z	  
+2025-07-15T18:55:32.375999Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "tls"[0m
+2025-07-15T18:55:32.376149Z	  
+2025-07-15T18:55:32.376277Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:6:20:
+2025-07-15T18:55:32.37635Z	  [37m      6 │ const tls = require([32m'tls'[37m);
+2025-07-15T18:55:32.376482Z	          ╵                     [32m~~~~~[0m
+2025-07-15T18:55:32.376655Z	  
+2025-07-15T18:55:32.376776Z	    The package "tls" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.37687Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.37699Z	    
+2025-07-15T18:55:32.377102Z	  
+2025-07-15T18:55:32.377176Z	  
+2025-07-15T18:55:32.377287Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "os"[0m
+2025-07-15T18:55:32.377408Z	  
+2025-07-15T18:55:32.377526Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:7:19:
+2025-07-15T18:55:32.377649Z	  [37m      7 │ const os = require([32m'os'[37m);
+2025-07-15T18:55:32.377776Z	          ╵                    [32m~~~~[0m
+2025-07-15T18:55:32.377922Z	  
+2025-07-15T18:55:32.378052Z	    The package "os" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.378198Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.378275Z	    
+2025-07-15T18:55:32.378377Z	  
+2025-07-15T18:55:32.378478Z	  
+2025-07-15T18:55:32.378569Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.378691Z	  
+2025-07-15T18:55:32.378798Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:8:23:
+2025-07-15T18:55:32.378917Z	  [37m      8 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.379029Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.379135Z	  
+2025-07-15T18:55:32.379236Z	    The package "crypto" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.379354Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.379453Z	    
+2025-07-15T18:55:32.37955Z	  
+2025-07-15T18:55:32.379664Z	  
+2025-07-15T18:55:32.379757Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.379856Z	  
+2025-07-15T18:55:32.379929Z	      ../node_modules/nodemailer/lib/smtp-connection/index.js:10:28:
+2025-07-15T18:55:32.380017Z	  [37m      10 │ const PassThrough = require([32m'stream'[37m).PassThrough;
+2025-07-15T18:55:32.380129Z	           ╵                             [32m~~~~~~~~[0m
+2025-07-15T18:55:32.380268Z	  
+2025-07-15T18:55:32.380364Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.380455Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.380552Z	    
+2025-07-15T18:55:32.380656Z	  
+2025-07-15T18:55:32.380766Z	  
+2025-07-15T18:55:32.380963Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.381055Z	  
+2025-07-15T18:55:32.381181Z	      ../node_modules/nodemailer/lib/smtp-pool/index.js:3:29:
+2025-07-15T18:55:32.38131Z	  [37m      3 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.381448Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.38153Z	  
+2025-07-15T18:55:32.381648Z	    The package "events" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.381776Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.381856Z	    
+2025-07-15T18:55:32.381974Z	  
+2025-07-15T18:55:32.382142Z	  
+2025-07-15T18:55:32.382255Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.382378Z	  
+2025-07-15T18:55:32.382476Z	      ../node_modules/nodemailer/lib/smtp-pool/pool-resource.js:6:29:
+2025-07-15T18:55:32.382583Z	  [37m      6 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.382689Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.382794Z	  
+2025-07-15T18:55:32.382887Z	    The package "events" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.382979Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.38307Z	    
+2025-07-15T18:55:32.383275Z	  
+2025-07-15T18:55:32.383415Z	  
+2025-07-15T18:55:32.383536Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "events"[0m
+2025-07-15T18:55:32.383674Z	  
+2025-07-15T18:55:32.38383Z	      ../node_modules/nodemailer/lib/smtp-transport/index.js:3:29:
+2025-07-15T18:55:32.383916Z	  [37m      3 │ const EventEmitter = require([32m'events'[37m);
+2025-07-15T18:55:32.384009Z	          ╵                              [32m~~~~~~~~[0m
+2025-07-15T18:55:32.384127Z	  
+2025-07-15T18:55:32.384235Z	    The package "events" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.384328Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.384424Z	    
+2025-07-15T18:55:32.384516Z	  
+2025-07-15T18:55:32.384592Z	  
+2025-07-15T18:55:32.38479Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "stream"[0m
+2025-07-15T18:55:32.384908Z	  
+2025-07-15T18:55:32.385052Z	      ../node_modules/nodemailer/lib/xoauth2/index.js:3:23:
+2025-07-15T18:55:32.385176Z	  [37m      3 │ const Stream = require([32m'stream'[37m).Stream;
+2025-07-15T18:55:32.385507Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.385661Z	  
+2025-07-15T18:55:32.385789Z	    The package "stream" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.385907Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.386094Z	    
+2025-07-15T18:55:32.386198Z	  
+2025-07-15T18:55:32.38632Z	  
+2025-07-15T18:55:32.386428Z	  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "crypto"[0m
+2025-07-15T18:55:32.386557Z	  
+2025-07-15T18:55:32.386681Z	      ../node_modules/nodemailer/lib/xoauth2/index.js:5:23:
+2025-07-15T18:55:32.386858Z	  [37m      5 │ const crypto = require([32m'crypto'[37m);
+2025-07-15T18:55:32.38698Z	          ╵                        [32m~~~~~~~~[0m
+2025-07-15T18:55:32.38713Z	  
+2025-07-15T18:55:32.387272Z	    The package "crypto" wasn't found on the file system but is built into node.
+2025-07-15T18:55:32.387385Z	    - Add the "nodejs_compat" compatibility flag to your project.
+2025-07-15T18:55:32.387509Z	    
+2025-07-15T18:55:32.387652Z	  
+2025-07-15T18:55:32.387756Z	  
+2025-07-15T18:55:32.387852Z	
+2025-07-15T18:55:32.387959Z	
+2025-07-15T18:55:32.388072Z	🪵  Logs were written to "/root/.config/.wrangler/logs/wrangler-2025-07-15_18-55-31_793.log"
+2025-07-15T18:55:32.388302Z	Failed building Pages Functions.
+2025-07-15T18:55:33.839632Z	Failed: generating Pages Functions failed. Check the logs above for more information. If this continues for an unknown reason, contact support: https://cfl.re/3WgEyrH

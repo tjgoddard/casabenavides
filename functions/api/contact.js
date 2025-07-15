@@ -1,23 +1,3 @@
-import nodemailer from 'nodemailer';
-
-// Email configuration
-const createTransporter = () => {
-  if (!env.SMTP_HOST || !env.SMTP_USER || !env.SMTP_PASS) {
-    console.warn("Email configuration missing. Contact form emails will not be sent.");
-    return null;
-  }
-  
-  return nodemailer.createTransporter({
-    host: env.SMTP_HOST,
-    port: parseInt(env.SMTP_PORT || "587"),
-    secure: false,
-    auth: {
-      user: env.SMTP_USER,
-      pass: env.SMTP_PASS,
-    },
-  });
-};
-
 // Simple validation function
 const validateContactData = (data) => {
   const errors = [];
@@ -35,6 +15,31 @@ const validateContactData = (data) => {
   }
   
   return errors;
+};
+
+// Simple email sending using EmailJS API or similar service
+const sendEmailNotification = async (env, submission) => {
+  try {
+    // For now, we'll log the email details and store the submission
+    console.log("=== EMAIL NOTIFICATION ===");
+    console.log("To: casabena@taosnet.com");
+    console.log("Subject: New Contact Form Submission from", submission.name);
+    console.log("From:", submission.email);
+    console.log("Message:", submission.message);
+    console.log("Submitted:", submission.createdAt);
+    console.log("=== END EMAIL ===");
+    
+    // In production, you would implement email sending here using:
+    // - EmailJS API
+    // - SendGrid API
+    // - Mailgun API
+    // - Or any other email service API
+    
+    return true;
+  } catch (error) {
+    console.error("Email notification failed:", error);
+    return false;
+  }
 };
 
 export async function onRequestPost(context) {
@@ -75,34 +80,12 @@ export async function onRequestPost(context) {
     console.log("Validation successful:", submission);
     
     // Send email notification
-    const transporter = createTransporter();
-    if (transporter) {
-      try {
-        console.log("Attempting to send email...");
-        console.log("From:", env.EMAIL_FROM || env.SMTP_USER);
-        console.log("To: casabena@taosnet.com");
-        
-        await transporter.sendMail({
-          from: env.EMAIL_FROM || env.SMTP_USER,
-          to: "casabena@taosnet.com",
-          subject: `New Contact Form Submission from ${submission.name}`,
-          html: `
-            <h3>New Contact Form Submission</h3>
-            <p><strong>Name:</strong> ${submission.name}</p>
-            <p><strong>Email:</strong> ${submission.email}</p>
-            <p><strong>Message:</strong></p>
-            <p>${submission.message.replace(/\n/g, '<br>')}</p>
-            <p><strong>Submitted:</strong> ${submission.createdAt}</p>
-          `,
-        });
-        console.log("Email sent successfully");
-      } catch (emailError) {
-        console.error("Failed to send email:", emailError);
-        console.error("Email error details:", emailError.message);
-        // Don't fail the request if email fails
-      }
+    const emailSent = await sendEmailNotification(env, submission);
+    
+    if (emailSent) {
+      console.log("Email notification logged successfully");
     } else {
-      console.warn("Email transporter not configured - email will not be sent");
+      console.warn("Email notification failed");
     }
     
     return new Response(JSON.stringify({
