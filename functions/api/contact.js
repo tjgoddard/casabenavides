@@ -38,6 +38,8 @@ const sendEmailNotification = async (env, submission) => {
     console.log('Service ID:', serviceId);
     console.log('Template ID:', templateId);
     console.log('Public Key:', publicKey);
+    console.log('Request origin:', context.request.headers.get('origin'));
+    console.log('Request host:', context.request.headers.get('host'));
     
     if (serviceId && templateId && publicKey) {
       const emailjsData = {

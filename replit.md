@@ -135,6 +135,8 @@ Changelog:
     - Status: ✅ RESOLVED - Contact form now works reliably via backend API
     - Updated email recipient to casabena@newmex.com (matching EmailJS template configuration)
     - Emails sent with full form data and formatting to correct address
+    - Enhanced Cloudflare Functions with proper environment variable handling
+    - Added domain debugging for EmailJS security configuration
 ```
 
 ## User Preferences
