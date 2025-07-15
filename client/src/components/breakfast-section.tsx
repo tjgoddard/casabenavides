@@ -8,6 +8,7 @@ export default function BreakfastSection() {
     "Family secret recipe granola",
     "Egg frittata with award-winning red chili sauce",
     "Variety of muffins, fruit, and yogurt",
+    "Gluten-free options available upon request",
     "Freshly brewed coffee and tea"
   ];
 
