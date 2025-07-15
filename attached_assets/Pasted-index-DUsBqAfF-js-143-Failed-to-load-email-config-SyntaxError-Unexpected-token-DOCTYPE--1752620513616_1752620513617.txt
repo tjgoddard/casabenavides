@@ -1,0 +1,86 @@
+index-DUsBqAfF.js:143 Failed to load email config: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+(anonymous) @ index-DUsBqAfF.js:143
+Promise.catch
+(anonymous) @ index-DUsBqAfF.js:143
+mi @ index-DUsBqAfF.js:40
+ur @ index-DUsBqAfF.js:40
+mv @ index-DUsBqAfF.js:40
+Cn @ index-DUsBqAfF.js:40
+Gc @ index-DUsBqAfF.js:40
+wn @ index-DUsBqAfF.js:38
+(anonymous) @ index-DUsBqAfF.js:40Understand this error
+index-DUsBqAfF.js:143 Using fallback email configuration
+index-DUsBqAfF.js:143 Using email config: {serviceId: 'service_zqnfqk6', templateId: 'template_28nj7rp', publicKey: 'vOTyhdXNTECRzjWWT'}
+index-DUsBqAfF.js:143 Sending email with params: {name: 'Travis Goddard', email: 'travisjgoddard@gmail.com', message: 'fefefef'}
+index-DUsBqAfF.js:143 
+            
+            
+           POST https://api.emailjs.com/api/v1.0/email/send 404 (Not Found)
+$m @ index-DUsBqAfF.js:143
+bS @ index-DUsBqAfF.js:143
+await in bS
+l @ index-DUsBqAfF.js:143
+Mg @ index-DUsBqAfF.js:37
+Dg @ index-DUsBqAfF.js:37
+Ig @ index-DUsBqAfF.js:37
+yc @ index-DUsBqAfF.js:37
+Wf @ index-DUsBqAfF.js:37
+(anonymous) @ index-DUsBqAfF.js:37
+su @ index-DUsBqAfF.js:40
+mf @ index-DUsBqAfF.js:37
+Xi @ index-DUsBqAfF.js:37
+_a @ index-DUsBqAfF.js:37
+Jg @ index-DUsBqAfF.js:37Understand this error
+index-DUsBqAfF.js:143 Email send error: Vo {status: 404, text: 'Account not found'}
+(anonymous) @ index-DUsBqAfF.js:143
+Promise.catch
+l @ index-DUsBqAfF.js:143
+Mg @ index-DUsBqAfF.js:37
+Dg @ index-DUsBqAfF.js:37
+Ig @ index-DUsBqAfF.js:37
+yc @ index-DUsBqAfF.js:37
+Wf @ index-DUsBqAfF.js:37
+(anonymous) @ index-DUsBqAfF.js:37
+su @ index-DUsBqAfF.js:40
+mf @ index-DUsBqAfF.js:37
+Xi @ index-DUsBqAfF.js:37
+_a @ index-DUsBqAfF.js:37
+Jg @ index-DUsBqAfF.js:37Understand this error
+index-DUsBqAfF.js:143 Error details: Account not found 404
+(anonymous) @ index-DUsBqAfF.js:143
+Promise.catch
+l @ index-DUsBqAfF.js:143
+Mg @ index-DUsBqAfF.js:37
+Dg @ index-DUsBqAfF.js:37
+Ig @ index-DUsBqAfF.js:37
+yc @ index-DUsBqAfF.js:37
+Wf @ index-DUsBqAfF.js:37
+(anonymous) @ index-DUsBqAfF.js:37
+su @ index-DUsBqAfF.js:40
+mf @ index-DUsBqAfF.js:37
+Xi @ index-DUsBqAfF.js:37
+_a @ index-DUsBqAfF.js:37
+Jg @ index-DUsBqAfF.js:37Understand this error
+index-DUsBqAfF.js:143 Trying alternative parameter names...
+index-DUsBqAfF.js:143 
+            
+            
+           POST https://api.emailjs.com/api/v1.0/email/send 404 (Not Found)
+$m @ index-DUsBqAfF.js:143
+bS @ index-DUsBqAfF.js:143
+await in bS
+(anonymous) @ index-DUsBqAfF.js:143
+Promise.catch
+l @ index-DUsBqAfF.js:143
+Mg @ index-DUsBqAfF.js:37
+Dg @ index-DUsBqAfF.js:37
+Ig @ index-DUsBqAfF.js:37
+yc @ index-DUsBqAfF.js:37
+Wf @ index-DUsBqAfF.js:37
+(anonymous) @ index-DUsBqAfF.js:37
+su @ index-DUsBqAfF.js:40
+mf @ index-DUsBqAfF.js:37
+Xi @ index-DUsBqAfF.js:37
+_a @ index-DUsBqAfF.js:37
+Jg @ index-DUsBqAfF.js:37Understand this error
+index-DUsBqAfF.js:143 Final email send error: Vo {status: 404, text: 'Account not found'}

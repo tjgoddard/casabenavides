@@ -72,6 +72,14 @@ export default function ContactSection() {
     
     console.log('Sending email with params:', templateParams);
 
+    // Try initializing EmailJS first (some versions require this)
+    try {
+      emailjs.init(emailConfig.publicKey);
+      console.log('EmailJS initialized successfully');
+    } catch (initError) {
+      console.warn('EmailJS init warning:', initError);
+    }
+
     emailjs.send(
       emailConfig.serviceId,
       emailConfig.templateId,
