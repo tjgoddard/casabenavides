@@ -68,31 +68,31 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
           <div className="text-white px-4 max-w-6xl mx-auto">
             
             
-            <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center mb-8">
               <a 
                 href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
+                className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition py-3 px-6 text-center min-h-[48px] flex items-center justify-center border border-white/30 hover:border-white/60 active:bg-white/10 rounded-sm"
                 onClick={() => trackEvent('click', 'reservation', 'hero_stay_button')}
               >
                 STAY
               </a>
               <a 
                 href="/our-story"
-                className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
+                className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition py-3 px-6 text-center min-h-[48px] flex items-center justify-center border border-white/30 hover:border-white/60 active:bg-white/10 rounded-sm"
               >
                 OUR STORY
               </a>
               <a 
                 href="/breakfast"
-                className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
+                className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition py-3 px-6 text-center min-h-[48px] flex items-center justify-center border border-white/30 hover:border-white/60 active:bg-white/10 rounded-sm"
               >
                 BREAKFAST
               </a>
               <a 
                 href="/experiences"
-                className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition"
+                className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition py-3 px-6 text-center min-h-[48px] flex items-center justify-center border border-white/30 hover:border-white/60 active:bg-white/10 rounded-sm"
               >
                 EXPERIENCES
               </a>
