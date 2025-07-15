@@ -25,6 +25,21 @@ const createTransporter = () => {
 };
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  console.log("Registering routes...");
+  console.log("NODE_ENV:", process.env.NODE_ENV);
+  
+  // Test route to verify routes are working
+  app.get("/api/health", (req, res) => {
+    console.log("Health check endpoint hit");
+    res.json({ status: "ok", timestamp: new Date().toISOString() });
+  });
+  
+  // Debug middleware to log all API requests
+  app.use('/api/*', (req, res, next) => {
+    console.log(`API Request: ${req.method} ${req.originalUrl}`);
+    next();
+  });
+  
   // Contact form submission
   app.post("/api/contact", async (req, res) => {
     try {
