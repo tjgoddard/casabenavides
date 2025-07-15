@@ -22,7 +22,23 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-
+    // Debug the environment variables
+    console.log('EmailJS Environment Check:');
+    console.log('SERVICE_ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log('TEMPLATE_ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log('PUBLIC_KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    
+    // Check if any are undefined
+    if (!import.meta.env.VITE_EMAILJS_SERVICE_ID || !import.meta.env.VITE_EMAILJS_TEMPLATE_ID || !import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
+      console.error('Missing EmailJS environment variables!');
+      toast({
+        title: "Configuration Error",
+        description: "EmailJS is not properly configured. Please check environment variables.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
