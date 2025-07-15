@@ -63,18 +63,25 @@ export default function ContactSection() {
 
     console.log('Using email config:', emailConfig);
 
+    // Try different field mapping patterns that EmailJS commonly uses
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_name: "Casa Benavides",
+      to_email: "casabena@taosnet.com"
+    };
+    
+    console.log('Sending email with params:', templateParams);
+
     emailjs.send(
       emailConfig.serviceId,
       emailConfig.templateId,
-      {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      },
+      templateParams,
       emailConfig.publicKey
     )
     .then((result) => {
-      console.log("Email successfully sent!", result.text);
+      console.log("Email successfully sent!", result);
       toast({
         title: "Message Sent!",
         description: "Thank you for your message! We will get back to you soon.",
@@ -83,6 +90,38 @@ export default function ContactSection() {
     })
     .catch((error) => {
       console.error("Email send error:", error);
+      console.error("Error details:", error.text, error.status);
+      
+      // Try alternative parameter names if first attempt fails
+      if (error.status === 404) {
+        console.log("Trying alternative parameter names...");
+        const altParams = {
+          user_name: formData.name,
+          user_email: formData.email,
+          user_message: formData.message,
+        };
+        
+        return emailjs.send(
+          emailConfig.serviceId,
+          emailConfig.templateId,
+          altParams,
+          emailConfig.publicKey
+        );
+      }
+      throw error;
+    })
+    .then((result) => {
+      if (result) {
+        console.log("Email sent with alternative params!", result);
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message! We will get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      }
+    })
+    .catch((finalError) => {
+      console.error("Final email send error:", finalError);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
