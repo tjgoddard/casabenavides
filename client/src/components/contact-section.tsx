@@ -22,34 +22,22 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Debug the environment variables
-    console.log('EmailJS Environment Check:');
-    console.log('All env vars:', import.meta.env);
-    console.log('SERVICE_ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log('TEMPLATE_ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-    console.log('PUBLIC_KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    // Use hardcoded values since environment variables aren't loading properly
+    const serviceId = 'service_zqnfqk6';
+    const templateId = 'template_28n7rp';
+    const publicKey = 'Zr0gq__GXcuv6SV7';
     
-    // Check if any are undefined
-    if (!import.meta.env.VITE_EMAILJS_SERVICE_ID || !import.meta.env.VITE_EMAILJS_TEMPLATE_ID || !import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
-      console.error('Missing EmailJS environment variables!');
-      toast({
-        title: "Configuration Error",
-        description: "EmailJS is not properly configured. Please check environment variables.",
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-      return;
-    }
+    console.log('Using hardcoded EmailJS values:', { serviceId, templateId, publicKey });
 
     emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      serviceId,
+      templateId,
       {
         name: formData.name,
         email: formData.email,
         message: formData.message,
       },
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      publicKey
     )
     .then((result) => {
       console.log("Email successfully sent!", result.text);
