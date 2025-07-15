@@ -24,9 +24,7 @@ export default function SeasonalSection() {
                   href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1&promo=WINTER25"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
-                  BOOK YOUR WINTER ESCAPE
-                </a>
+                >BOOK YOUR ESCAPE</a>
               </Button>
             </div>
           </div>

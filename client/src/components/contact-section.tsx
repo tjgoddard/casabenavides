@@ -69,7 +69,7 @@ export default function ContactSection() {
           <div>
             <div className="mb-8">
               <img 
-                src="https://www.casabenavides.com/quality_auto/f4f18f_12a4a9ffdcce4e789d2a0dfc43bbd4ce~mv2.jpg" 
+                src="/attached_assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg" 
                 alt="Casa Benavides Inn exterior" 
                 className="w-full h-64 object-cover rounded-xl shadow-lg"
               />
@@ -206,26 +206,30 @@ export default function ContactSection() {
 
         {/* Google Maps Integration */}
         <div className="mt-16">
-          <h3 className="text-2xl font-semibold mb-6 text-center text-gray-900">Find Us</h3>
+          <h3 className="luxury-subheading text-2xl font-semibold mb-6 text-center text-casa-navy">Find Us</h3>
           <div className="bg-gray-200 rounded-xl overflow-hidden shadow-lg">
-            <a 
-              href="https://www.google.com/maps/place/137+Kit+Carson+Rd,+Taos,+NM+87571/@36.4070267,-105.57262,18z/data=!4m2!3m1!1s0x87176522a5e3309d:0x77572bd3bb2f6f2a" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block relative group"
-            >
-              <img 
-                src="https://www.casabenavides.com/quality_auto/f4f18f_03968c7e019247b5b46e968f3f7ae001~mv2.jpg" 
-                alt="View & Print Your Directions with Google Maps" 
-                className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-casa-blue bg-opacity-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="bg-white text-casa-blue px-4 py-2 rounded-lg font-semibold">
-                  <ExternalLink className="w-4 h-4 mr-2 inline" />
-                  View & Print Your Directions with Google Maps
-                </span>
-              </div>
-            </a>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.7423853!2d-105.5726!3d36.4070267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87176522a5e3309d%3A0x77572bd3bb2f6f2a!2s137%20Kit%20Carson%20Rd%2C%20Taos%2C%20NM%2087571!5e0!3m2!1sen!2sus!4v1640995200000!5m2!1sen!2sus"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Casa Benavides Inn Location"
+            ></iframe>
+          </div>
+          <div className="text-center mt-4">
+            <Button asChild variant="outline" className="border-casa-blue text-casa-blue hover:bg-casa-blue hover:text-white">
+              <a 
+                href="https://www.google.com/maps/place/137+Kit+Carson+Rd,+Taos,+NM+87571/@36.4070267,-105.57262,18z/data=!4m2!3m1!1s0x87176522a5e3309d:0x77572bd3bb2f6f2a" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                View & Print Directions
+              </a>
+            </Button>
           </div>
         </div>
       </div>
