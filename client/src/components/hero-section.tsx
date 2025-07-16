@@ -35,6 +35,14 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
+    // Preload the first hero image for better LCP
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = heroImage1;
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
+    
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => 
         (prevIndex + 1) % images.length

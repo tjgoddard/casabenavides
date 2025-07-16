@@ -160,6 +160,10 @@ Changelog:
       - Enhanced font stack with system-ui fallbacks for immediate rendering
       - Optimized font loading sequence to prevent render blocking
       - Improved LCP and FCP metrics by removing CSS blocking resources
+    - LCP IMAGE OPTIMIZATION: Fixed LCP image discovery and preloading
+      - Implemented dynamic preloading of hero image with correct hashed filename
+      - Ensured LCP image is discoverable and properly prioritized
+      - Fixed filename mismatch between static preload and Vite build output
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 
