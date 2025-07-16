@@ -23,8 +23,14 @@
       gtag('js', new Date());
       gtag('config', 'G-TDTMB2DBTF');
     </script>
+    <!-- Preconnect to critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Preload critical fonts to break the chain -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <!-- Critical styles for immediate rendering -->
     <style>
       /* System font fallbacks for immediate rendering */
@@ -72,14 +78,21 @@
       /* Show content when fonts load */
       .fonts-loaded .async-content { visibility: visible; }
     </style>
-    <!-- Load fonts asynchronously -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'; document.documentElement.className += ' fonts-loaded';">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Fallback font loading for browsers that don't support preload -->
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
     <script>
-      // Show content immediately if fonts are already loaded
+      // Show content immediately and optimize font loading
       document.documentElement.className += ' fonts-loaded';
+      
+      // Preload critical JavaScript bundle
+      const script = document.createElement('link');
+      script.rel = 'preload';
+      script.as = 'script';
+      script.href = '/src/main.tsx';
+      document.head.appendChild(script);
     </script>
     <!-- Hero image will be preloaded dynamically by the component -->
   </head>

@@ -160,6 +160,11 @@ Changelog:
       - Enhanced font stack with system-ui fallbacks for immediate rendering
       - Optimized font loading sequence to prevent render blocking
       - Improved LCP and FCP metrics by removing CSS blocking resources
+    - CRITICAL PATH OPTIMIZATION: Reduced critical request chain length from 884ms to parallel loading
+      - Implemented resource preloading to break dependency chains
+      - Added DNS prefetch for faster font domain resolution
+      - Optimized font loading with preload hints instead of blocking requests
+      - Parallel loading of critical resources reduces maximum latency
     - LCP IMAGE OPTIMIZATION: Fixed LCP image discovery and preloading
       - Implemented dynamic preloading of hero image with correct hashed filename
       - Ensured LCP image is discoverable and properly prioritized
