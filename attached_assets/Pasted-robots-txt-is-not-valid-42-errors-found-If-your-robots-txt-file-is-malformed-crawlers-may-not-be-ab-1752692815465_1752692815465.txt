@@ -1,0 +1,131 @@
+robots.txt is not valid 42 errors found
+If your robots.txt file is malformed, crawlers may not be able to understand how you want your website to be crawled or indexed. Learn more about robots.txt.
+Line #
+Content
+Error
+1
+<!DOCTYPE html>
+Syntax not understood
+2
+<html lang="en">
+Syntax not understood
+3
+<head>
+Syntax not understood
+4
+<meta charset="UTF-8" />
+Syntax not understood
+5
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+Syntax not understood
+6
+<title>Casa Benavides Inn | Historic Bed & Breakfast in Taos, New Mexico</title>
+Syntax not understood
+7
+<meta name="description" content="Experience the charm of Casa Benavides Inn, a historic bed & breakfast in the heart of Taos, NM. 36 unique rooms, gourmet breakfast, and walking distance to everything Taos has to offer." />
+Syntax not understood
+8
+<meta property="og:title" content="Casa Benavides Inn | Historic Bed & Breakfast in Taos, New Mexico" />
+Unknown directive
+9
+<meta property="og:description" content="Experience the charm of Casa Benavides Inn, a historic bed & breakfast in the heart of Taos, NM. 36 unique rooms, gourmet breakfast, and walking distance to everything Taos has to offer." />
+Unknown directive
+10
+<meta property="og:type" content="website" />
+Unknown directive
+11
+<meta property="og:url" content="https://casabenavides.com" />
+Unknown directive
+12
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+Syntax not understood
+13
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+Syntax not understood
+14
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+Syntax not understood
+15
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+Syntax not understood
+16
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+Syntax not understood
+17
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+Syntax not understood
+18
+<!-- Google tag (gtag.js) -->
+Syntax not understood
+19
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDTMB2DBTF"></script>
+Unknown directive
+20
+<script>
+Syntax not understood
+21
+window.dataLayer = window.dataLayer || [];
+Syntax not understood
+22
+function gtag(){dataLayer.push(arguments);}
+Syntax not understood
+23
+gtag('js', new Date());
+Syntax not understood
+24
+gtag('config', 'G-TDTMB2DBTF');
+Syntax not understood
+25
+</script>
+Syntax not understood
+26
+<link rel="preconnect" href="https://fonts.googleapis.com">
+Unknown directive
+27
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+Unknown directive
+28
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+Unknown directive
+29
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+Unknown directive
+30
+<link href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+Unknown directive
+31
+<noscript><link href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+Unknown directive
+32
+<!-- Preload the first hero image for better LCP -->
+Syntax not understood
+33
+<link rel="preload" as="image" href="/assets/IMG_4448 edit no sky_(2)_1752537525049.jpg" fetchpriority="high">
+Syntax not understood
+34
+<script type="module" crossorigin src="/assets/index-CtgY9ySH.js"></script>
+Syntax not understood
+35
+<link rel="stylesheet" crossorigin href="/assets/index-BvlPA86F.css">
+Syntax not understood
+36
+</head>
+Syntax not understood
+37
+<body>
+Syntax not understood
+38
+<div id="root"></div>
+Syntax not understood
+39
+<!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+Syntax not understood
+40
+<script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" async></script>
+Unknown directive
+41
+</body>
+Syntax not understood
+42
+</html>
+Syntax not understood
