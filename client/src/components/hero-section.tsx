@@ -48,7 +48,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
     <section id="home" className="relative">
       {/* Hero Section */}
       <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        {/* Image carousel */}
+        {/* Image carousel with optimized loading */}
         {images.map((image, index) => (
           <img 
             key={index}
@@ -62,6 +62,9 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
               aspectRatio: '16/9'
             }}
             fetchpriority={index === 0 ? 'high' : 'low'}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            sizes="100vw"
+            decoding="async"
           />
         ))}
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>

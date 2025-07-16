@@ -94,6 +94,8 @@ export default function ContactSection() {
                 alt="Casa Benavides Inn exterior" 
                 className="w-full h-64 object-cover rounded-xl shadow-lg"
                 loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
+                decoding="async"
               />
             </div>
             

@@ -1,0 +1,60 @@
+Improve image delivery Est savings of 27,162 KiB
+Reducing the download time of images can improve the perceived load time of the page and LCP. Learn more about optimizing image sizeLCPFCP
+URL
+Resource Size
+Est Savings
+casabenavides.com 1st party
+27,769.4 KiB	27,162.1 KiB
+/assets/IMG_4445_….jpg(www.casabenavides.com)
+11,621.5 KiB
+11,483.2 KiB
+Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+9,819.0 KiB
+This image file is larger than it needs to be (2814x3936) for its displayed dimensions (1475x576). Use responsive images to reduce the image download size.
+10,729.6 KiB
+/assets/IMG_4446_….jpg(www.casabenavides.com)
+7,262.6 KiB
+7,102.8 KiB
+Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+5,539.3 KiB
+This image file is larger than it needs to be (2752x3848) for its displayed dimensions (1704x576). Use responsive images to reduce the image download size.
+6,589.3 KiB
+/casa-sunset-moon.jpg(www.casabenavides.com)
+2,691.8 KiB
+2,648.7 KiB
+Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+2,394.2 KiB
+This image file is larger than it needs to be (1179x1551) for its displayed dimensions (380x698). Use responsive images to reduce the image download size.
+2,301.5 KiB
+/casa-living-room.png(www.casabenavides.com)
+1,846.1 KiB
+1,821.6 KiB
+Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+1,631.4 KiB
+This image file is larger than it needs to be (1143x1154) for its displayed dimensions (392x384). Use responsive images to reduce the image download size.
+1,635.2 KiB
+/assets/IMG_3403-BnbVmkWq.png(www.casabenavides.com)
+1,845.3 KiB
+1,802.0 KiB
+Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+1,693.9 KiB
+This image file is larger than it needs to be (841x1106) for its displayed dimensions (532x500). Use responsive images to reduce the image download size.
+1,317.3 KiB
+/assets/iStock-14….jpg(www.casabenavides.com)
+1,882.6 KiB
+1,780.0 KiB
+Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+1,698.9 KiB
+This image file is larger than it needs to be (899x1256) for its displayed dimensions (1094x576). Use responsive images to reduce the image download size.
+830.9 KiB
+/assets/IMG_4448%20edit%20no%20sky_(2)_17525375….jpg(www.casabenavides.com)
+473.1 KiB
+380.1 KiB
+Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+380.1 KiB
+/assets/casa-bena….png(www.casabenavides.com)
+146.4 KiB
+143.8 KiB
+Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.
+131.0 KiB
+This image file is larger than it needs to be (272x348) for its displayed dimensions (128x128). Use responsive images to reduce the image download size.
