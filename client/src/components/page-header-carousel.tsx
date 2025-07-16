@@ -71,6 +71,9 @@ export default function PageHeaderCarousel({ title, subtitle }: PageHeaderCarous
             style={{
               objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : 'center center'
             }}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1920px"
+            decoding="async"
           />
         ))}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>

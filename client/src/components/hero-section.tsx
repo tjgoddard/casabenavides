@@ -71,7 +71,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
             }}
             fetchpriority={index === 0 ? 'high' : 'low'}
             loading={index === 0 ? 'eager' : 'lazy'}
-            sizes="100vw"
+            sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1920px"
             decoding="async"
           />
         ))}

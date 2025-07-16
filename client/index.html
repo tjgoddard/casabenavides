@@ -38,7 +38,7 @@
     <!-- Preload critical fonts to break the chain -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <!-- Critical styles for immediate rendering -->
+    <!-- Critical styles for immediate rendering and mobile optimization -->
     <style>
       /* System font fallbacks for immediate rendering */
       body { 
@@ -84,6 +84,14 @@
       
       /* Show content when fonts load */
       .fonts-loaded .async-content { visibility: visible; }
+      
+      /* Mobile optimization: Reduce image quality on smaller screens */
+      @media (max-width: 768px) {
+        img {
+          image-rendering: -webkit-optimize-contrast;
+          image-rendering: crisp-edges;
+        }
+      }
     </style>
     <!-- Fallback font loading for browsers that don't support preload -->
     <noscript>
