@@ -238,46 +238,8 @@
   </head>
   <body>
     <div id="root"></div>
-    <!-- Load JavaScript after initial paint -->
-    <script>
-      // Delay JavaScript loading until after first paint
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          const script = document.createElement('script');
-          script.type = 'module';
-          script.src = '/src/main.tsx';
-          script.fetchPriority = 'high';
-          document.body.appendChild(script);
-        });
-      });
-      
-      // Aggressive image loading optimization
-      document.addEventListener('DOMContentLoaded', function() {
-        // Add intersection observer for images
-        if ('IntersectionObserver' in window) {
-          const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                  img.src = img.dataset.src;
-                  img.removeAttribute('data-src');
-                  imageObserver.unobserve(img);
-                }
-              }
-            });
-          }, {
-            rootMargin: '50px 0px',
-            threshold: 0.01
-          });
-          
-          // Observe all images with data-src
-          document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-          });
-        }
-      });
-    </script>
+    <!-- Load JavaScript normally for production compatibility -->
+    <script type="module" src="/src/main.tsx"></script>
     <!-- Load non-critical scripts after page load -->
     <script>
       // Defer non-critical scripts until after page load

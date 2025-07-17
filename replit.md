@@ -207,10 +207,15 @@ Changelog:
       - Implemented progressive loading for hero carousel (only load first image initially)
       - Page headers now use single static image instead of full carousel (saves 18MB)
       - Hero carousel images load on-demand when carousel advances
-      - Added 1-second delay for non-critical images to prioritize initial render
+      - Added 500ms delay for non-critical images to prioritize initial render
       - Reduced image sizes attributes for mobile (40vw vs 100vw)
-      - Added intersection observer for future image lazy loading enhancements
       - Expected payload reduction: ~20MB (from 25MB to ~5MB) for initial page load
+    - PRODUCTION DEPLOYMENT FIX: Fixed white screen issue caused by aggressive optimizations
+      - Reverted delayed JavaScript loading approach that broke production builds
+      - Changed React.lazy back to normal imports for production stability
+      - Removed intersection observer code that was causing deployment issues
+      - Kept progressive image loading for hero carousel (works in production)
+      - Site now loads properly in production with maintained performance improvements
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 

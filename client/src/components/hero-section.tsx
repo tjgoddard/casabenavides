@@ -66,17 +66,11 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
       // Load images 2-4 after initial render
       setTimeout(() => {
         setImagesLoaded(prev => new Set([...prev, 1, 2, 3]));
-      }, 1000);
+      }, 500); // Reduced delay for better UX
     };
     
-    if (typeof window !== 'undefined') {
-      if (document.readyState === 'complete') {
-        loadRemainingImages();
-      } else {
-        window.addEventListener('load', loadRemainingImages);
-        return () => window.removeEventListener('load', loadRemainingImages);
-      }
-    }
+    // Load images after a short delay
+    loadRemainingImages();
   }, []);
 
   return (
