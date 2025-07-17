@@ -12,36 +12,20 @@ interface PageHeaderCarouselProps {
 }
 
 export default function PageHeaderCarousel({ title, subtitle }: PageHeaderCarouselProps) {
+  // Use only the first image for page headers to reduce payload
   const images = [
     {
       src: heroImage1,
       alt: "Casa Benavides Inn - Adobe Architecture at Sunset with Turquoise Accents"
-    },
-    {
-      src: heroImage2,
-      alt: "Taos Mountain Landscape at Sunset"
-    },
-    {
-      src: heroImage3,
-      alt: "Casa Benavides Inn - Courtyard Patio with Colorful Umbrellas"
-    },
-    {
-      src: heroImage4,
-      alt: "Casa Benavides Inn - Interior Living Space with Southwest Decor"
     }
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Remove carousel for page headers - static image only
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        (prevIndex + 1) % images.length
-      );
-    }, 5000); // Change image every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [images.length]);
+    // No carousel needed for page headers
+  }, []);
 
   const goToPrevious = () => {
     setCurrentImageIndex((prevIndex) => 
@@ -57,25 +41,17 @@ export default function PageHeaderCarousel({ title, subtitle }: PageHeaderCarous
 
   return (
     <section className="relative">
-      {/* Page Header Carousel */}
+      {/* Page Header - Static Image Only */}
       <div className="relative h-[40vh] min-h-[300px] overflow-hidden">
-        {/* Image carousel */}
-        {images.map((image, index) => (
-          <img 
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            } object-cover object-center`}
-            style={{
-              objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : 'center center'
-            }}
-            loading={index === 0 ? 'eager' : 'lazy'}
-            sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1920px"
-            decoding="async"
-          />
-        ))}
+        <img 
+          src={heroImage1}
+          alt="Casa Benavides Inn - Adobe Architecture at Sunset with Turquoise Accents"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ objectPosition: '25% 30%' }}
+          loading="eager"
+          sizes="(max-width: 640px) 50vw, (max-width: 768px) 75vw, (max-width: 1024px) 85vw, 90vw"
+          decoding="async"
+        />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         
         

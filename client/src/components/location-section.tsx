@@ -44,7 +44,7 @@ export default function LocationSection() {
                 alt="Casa Benavides Inn living room with authentic Southwest art collection and pottery" 
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 loading="lazy"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                sizes="(max-width: 640px) 40vw, (max-width: 768px) 45vw, (max-width: 1024px) 35vw, 400px"
                 decoding="async"
               />
             </div>

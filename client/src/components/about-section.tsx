@@ -17,7 +17,7 @@ export default function AboutSection() {
               alt="Casa Benavides Inn authentic Southwest architecture"
               className="relative w-full h-[500px] object-cover rounded-2xl luxury-shadow smooth-transition group-hover:scale-105"
               loading="lazy"
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 600px"
+              sizes="(max-width: 640px) 40vw, (max-width: 768px) 45vw, (max-width: 1024px) 35vw, 400px"
               decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl"></div>
