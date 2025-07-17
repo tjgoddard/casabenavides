@@ -30,10 +30,14 @@
       gtag('js', new Date());
       gtag('config', 'G-TDTMB2DBTF');
     </script>
-    <!-- Preconnect to critical resources -->
+    <!-- Resource hints to break dependency chains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Preload critical resources to break the chain -->
+    <link rel="modulepreload" href="/src/main.tsx">
+    <link rel="preload" href="/src/index.css" as="style">
     
     <!-- Preload critical fonts to break the chain -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -161,36 +165,34 @@
       // Show content immediately and optimize font loading
       document.documentElement.className += ' fonts-loaded';
       
-      // Make CSS non-render-blocking
-      document.addEventListener('DOMContentLoaded', function() {
-        // Find all CSS link tags and make them non-blocking
+      // Optimize resource loading immediately
+      (function() {
+        // Make CSS non-render-blocking
         const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
         cssLinks.forEach(link => {
           // Skip fonts that are already async
           if (link.href.includes('fonts.googleapis.com')) return;
           
-          // Create a new link element
-          const newLink = document.createElement('link');
-          newLink.rel = 'preload';
-          newLink.as = 'style';
-          newLink.href = link.href;
-          newLink.onload = function() {
-            this.onload = null;
-            this.rel = 'stylesheet';
-          };
-          
-          // Replace the old link with the new one
-          link.parentNode.insertBefore(newLink, link);
-          link.remove();
+          // Convert to non-blocking
+          link.media = 'print';
+          link.onload = function() { this.media = 'all'; };
         });
-      });
+        
+        // Ensure fonts continue loading async
+        const fontLinks = document.querySelectorAll('link[href*="fonts.googleapis.com"]');
+        fontLinks.forEach(link => {
+          if (link.rel === 'stylesheet') {
+            link.media = 'print';
+            link.onload = function() { this.media = 'all'; };
+          }
+        });
+      })();
       
-      // Preload critical JavaScript bundle
-      const script = document.createElement('link');
-      script.rel = 'preload';
-      script.as = 'script';
-      script.href = '/src/main.tsx';
-      document.head.appendChild(script);
+      // Resource prioritization for mobile
+      if ('connection' in navigator && navigator.connection.saveData) {
+        // On slow connections, delay non-critical resources
+        console.log('Data saver mode detected');
+      }
     </script>
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -236,8 +238,31 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" async></script>
+    <!-- Load JavaScript after initial paint -->
+    <script>
+      // Delay JavaScript loading until after first paint
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          const script = document.createElement('script');
+          script.type = 'module';
+          script.src = '/src/main.tsx';
+          script.fetchPriority = 'high';
+          document.body.appendChild(script);
+        });
+      });
+    </script>
+    <!-- Load non-critical scripts after page load -->
+    <script>
+      // Defer non-critical scripts until after page load
+      window.addEventListener('load', function() {
+        // Load Replit banner only in dev mode
+        if (window.location.hostname === 'localhost' || window.location.hostname.includes('.repl.')) {
+          const replitScript = document.createElement('script');
+          replitScript.src = 'https://replit.com/public/js/replit-dev-banner.js';
+          replitScript.async = true;
+          document.body.appendChild(replitScript);
+        }
+      });
+    </script>
   </body>
 </html>
