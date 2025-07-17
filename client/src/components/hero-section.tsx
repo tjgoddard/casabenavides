@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy } from "react";
 import { trackEvent } from "@/lib/analytics";
 import heroImage1 from "@assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
 import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
