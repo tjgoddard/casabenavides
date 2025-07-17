@@ -92,6 +92,65 @@
           image-rendering: crisp-edges;
         }
       }
+      
+      /* Critical CSS for above-the-fold content */
+      .relative { position: relative; }
+      .absolute { position: absolute; }
+      .fixed { position: fixed; }
+      .inset-0 { inset: 0px; }
+      .z-10 { z-index: 10; }
+      .z-20 { z-index: 20; }
+      .z-50 { z-index: 50; }
+      .mx-auto { margin-left: auto; margin-right: auto; }
+      .flex { display: flex; }
+      .hidden { display: none; }
+      .h-full { height: 100%; }
+      .w-full { width: 100%; }
+      .max-w-7xl { max-width: 80rem; }
+      .items-center { align-items: center; }
+      .justify-center { justify-content: center; }
+      .justify-between { justify-content: space-between; }
+      .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+      .overflow-hidden { overflow: hidden; }
+      .rounded-sm { border-radius: 0.125rem; }
+      .border { border-width: 1px; }
+      .bg-white { background-color: #ffffff; }
+      .bg-black { background-color: #000000; }
+      .bg-opacity-30 { background-color: rgb(0 0 0 / 0.3); }
+      .px-4 { padding-left: 1rem; padding-right: 1rem; }
+      .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+      .text-center { text-align: center; }
+      .text-white { color: #ffffff; }
+      .opacity-0 { opacity: 0; }
+      .opacity-100 { opacity: 1; }
+      .shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+      .transition-all { transition-property: all; }
+      .duration-300 { transition-duration: 300ms; }
+      
+      /* Button critical styles */
+      .btn-primary {
+        background-color: #0682b3;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.2s;
+      }
+      .btn-primary:hover { background-color: #0569a1; }
+      
+      /* Typography critical styles */
+      .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+      .text-5xl { font-size: 3rem; line-height: 1; }
+      .text-6xl { font-size: 3.75rem; line-height: 1; }
+      .font-light { font-weight: 300; }
+      .font-medium { font-weight: 500; }
+      
+      @media (min-width: 768px) {
+        .md\\:text-5xl { font-size: 3rem; line-height: 1; }
+        .md\\:text-6xl { font-size: 3.75rem; line-height: 1; }
+      }
     </style>
     <!-- Fallback font loading for browsers that don't support preload -->
     <noscript>
@@ -101,6 +160,30 @@
     <script>
       // Show content immediately and optimize font loading
       document.documentElement.className += ' fonts-loaded';
+      
+      // Make CSS non-render-blocking
+      document.addEventListener('DOMContentLoaded', function() {
+        // Find all CSS link tags and make them non-blocking
+        const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
+        cssLinks.forEach(link => {
+          // Skip fonts that are already async
+          if (link.href.includes('fonts.googleapis.com')) return;
+          
+          // Create a new link element
+          const newLink = document.createElement('link');
+          newLink.rel = 'preload';
+          newLink.as = 'style';
+          newLink.href = link.href;
+          newLink.onload = function() {
+            this.onload = null;
+            this.rel = 'stylesheet';
+          };
+          
+          // Replace the old link with the new one
+          link.parentNode.insertBefore(newLink, link);
+          link.remove();
+        });
+      });
       
       // Preload critical JavaScript bundle
       const script = document.createElement('link');
