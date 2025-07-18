@@ -27,12 +27,10 @@ export default function Map() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      
       <PageHeaderCarousel 
         title="PROPERTY MAP"
         subtitle="Navigate Our Historic Grounds"
       />
-      
       <main className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Introduction Section */}
@@ -118,10 +116,7 @@ export default function Map() {
             <h3 className="luxury-subheading text-2xl mb-6 text-casa-navy">
               Need Help Finding Your Room?
             </h3>
-            <p className="luxury-body text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Our friendly staff is always available to help you navigate the property. 
-              Don't hesitate to ask for directions or assistance during your stay.
-            </p>
+            <p className="luxury-body text-lg text-gray-700 mb-8 max-w-2xl mx-auto">Our staff is always available to help you navigate the property. Don't hesitate to ask for directions or assistance during your stay.</p>
             
             <Button 
               asChild 
@@ -138,7 +133,6 @@ export default function Map() {
           </div>
         </div>
       </main>
-      
       <Footer />
     </div>
   );
