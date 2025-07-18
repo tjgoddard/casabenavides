@@ -44,6 +44,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/map" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
+                  Property Map
+                </Link>
+              </li>
+              <li>
                 <Link href="/our-story" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
                   Our Story
                 </Link>
