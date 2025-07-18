@@ -15,6 +15,7 @@ import Experiences from "@/pages/experiences";
 import OurStory from "@/pages/our-story";
 import Policies from "@/pages/policies";
 import GroupReservations from "@/pages/group-reservations";
+import Map from "@/pages/map";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/our-story" component={OurStory} />
       <Route path="/policies" component={Policies} />
       <Route path="/group-reservations" component={GroupReservations} />
+      <Route path="/map" component={Map} />
       <Route component={NotFound} />
     </Switch>
   );
