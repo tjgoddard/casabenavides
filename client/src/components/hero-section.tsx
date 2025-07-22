@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect, lazy } from "react";
 import { trackEvent, trackReservationClick } from "@/lib/analytics";
-import heroImage1 from "@assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
-import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
-import heroImage3 from "@assets/IMG_4446_1752533547603.jpg";
-import heroImage4 from "@assets/IMG_4445_1752533547607.jpg";
+// Use your original Casa Benavides hero images
+const heroImage1 = "/hero-adobe-architecture.jpg";
+const heroImage2 = "/hero-taos-mountains.jpg"; 
+const heroImage3 = "/hero-courtyard-patio.jpg";
+const heroImage4 = "/hero-interior-space.jpg";
 import logoImage from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)-Photoroom_1752359300963.jpg";
 
 interface HeroSectionProps {
@@ -33,8 +34,6 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-
 
   useEffect(() => {
     // Preload the first hero image for better LCP on desktop
@@ -42,7 +41,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
       const link = document.createElement('link');
       link.rel = 'preload';
       link.as = 'image';
-      link.href = heroImage1;
+      link.href = '/hero-adobe-architecture.jpg';
       link.fetchPriority = 'high';
       document.head.appendChild(link);
     }
@@ -82,7 +81,6 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
               aspectRatio: '16/9',
               imageRendering: 'auto'
             }}
-
             loading={index === 0 ? 'eager' : 'lazy'}
             sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 85vw, 90vw"
             decoding="async"
