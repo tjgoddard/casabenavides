@@ -46,19 +46,18 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
     }
 
     // Simple carousel - start after 3 seconds to let first image load
+    let intervalId: NodeJS.Timeout;
+    
     const timer = setTimeout(() => {
-      const interval = setInterval(() => {
+      intervalId = setInterval(() => {
         setCurrentImageIndex(prev => (prev + 1) % images.length);
       }, 5000);
-      
-      // Store interval for cleanup
-      (timer as any).intervalId = interval;
     }, 3000);
 
     return () => {
       clearTimeout(timer);
-      if ((timer as any).intervalId) {
-        clearInterval((timer as any).intervalId);
+      if (intervalId) {
+        clearInterval(intervalId);
       }
     };
   }, [images.length]);
