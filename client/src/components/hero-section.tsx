@@ -46,14 +46,15 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
       document.head.appendChild(link);
     }
 
-    // Simple carousel - start after 3 seconds to let first image load
+    // Wait for first image to load before starting carousel
     let intervalId: NodeJS.Timeout;
     
+    // Start carousel after 6 seconds to ensure all images are properly loaded
     const timer = setTimeout(() => {
       intervalId = setInterval(() => {
         setCurrentImageIndex(prev => (prev + 1) % images.length);
-      }, 5000);
-    }, 3000);
+      }, 5000); // Change image every 5 seconds
+    }, 6000);
 
     return () => {
       clearTimeout(timer);
@@ -81,6 +82,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
               aspectRatio: '16/9',
               imageRendering: 'auto'
             }}
+
             loading={index === 0 ? 'eager' : 'lazy'}
             sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 85vw, 90vw"
             decoding="async"
