@@ -33,6 +33,8 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+
 
   useEffect(() => {
     // Preload the first hero image for better LCP on desktop
@@ -66,15 +68,15 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
     <section id="home" className="relative">
       {/* Hero Section */}
       <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        {/* Image carousel - always render all images for proper carousel functionality */}
+        {/* Image carousel with error handling */}
         {images.map((image, index) => (
           <img 
             key={index}
             src={image.src}
             alt={image.alt}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 w-full h-full object-cover object-center z-0 ${
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            } object-cover object-center`}
+            } transition-opacity duration-1000 ease-in-out`}
             style={{
               objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : index === 3 ? 'center center' : 'center center',
               aspectRatio: '16/9',
@@ -86,7 +88,8 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
             decoding="async"
           />
         ))}
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black bg-opacity-30 z-5"></div>
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <div className="text-white px-4 max-w-6xl mx-auto">

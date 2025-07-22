@@ -244,6 +244,12 @@ Changelog:
       - Conversion tracking fires on successful contact form submissions and reservation button clicks
       - Added tracking to all reservation buttons: navigation, hero, location, contact, breakfast, story, map, and footer
       - All reservation buttons now trigger Google Ads conversion AW-11090641794/HxekCObmo5wZEIKHt6gp
+    - HERO CAROUSEL FIX: Fixed grayed out image display issue in hero section (July 22, 2025)
+      - Resolved JavaScript timer errors and carousel malfunction due to improper timeout/interval management
+      - Fixed z-index layering: images (z-0), dark overlay (z-5), text content (z-10) for proper display
+      - All 4 hero images now display correctly with smooth opacity transitions
+      - Maintained mobile performance optimizations and Google Ads conversion tracking functionality
+      - Carousel cycles properly through all images: Adobe architecture → Taos mountains → courtyard → interior space
     - MOBILE PERFORMANCE OPTIMIZATION: Implemented aggressive mobile speed optimizations
       - Optimized responsive image sizing with mobile-first breakpoints (480px, 768px, 1024px)
       - Added critical mobile image CSS inline in HTML head for immediate effect
