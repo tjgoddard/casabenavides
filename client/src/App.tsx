@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
+import { addImageLoadListeners, optimizeImagesForMobile } from "./utils/imageOptimization";
 
 // Import pages normally for production stability
 import Home from "@/pages/home";
@@ -38,9 +39,22 @@ function Router() {
 }
 
 function App() {
-  // Initialize Google Analytics when app loads
+  // Initialize Google Analytics and mobile optimizations when app loads
   useEffect(() => {
     initGA();
+    
+    // Initialize mobile image optimizations
+    optimizeImagesForMobile();
+    addImageLoadListeners();
+    
+    // Re-apply optimizations when images load dynamically
+    const observer = new MutationObserver(() => {
+      addImageLoadListeners();
+    });
+    
+    observer.observe(document.body, { childList: true, subtree: true });
+    
+    return () => observer.disconnect();
   }, []);
 
   return (

@@ -31,7 +31,7 @@ export default function Navigation() {
                 isScrolled ? 'h-16 w-auto' : 'h-32 w-auto'
               }`}
               style={{ aspectRatio: '1/1' }}
-              sizes="(max-width: 640px) 128px, 128px"
+              sizes="(max-width: 480px) 64px, (max-width: 768px) 80px, 128px"
               loading="eager"
               decoding="async"
             />

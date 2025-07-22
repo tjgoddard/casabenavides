@@ -63,10 +63,13 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
   // Load remaining images after first paint to reduce initial payload
   useEffect(() => {
     const loadRemainingImages = () => {
-      // Load images 2-4 after initial render
+      // Load images 2-4 after initial render with longer delay on mobile
+      const isMobile = window.innerWidth <= 768;
+      const delay = isMobile ? 1000 : 500; // Longer delay on mobile to prioritize initial load
+      
       setTimeout(() => {
         setImagesLoaded(prev => new Set(Array.from(prev).concat([1, 2, 3])));
-      }, 500); // Reduced delay for better UX
+      }, delay);
     };
     
     // Load images after a short delay
@@ -102,11 +105,12 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
               } object-cover object-center`}
               style={{
                 objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : index === 3 ? 'center center' : 'center center',
-                aspectRatio: '16/9'
+                aspectRatio: '16/9',
+                imageRendering: 'auto'
               }}
-              fetchPriority={index === 0 ? 'high' : 'low'}
+              fetchpriority={index === 0 ? 'high' : 'low'}
               loading={index === 0 ? 'eager' : 'lazy'}
-              sizes="(max-width: 640px) 50vw, (max-width: 768px) 75vw, (max-width: 1024px) 85vw, 90vw"
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 85vw, 90vw"
               decoding="async"
             />
           );

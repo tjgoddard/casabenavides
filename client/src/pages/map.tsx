@@ -80,7 +80,7 @@ export default function Map() {
                   alt="Casa Benavides Inn detailed room map showing all 36 rooms, patios, and parking areas"
                   className="relative w-full h-auto rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
                   loading="lazy"
-                  sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 1000px"
+                  sizes="(max-width: 480px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 1000px"
                   decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent rounded-xl"></div>

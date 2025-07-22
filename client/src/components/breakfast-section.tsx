@@ -32,6 +32,9 @@ export default function BreakfastSection() {
               alt="Casa Benavides kitchen and dining area" 
               className="w-full h-96 object-cover rounded-xl shadow-lg"
               style={{ objectPosition: '25% center' }}
+              loading="lazy"
+              sizes="(max-width: 480px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 45vw, 500px"
+              decoding="async"
             />
           </div>
           
@@ -66,6 +69,8 @@ export default function BreakfastSection() {
               className="w-full h-72 object-cover rounded-xl shadow-lg"
               style={{ objectPosition: 'center 65%' }}
               loading="lazy"
+              sizes="(max-width: 480px) 95vw, (max-width: 768px) 45vw, (max-width: 1024px) 40vw, 400px"
+              decoding="async"
             />
           </div>
           <div>
@@ -74,6 +79,8 @@ export default function BreakfastSection() {
               alt="Gourmet French toast with fresh berries and banana" 
               className="w-full h-72 object-cover rounded-xl shadow-lg"
               loading="lazy"
+              sizes="(max-width: 480px) 95vw, (max-width: 768px) 45vw, (max-width: 1024px) 40vw, 400px"
+              decoding="async"
             />
           </div>
         </div>

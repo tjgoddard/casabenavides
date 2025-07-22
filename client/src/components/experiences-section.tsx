@@ -58,6 +58,9 @@ export default function ExperiencesSection() {
                     src={experience.image} 
                     alt={experience.title} 
                     className="w-full h-96 object-cover hover:scale-105 smooth-transition"
+                    loading="lazy"
+                    sizes="(max-width: 480px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 45vw, 500px"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>

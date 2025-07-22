@@ -236,6 +236,19 @@
     }
     </script>
     <!-- Hero image will be preloaded dynamically by the component -->
+    <style>
+      /* Critical mobile image optimizations - inline for immediate effect */
+      @media (max-width: 480px) {
+        img { image-rendering: auto; image-rendering: -webkit-optimize-contrast; }
+        .w-full.h-96 { height: 250px !important; }
+        .w-full.h-72 { height: 200px !important; }
+        .w-full.h-64 { height: 180px !important; }
+        .hover\:scale-105:hover { transform: scale(1.02) !important; }
+      }
+      /* Lazy loading optimization */
+      img[loading="lazy"] { opacity: 0; transition: opacity 0.3s ease-in-out; }
+      img[loading="lazy"].loaded { opacity: 1; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
