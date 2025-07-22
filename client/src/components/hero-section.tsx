@@ -44,13 +44,23 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
       link.fetchPriority = 'high';
       document.head.appendChild(link);
     }
-    
-    // Start carousel after initial load
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
 
-    return () => clearInterval(interval);
+    // Simple carousel - start after 3 seconds to let first image load
+    const timer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setCurrentImageIndex(prev => (prev + 1) % images.length);
+      }, 5000);
+      
+      // Store interval for cleanup
+      (timer as any).intervalId = interval;
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+      if ((timer as any).intervalId) {
+        clearInterval((timer as any).intervalId);
+      }
+    };
   }, [images.length]);
 
   return (
@@ -71,8 +81,8 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
               aspectRatio: '16/9',
               imageRendering: 'auto'
             }}
-            fetchpriority={index === 0 ? 'high' : 'low'}
-            loading={index === 0 ? 'eager' : (index === 1 ? 'lazy' : 'lazy')}
+
+            loading={index === 0 ? 'eager' : 'lazy'}
             sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 85vw, 90vw"
             decoding="async"
           />
