@@ -29,7 +29,6 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-TDTMB2DBTF');
-      gtag('config', 'AW-11090641794');
     </script>
     <!-- Resource hints to break dependency chains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -236,24 +235,49 @@
     }
     </script>
     <!-- Hero image will be preloaded dynamically by the component -->
-    <style>
-      /* Critical mobile image optimizations - inline for immediate effect */
-      @media (max-width: 480px) {
-        img { image-rendering: auto; image-rendering: -webkit-optimize-contrast; }
-        .w-full.h-96 { height: 250px !important; }
-        .w-full.h-72 { height: 200px !important; }
-        .w-full.h-64 { height: 180px !important; }
-        .hover\:scale-105:hover { transform: scale(1.02) !important; }
-      }
-      /* Lazy loading optimization */
-      img[loading="lazy"] { opacity: 0; transition: opacity 0.3s ease-in-out; }
-      img[loading="lazy"].loaded { opacity: 1; }
-    </style>
   </head>
   <body>
     <div id="root"></div>
-    <!-- Load JavaScript normally for production compatibility -->
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Load JavaScript after initial paint -->
+    <script>
+      // Delay JavaScript loading until after first paint
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          const script = document.createElement('script');
+          script.type = 'module';
+          script.src = '/src/main.tsx';
+          script.fetchPriority = 'high';
+          document.body.appendChild(script);
+        });
+      });
+      
+      // Aggressive image loading optimization
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add intersection observer for images
+        if ('IntersectionObserver' in window) {
+          const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  img.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  imageObserver.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+          
+          // Observe all images with data-src
+          document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+          });
+        }
+      });
+    </script>
     <!-- Load non-critical scripts after page load -->
     <script>
       // Defer non-critical scripts until after page load

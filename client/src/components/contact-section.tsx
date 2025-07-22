@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { trackConversion, trackReservationClick } from "@/lib/analytics";
 import exteriorImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
 
 export default function ContactSection() {
@@ -37,10 +36,6 @@ export default function ContactSection() {
       if (response.ok) {
         const result = await response.json();
         console.log('Contact form submitted successfully:', result);
-        
-        // Track Google Ads conversion
-        trackConversion();
-        
         toast({
           title: "Message Sent!",
           description: "Thank you for your message! We will get back to you soon.",
@@ -99,7 +94,7 @@ export default function ContactSection() {
                 alt="Casa Benavides Inn exterior" 
                 className="w-full h-64 object-cover rounded-xl shadow-lg"
                 loading="lazy"
-                sizes="(max-width: 480px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 45vw, 500px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
                 decoding="async"
               />
             </div>
@@ -223,7 +218,6 @@ export default function ContactSection() {
                     href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => trackReservationClick('contact_section_reservation')}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
                     Click to Make Your Reservation!

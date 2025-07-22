@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect, lazy } from "react";
-import { trackEvent, trackReservationClick } from "@/lib/analytics";
-// Use your original Casa Benavides hero images
-const heroImage1 = "/hero-adobe-architecture.jpg";
-const heroImage2 = "/hero-taos-mountains.jpg"; 
-const heroImage3 = "/hero-courtyard-patio.jpg";
-const heroImage4 = "/hero-interior-space.jpg";
+import { trackEvent } from "@/lib/analytics";
+import heroImage1 from "@assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
+import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
+import heroImage3 from "@assets/IMG_4446_1752533547603.jpg";
+import heroImage4 from "@assets/IMG_4445_1752533547607.jpg";
 import logoImage from "@assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)-Photoroom_1752359300963.jpg";
 
 interface HeroSectionProps {
@@ -35,61 +34,90 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  const [imagesLoaded, setImagesLoaded] = useState(new Set([0])); // Only load first image initially
+  
   useEffect(() => {
-    // Preload the first hero image for better LCP on desktop
-    if (window.innerWidth > 768) {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = '/hero-adobe-architecture.jpg';
-      link.fetchPriority = 'high';
-      document.head.appendChild(link);
-    }
-
-    // Wait for first image to load before starting carousel
-    let intervalId: NodeJS.Timeout;
+    // Preload the first hero image for better LCP
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = heroImage1;
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
     
-    // Start carousel after 6 seconds to ensure all images are properly loaded
-    const timer = setTimeout(() => {
-      intervalId = setInterval(() => {
-        setCurrentImageIndex(prev => (prev + 1) % images.length);
-      }, 5000); // Change image every 5 seconds
-    }, 6000);
+    // Start carousel after initial load
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % images.length;
+        // Lazy load the next image when it's about to be shown
+        if (!imagesLoaded.has(nextIndex)) {
+          setImagesLoaded(prev => new Set([...prev, nextIndex]));
+        }
+        return nextIndex;
+      });
+    }, 5000); // Change image every 5 seconds
 
-    return () => {
-      clearTimeout(timer);
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
+    return () => clearInterval(interval);
+  }, [images.length, imagesLoaded]);
+
+  // Load remaining images after first paint to reduce initial payload
+  useEffect(() => {
+    const loadRemainingImages = () => {
+      // Load images 2-4 after initial render
+      setTimeout(() => {
+        setImagesLoaded(prev => new Set([...prev, 1, 2, 3]));
+      }, 1000);
     };
-  }, [images.length]);
+    
+    if (typeof window !== 'undefined') {
+      if (document.readyState === 'complete') {
+        loadRemainingImages();
+      } else {
+        window.addEventListener('load', loadRemainingImages);
+        return () => window.removeEventListener('load', loadRemainingImages);
+      }
+    }
+  }, []);
 
   return (
     <section id="home" className="relative">
       {/* Hero Section */}
       <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        {/* Image carousel with error handling */}
-        {images.map((image, index) => (
-          <img 
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            className={`absolute inset-0 w-full h-full object-cover object-center z-0 ${
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            } transition-opacity duration-1000 ease-in-out`}
-            style={{
-              objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : index === 3 ? 'center center' : 'center center',
-              aspectRatio: '16/9',
-              imageRendering: 'auto'
-            }}
-
-            loading={index === 0 ? 'eager' : 'lazy'}
-            sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 85vw, 90vw"
-            decoding="async"
-          />
-        ))}
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-30 z-5"></div>
+        {/* Image carousel with progressive loading */}
+        {images.map((image, index) => {
+          // Only render images that should be loaded
+          if (!imagesLoaded.has(index)) {
+            // Show placeholder for unloaded images
+            return (
+              <div 
+                key={`placeholder-${index}`}
+                className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                } bg-gradient-to-br from-casa-blue/20 to-casa-navy/30 animate-pulse`}
+              />
+            );
+          }
+          
+          return (
+            <img 
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              } object-cover object-center`}
+              style={{
+                objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : index === 3 ? 'center center' : 'center center',
+                aspectRatio: '16/9'
+              }}
+              fetchpriority={index === 0 ? 'high' : 'low'}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 75vw, (max-width: 1024px) 85vw, 90vw"
+              decoding="async"
+            />
+          );
+        })}
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <div className="text-white px-4 max-w-6xl mx-auto">
@@ -101,7 +129,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition py-3 px-6 text-center min-h-[48px] flex items-center justify-center border border-white/30 hover:border-white/60 active:bg-white/10 rounded-sm"
-                onClick={() => trackReservationClick('hero_stay_button')}
+                onClick={() => trackEvent('click', 'reservation', 'hero_stay_button')}
               >
                 STAY
               </a>

@@ -47,18 +47,7 @@ Casa Benavides Inn is a full-stack web application built for a historic bed & br
 - **Breakfast Section**: Details about gourmet breakfast offerings
 - **Contact Section**: Contact form with real-time validation
 - **Story Section**: Historic background of the inn
-- **Map Section**: Interactive property map with room locations
 - **Footer**: Links and additional information
-
-### Page Structure
-- **Home Page**: Main landing page with all sections
-- **Breakfast Page**: Detailed breakfast information
-- **Contact Page**: Contact form and information
-- **Experiences Page**: Local attractions and activities
-- **Our Story Page**: History and heritage of Casa Benavides
-- **Policies Page**: Terms and conditions
-- **Group Reservations Page**: Group booking information
-- **Map Page**: Interactive property map with room layouts
 
 ### Form Handling
 - **Validation**: Zod schema validation on both client and server
@@ -218,47 +207,10 @@ Changelog:
       - Implemented progressive loading for hero carousel (only load first image initially)
       - Page headers now use single static image instead of full carousel (saves 18MB)
       - Hero carousel images load on-demand when carousel advances
-      - Added 500ms delay for non-critical images to prioritize initial render
+      - Added 1-second delay for non-critical images to prioritize initial render
       - Reduced image sizes attributes for mobile (40vw vs 100vw)
+      - Added intersection observer for future image lazy loading enhancements
       - Expected payload reduction: ~20MB (from 25MB to ~5MB) for initial page load
-    - PRODUCTION DEPLOYMENT FIX: Fixed white screen issue caused by aggressive optimizations
-      - Reverted delayed JavaScript loading approach that broke production builds
-      - Changed React.lazy back to normal imports for production stability
-      - Removed intersection observer code that was causing deployment issues
-      - Kept progressive image loading for hero carousel (works in production)
-      - Site now loads properly in production with maintained performance improvements
-    - MAP PAGE ADDITION: Added interactive property map page
-      - Created /map route with responsive room layout display
-      - Added downloadable map feature with Google Analytics tracking
-      - Implemented lazy loading for performance optimization
-      - Added map legend and property information sections
-      - Connected to reservation system and contact information
-      - Optimized image loading with proper sizes attributes
-      - Added Property Map link to footer Quick Links section
-    - GOOGLE ADS CONVERSION TRACKING: Implemented comprehensive Google Ads conversion tracking
-      - Added Google Ads conversion ID (AW-11090641794) to gtag configuration in HTML head
-      - Created trackConversion function for contact form submission tracking
-      - Created trackReservationClick function for all reservation/availability button clicks
-      - Integrated conversion tracking with contact form submissions and reservation clicks
-      - Tracks both Google Ads conversions and Google Analytics events for complete funnel tracking
-      - Conversion tracking fires on successful contact form submissions and reservation button clicks
-      - Added tracking to all reservation buttons: navigation, hero, location, contact, breakfast, story, map, and footer
-      - All reservation buttons now trigger Google Ads conversion AW-11090641794/HxekCObmo5wZEIKHt6gp
-    - HERO CAROUSEL FIX: Fixed grayed out image display issue in hero section (July 22, 2025)
-      - Resolved JavaScript timer errors and carousel malfunction due to improper timeout/interval management
-      - Fixed z-index layering: images (z-0), dark overlay (z-5), text content (z-10) for proper display
-      - All 4 hero images now display correctly with smooth opacity transitions
-      - Maintained mobile performance optimizations and Google Ads conversion tracking functionality
-      - Carousel cycles properly through all images: Adobe architecture → Taos mountains → courtyard → interior space
-    - MOBILE PERFORMANCE OPTIMIZATION: Implemented aggressive mobile speed optimizations
-      - Optimized responsive image sizing with mobile-first breakpoints (480px, 768px, 1024px)
-      - Added critical mobile image CSS inline in HTML head for immediate effect
-      - Reduced image heights on mobile devices (h-96 to 250px, h-72 to 200px, h-64 to 180px)
-      - Implemented mobile-aware progressive image loading with longer delays on mobile
-      - Added image rendering optimizations and compression hints for mobile browsers
-      - Enhanced lazy loading with opacity transitions and loaded states
-      - Reduced hover effects intensity on mobile for better performance
-      - Targeting 25MB+ image payload reduction through better mobile sizing
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 

@@ -1,4 +1,4 @@
-import { trackReservationClick } from '@/lib/analytics';
+import { trackEvent } from '@/lib/analytics';
 
 export default function StorySection() {
   return (
@@ -69,7 +69,7 @@ export default function StorySection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-[#0682b3] text-white px-8 py-3 rounded-md luxury-body font-semibold hover:bg-[#0682b3]/90 smooth-transition shadow-lg hover:shadow-xl transform hover:scale-105"
-                onClick={() => trackReservationClick('story_check_availability')}
+                onClick={() => trackEvent('click', 'reservation', 'story_check_availability')}
               >
                 Check Availability
               </a>

@@ -37,31 +37,3 @@ export const trackEvent = (
     value: value,
   });
 };
-
-// Track Google Ads conversions
-export const trackConversion = (conversionId?: string) => {
-  if (typeof window === 'undefined' || !window.gtag) return;
-  
-  // Default to the contact form conversion
-  const conversion = conversionId || 'AW-11090641794/HxekCObmo5wZEIKHt6gp';
-  
-  window.gtag('event', 'conversion', {
-    send_to: conversion,
-  });
-  
-  // Also track as a regular event for analytics
-  trackEvent('conversion', 'contact', 'form_submission');
-};
-
-// Track reservation clicks with conversion
-export const trackReservationClick = (location: string) => {
-  if (typeof window === 'undefined' || !window.gtag) return;
-  
-  // Track the conversion
-  window.gtag('event', 'conversion', {
-    send_to: 'AW-11090641794/HxekCObmo5wZEIKHt6gp',
-  });
-  
-  // Also track as a regular event for analytics
-  trackEvent('click', 'reservation', location);
-};

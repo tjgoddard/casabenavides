@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { trackReservationClick } from "@/lib/analytics";
 import logoImage from "@assets/casa-benavides-your-front-Photoroom-removebg-preview_1752360228306.png";
 
 export default function Navigation() {
@@ -31,7 +30,7 @@ export default function Navigation() {
                 isScrolled ? 'h-16 w-auto' : 'h-32 w-auto'
               }`}
               style={{ aspectRatio: '1/1' }}
-              sizes="(max-width: 480px) 64px, (max-width: 768px) 80px, 128px"
+              sizes="(max-width: 640px) 128px, 128px"
               loading="eager"
               decoding="async"
             />
@@ -60,7 +59,6 @@ export default function Navigation() {
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-200 text-gray-800 px-3 py-1 text-xs font-medium tracking-wide hover:bg-gray-300 smooth-transition text-center whitespace-nowrap"
-            onClick={() => trackReservationClick('navigation_check_availability')}
           >
             CHECK AVAILABILITY
           </a>
