@@ -234,6 +234,13 @@ Changelog:
       - Added map legend and property information sections
       - Connected to reservation system and contact information
       - Optimized image loading with proper sizes attributes
+      - Added Property Map link to footer Quick Links section
+    - GOOGLE ADS CONVERSION TRACKING: Implemented Google Ads conversion tracking
+      - Added Google Ads conversion ID (AW-11090641794) to gtag configuration
+      - Created trackConversion function for tracking form submissions
+      - Integrated conversion tracking with contact form submissions
+      - Tracks both Google Ads conversions and Google Analytics events
+      - Conversion tracking fires on successful contact form submission
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 

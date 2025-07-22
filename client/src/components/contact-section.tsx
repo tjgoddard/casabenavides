@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { trackConversion } from "@/lib/analytics";
 import exteriorImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
 
 export default function ContactSection() {
@@ -36,6 +37,10 @@ export default function ContactSection() {
       if (response.ok) {
         const result = await response.json();
         console.log('Contact form submitted successfully:', result);
+        
+        // Track Google Ads conversion
+        trackConversion();
+        
         toast({
           title: "Message Sent!",
           description: "Thank you for your message! We will get back to you soon.",
