@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { trackConversion } from "@/lib/analytics";
+import { trackConversion, trackReservationClick } from "@/lib/analytics";
 import exteriorImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
 
 export default function ContactSection() {
@@ -223,6 +223,7 @@ export default function ContactSection() {
                     href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackReservationClick('contact_section_reservation')}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
                     Click to Make Your Reservation!

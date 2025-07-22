@@ -52,3 +52,16 @@ export const trackConversion = (conversionId?: string) => {
   // Also track as a regular event for analytics
   trackEvent('conversion', 'contact', 'form_submission');
 };
+
+// Track reservation clicks with conversion
+export const trackReservationClick = (location: string) => {
+  if (typeof window === 'undefined' || !window.gtag) return;
+  
+  // Track the conversion
+  window.gtag('event', 'conversion', {
+    send_to: 'AW-11090641794/HxekCObmo5wZEIKHt6gp',
+  });
+  
+  // Also track as a regular event for analytics
+  trackEvent('click', 'reservation', location);
+};

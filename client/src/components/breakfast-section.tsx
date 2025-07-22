@@ -1,6 +1,6 @@
 import { Check, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackReservationClick } from "@/lib/analytics";
 import kitchenImg from "@assets/Kitchen-1072-2a-cropped-web (1)_1752361224342.jpeg";
 import breakfastSpreadImg from "@assets/94178027[1]_1752361258523.jpeg";
 import frenchToastImg from "@assets/unnamed (2)_1752361773590.webp";
@@ -93,7 +93,7 @@ export default function BreakfastSection() {
               href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackEvent('click', 'reservation', 'breakfast_page_booking')}
+              onClick={() => trackReservationClick('breakfast_page_booking')}
             >
               BOOK YOUR STAY
             </a>

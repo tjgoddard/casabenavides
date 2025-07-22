@@ -1,6 +1,7 @@
 import { Calendar } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { trackReservationClick } from "@/lib/analytics";
 
 export default function Footer() {
   return (
@@ -92,6 +93,7 @@ export default function Footer() {
                 href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackReservationClick('footer_reserve_now')}
               >
                 <Calendar className="w-4 h-4 mr-2" />
                 Reserve Now

@@ -1,5 +1,6 @@
 import { MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackReservationClick } from "@/lib/analytics";
 
 // Using direct path approach
 // import img3 from "@assets/IMG_3405_new.png";
@@ -30,6 +31,7 @@ export default function LocationSection() {
                   href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackReservationClick('location_make_reservation')}
                 >
                   <Calendar className="w-4 h-4 mr-2" />
                   Make Reservation

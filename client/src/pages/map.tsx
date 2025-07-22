@@ -4,7 +4,7 @@ import PageHeaderCarousel from "@/components/page-header-carousel";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Download, MapPin, Phone } from "lucide-react";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackReservationClick } from "@/lib/analytics";
 import mapImage from "@assets/Casa-Benavides-Room-Map-web_1752848895132.jpg";
 
 export default function Map() {
@@ -61,7 +61,7 @@ export default function Map() {
                   href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackEvent('click', 'reservation', 'map_page_book_now')}
+                  onClick={() => trackReservationClick('map_page_book_now')}
                 >
                   <MapPin className="w-4 h-4 mr-2" />
                   Book Your Stay

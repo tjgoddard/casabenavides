@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { trackReservationClick } from "@/lib/analytics";
 import logoImage from "@assets/casa-benavides-your-front-Photoroom-removebg-preview_1752360228306.png";
 
 export default function Navigation() {
@@ -59,6 +60,7 @@ export default function Navigation() {
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-200 text-gray-800 px-3 py-1 text-xs font-medium tracking-wide hover:bg-gray-300 smooth-transition text-center whitespace-nowrap"
+            onClick={() => trackReservationClick('navigation_check_availability')}
           >
             CHECK AVAILABILITY
           </a>

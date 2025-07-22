@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect, lazy } from "react";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackReservationClick } from "@/lib/analytics";
 import heroImage1 from "@assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
 import heroImage2 from "@assets/iStock-1458935906_1752360314185.jpg";
 import heroImage3 from "@assets/IMG_4446_1752533547603.jpg";
@@ -51,7 +51,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
         const nextIndex = (prevIndex + 1) % images.length;
         // Lazy load the next image when it's about to be shown
         if (!imagesLoaded.has(nextIndex)) {
-          setImagesLoaded(prev => new Set([...prev, nextIndex]));
+          setImagesLoaded(prev => new Set(Array.from(prev).concat(nextIndex)));
         }
         return nextIndex;
       });
@@ -65,7 +65,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
     const loadRemainingImages = () => {
       // Load images 2-4 after initial render
       setTimeout(() => {
-        setImagesLoaded(prev => new Set([...prev, 1, 2, 3]));
+        setImagesLoaded(prev => new Set(Array.from(prev).concat([1, 2, 3])));
       }, 500); // Reduced delay for better UX
     };
     
@@ -104,7 +104,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
                 objectPosition: index === 0 ? '25% 30%' : index === 2 ? '25% center' : index === 3 ? 'center center' : 'center center',
                 aspectRatio: '16/9'
               }}
-              fetchpriority={index === 0 ? 'high' : 'low'}
+              fetchPriority={index === 0 ? 'high' : 'low'}
               loading={index === 0 ? 'eager' : 'lazy'}
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 75vw, (max-width: 1024px) 85vw, 90vw"
               decoding="async"
@@ -123,7 +123,7 @@ export default function HeroSection({ showSubtitle = false }: HeroSectionProps) 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white text-lg font-medium tracking-wide hover:text-white/80 smooth-transition py-3 px-6 text-center min-h-[48px] flex items-center justify-center border border-white/30 hover:border-white/60 active:bg-white/10 rounded-sm"
-                onClick={() => trackEvent('click', 'reservation', 'hero_stay_button')}
+                onClick={() => trackReservationClick('hero_stay_button')}
               >
                 STAY
               </a>

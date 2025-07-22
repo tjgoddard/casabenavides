@@ -235,12 +235,15 @@ Changelog:
       - Connected to reservation system and contact information
       - Optimized image loading with proper sizes attributes
       - Added Property Map link to footer Quick Links section
-    - GOOGLE ADS CONVERSION TRACKING: Implemented Google Ads conversion tracking
-      - Added Google Ads conversion ID (AW-11090641794) to gtag configuration
-      - Created trackConversion function for tracking form submissions
-      - Integrated conversion tracking with contact form submissions
-      - Tracks both Google Ads conversions and Google Analytics events
-      - Conversion tracking fires on successful contact form submission
+    - GOOGLE ADS CONVERSION TRACKING: Implemented comprehensive Google Ads conversion tracking
+      - Added Google Ads conversion ID (AW-11090641794) to gtag configuration in HTML head
+      - Created trackConversion function for contact form submission tracking
+      - Created trackReservationClick function for all reservation/availability button clicks
+      - Integrated conversion tracking with contact form submissions and reservation clicks
+      - Tracks both Google Ads conversions and Google Analytics events for complete funnel tracking
+      - Conversion tracking fires on successful contact form submissions and reservation button clicks
+      - Added tracking to all reservation buttons: navigation, hero, location, contact, breakfast, story, map, and footer
+      - All reservation buttons now trigger Google Ads conversion AW-11090641794/HxekCObmo5wZEIKHt6gp
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 
