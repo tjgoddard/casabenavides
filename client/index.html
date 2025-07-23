@@ -47,9 +47,9 @@
     <link rel="modulepreload" href="/src/main.tsx">
     <link rel="preload" href="/src/index.css" as="style">
     
-    <!-- Preload critical fonts to break the chain -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Load fonts directly to avoid preload warnings -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@300;400;500;600;700&display=swap">
     <!-- Critical styles for immediate rendering and mobile optimization -->
     <style>
       /* System font fallbacks for immediate rendering */
@@ -251,19 +251,11 @@
     <!-- End Google Tag Manager (noscript) -->
     
     <div id="root"></div>
-    <!-- Load JavaScript after initial paint -->
+    <!-- Load JavaScript directly for Cloudflare Pages compatibility -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Image loading optimization -->
     <script>
-      // Delay JavaScript loading until after first paint
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          const script = document.createElement('script');
-          script.type = 'module';
-          script.src = '/src/main.tsx';
-          script.fetchPriority = 'high';
-          document.body.appendChild(script);
-        });
-      });
-      
       // Aggressive image loading optimization
       document.addEventListener('DOMContentLoaded', function() {
         // Add intersection observer for images

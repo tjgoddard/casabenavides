@@ -1,0 +1,36 @@
+# Cloudflare Pages configuration for Casa Benavides
+name = "casa-benavides"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm run build"
+cwd = "."
+watch_dir = ["client/src", "server", "shared"]
+
+[build.environment_variables]
+NODE_VERSION = "18"
+
+[[redirects]]
+from = "/api/*"
+to = "/api/:splat"
+status = 200
+
+[[headers]]
+for = "/*.js"
+[headers.values]
+"Content-Type" = "application/javascript"
+
+[[headers]]
+for = "/*.tsx"
+[headers.values]
+"Content-Type" = "application/javascript"
+
+[[headers]]
+for = "/*.ts"
+[headers.values]
+"Content-Type" = "application/javascript"
+
+[[headers]]
+for = "/src/*"
+[headers.values]
+"Content-Type" = "application/javascript"
