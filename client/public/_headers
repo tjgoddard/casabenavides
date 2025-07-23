@@ -1,0 +1,16 @@
+# Cloudflare Pages Headers - Client Build Directory
+
+/*.js
+  Content-Type: application/javascript
+
+/*.tsx
+  Content-Type: application/javascript
+
+/*.ts
+  Content-Type: application/javascript
+
+/src/*
+  Content-Type: application/javascript
+
+/src/**/*
+  Content-Type: application/javascript

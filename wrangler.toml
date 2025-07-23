@@ -31,6 +31,21 @@ for = "/*.ts"
 "Content-Type" = "application/javascript"
 
 [[headers]]
+for = "/*.jsx"
+[headers.values]
+"Content-Type" = "application/javascript"
+
+[[headers]]
+for = "/*.mjs"
+[headers.values]
+"Content-Type" = "application/javascript"
+
+[[headers]]
 for = "/src/*"
+[headers.values]
+"Content-Type" = "application/javascript"
+
+[[headers]]
+for = "/src/**/*"
 [headers.values]
 "Content-Type" = "application/javascript"

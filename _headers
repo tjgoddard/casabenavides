@@ -1,57 +1,53 @@
-# Cloudflare Pages Headers for Casa Benavides
+# Cloudflare Pages Headers Configuration for Casa Benavides
 
-# JavaScript and TypeScript files
-*.js
+# All JavaScript files - force correct MIME type
+/*.js
   Content-Type: application/javascript
-*.mjs
+
+# TypeScript files served as JavaScript 
+/*.tsx
   Content-Type: application/javascript
-*.jsx
+
+/*.ts  
   Content-Type: application/javascript
-*.ts
+
+/*.jsx
   Content-Type: application/javascript
-*.tsx
+
+/*.mjs
+  Content-Type: application/javascript
+
+# Source files in src directory
+/src/*.js
+  Content-Type: application/javascript
+
+/src/*.tsx
+  Content-Type: application/javascript
+
+/src/*.ts
+  Content-Type: application/javascript
+
+/src/*.jsx
+  Content-Type: application/javascript
+
+# Nested source files
+/src/**/*.js
+  Content-Type: application/javascript
+
+/src/**/*.tsx
+  Content-Type: application/javascript
+
+/src/**/*.ts
+  Content-Type: application/javascript
+
+/src/**/*.jsx
   Content-Type: application/javascript
 
 # CSS files
-*.css
+/*.css
   Content-Type: text/css
 
-# JSON files
-*.json
-  Content-Type: application/json
-
-# Web fonts
-*.woff2
-  Content-Type: font/woff2
-*.woff
-  Content-Type: font/woff
-*.ttf
-  Content-Type: font/ttf
-*.eot
-  Content-Type: application/vnd.ms-fontobject
-
-# Images
-*.jpg
-  Content-Type: image/jpeg
-*.jpeg
-  Content-Type: image/jpeg
-*.png
-  Content-Type: image/png
-*.webp
-  Content-Type: image/webp
-*.svg
-  Content-Type: image/svg+xml
-
-# Security headers
+# Security headers for all files
 /*
-  X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
-
-# Cache control for static assets
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/src/*
-  Content-Type: application/javascript
+  X-Frame-Options: DENY
