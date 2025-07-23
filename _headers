@@ -1,53 +1,37 @@
-# Cloudflare Pages Headers Configuration for Casa Benavides
+# Cloudflare Pages Headers - Target Specific Files
 
-# All JavaScript files - force correct MIME type
-/*.js
+# Main application entry point
+/src/main.tsx
   Content-Type: application/javascript
 
-# TypeScript files served as JavaScript 
-/*.tsx
-  Content-Type: application/javascript
-
-/*.ts  
-  Content-Type: application/javascript
-
-/*.jsx
-  Content-Type: application/javascript
-
-/*.mjs
-  Content-Type: application/javascript
-
-# Source files in src directory
-/src/*.js
-  Content-Type: application/javascript
-
+# All source TypeScript files
 /src/*.tsx
   Content-Type: application/javascript
 
 /src/*.ts
   Content-Type: application/javascript
 
-/src/*.jsx
+# Component files  
+/src/components/*.tsx
   Content-Type: application/javascript
 
-# Nested source files
-/src/**/*.js
+/src/pages/*.tsx
   Content-Type: application/javascript
 
-/src/**/*.tsx
+/src/lib/*.ts
   Content-Type: application/javascript
 
-/src/**/*.ts
+# All JavaScript files
+/*.js
   Content-Type: application/javascript
 
-/src/**/*.jsx
+# Built assets
+/assets/*.js
   Content-Type: application/javascript
 
 # CSS files
 /*.css
   Content-Type: text/css
 
-# Security headers for all files
-/*
-  X-Content-Type-Options: nosniff
-  X-Frame-Options: DENY
+/assets/*.css
+  Content-Type: text/css

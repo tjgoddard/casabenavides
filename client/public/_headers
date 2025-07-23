@@ -1,14 +1,21 @@
 # Cloudflare Pages Headers - Client Build Directory
 
+# Main entry point - most critical
+/src/main.tsx
+  Content-Type: application/javascript
+
+# All TypeScript React components
+/src/*.tsx
+  Content-Type: application/javascript
+
+/src/*.ts
+  Content-Type: application/javascript
+
+# All JavaScript files
 /*.js
   Content-Type: application/javascript
 
-/*.tsx
-  Content-Type: application/javascript
-
-/*.ts
-  Content-Type: application/javascript
-
+# Source directory with subdirectories
 /src/*
   Content-Type: application/javascript
 
