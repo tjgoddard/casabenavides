@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import img1 from "@assets/IMG_3403.png";
+import { Button } from "../components/ui/button";
+import img1 from "../../../attached_assets/IMG_3403.png";
 
 export default function AboutSection() {
   return (

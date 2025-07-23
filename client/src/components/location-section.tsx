@@ -1,8 +1,8 @@
 import { MapPin, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 
 // Using direct path approach
-// import img3 from "@assets/IMG_3405_new.png";
+// import img3 from "../../../attached_assets/IMG_3405_new.png";
 
 export default function LocationSection() {
   return (

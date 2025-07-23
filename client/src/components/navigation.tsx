@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logoImage from "@assets/casa-benavides-your-front-Photoroom-removebg-preview_1752360228306.png";
+import logoImage from "../../../attached_assets/casa-benavides-your-front-Photoroom-removebg-preview_1752360228306.png";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);

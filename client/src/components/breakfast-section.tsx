@@ -1,9 +1,9 @@
 import { Check, Shield } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { trackEvent } from "@/lib/analytics";
-import kitchenImg from "@assets/Kitchen-1072-2a-cropped-web (1)_1752361224342.jpeg";
-import breakfastSpreadImg from "@assets/94178027[1]_1752361258523.jpeg";
-import frenchToastImg from "@assets/unnamed (2)_1752361773590.webp";
+import { Button } from "../components/ui/button";
+import { trackEvent } from "../lib/analytics";
+import kitchenImg from "../../../attached_assets/Kitchen-1072-2a-cropped-web (1)_1752361224342.jpeg";
+import breakfastSpreadImg from "../../../attached_assets/94178027[1]_1752361258523.jpeg";
+import frenchToastImg from "../../../attached_assets/unnamed (2)_1752361773590.webp";
 
 export default function BreakfastSection() {
   const breakfastItems = [

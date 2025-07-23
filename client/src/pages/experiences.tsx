@@ -1,7 +1,7 @@
-import Navigation from "@/components/navigation";
-import HeroSection from "@/components/hero-section";
-import ExperiencesSection from "@/components/experiences-section";
-import Footer from "@/components/footer";
+import Navigation from "../components/navigation";
+import HeroSection from "../components/hero-section";
+import ExperiencesSection from "../components/experiences-section";
+import Footer from "../components/footer";
 
 export default function Experiences() {
   return (

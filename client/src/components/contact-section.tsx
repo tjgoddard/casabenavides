@@ -1,12 +1,12 @@
 import { useState, lazy } from "react";
 import { MapPin, Phone, Mail, Check, Calendar, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent } from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
-import exteriorImage from "@assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
+import { Textarea } from "../components/ui/textarea";
+import { Card, CardContent } from "../components/ui/card";
+import { useToast } from "../hooks/use-toast";
+import exteriorImage from "../../../attached_assets/Exterior-Front-Homepage-Alt-1_1751842464150.jpeg";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({

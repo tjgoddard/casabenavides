@@ -1,7 +1,7 @@
-import Navigation from "@/components/navigation";
-import HeroSection from "@/components/hero-section";
-import ContactSection from "@/components/contact-section";
-import Footer from "@/components/footer";
+import Navigation from "../components/navigation";
+import HeroSection from "../components/hero-section";
+import ContactSection from "../components/contact-section";
+import Footer from "../components/footer";
 
 export default function Contact() {
   return (

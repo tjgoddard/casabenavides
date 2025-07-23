@@ -1,7 +1,7 @@
-import Navigation from "@/components/navigation";
-import Footer from "@/components/footer";
-import PageHeaderCarousel from "@/components/page-header-carousel";
-import { Button } from "@/components/ui/button";
+import Navigation from "../components/navigation";
+import Footer from "../components/footer";
+import PageHeaderCarousel from "../components/page-header-carousel";
+import { Button } from "../components/ui/button";
 import { Mail, Phone, Users, Calendar, MapPin } from "lucide-react";
 
 export default function GroupReservations() {

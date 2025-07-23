@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 
 interface MobileMenuProps {
   isOpen: boolean;

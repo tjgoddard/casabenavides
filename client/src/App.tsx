@@ -1,21 +1,21 @@
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "./components/ui/toaster";
+import { TooltipProvider } from "./components/ui/tooltip";
 import { useEffect, Suspense, lazy } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
 
 // Lazy load pages to reduce initial bundle size
-const Home = lazy(() => import("@/pages/home"));
-const Breakfast = lazy(() => import("@/pages/breakfast"));
-const Contact = lazy(() => import("@/pages/contact"));
-const Experiences = lazy(() => import("@/pages/experiences"));
-const OurStory = lazy(() => import("@/pages/our-story"));
-const Policies = lazy(() => import("@/pages/policies"));
-const GroupReservations = lazy(() => import("@/pages/group-reservations"));
-const NotFound = lazy(() => import("@/pages/not-found"));
+const Home = lazy(() => import("./pages/home"));
+const Breakfast = lazy(() => import("./pages/breakfast"));
+const Contact = lazy(() => import("./pages/contact"));
+const Experiences = lazy(() => import("./pages/experiences"));
+const OurStory = lazy(() => import("./pages/our-story"));
+const Policies = lazy(() => import("./pages/policies"));
+const GroupReservations = lazy(() => import("./pages/group-reservations"));
+const NotFound = lazy(() => import("./pages/not-found"));
 
 // Loading component with critical CSS
 const PageLoader = () => (
