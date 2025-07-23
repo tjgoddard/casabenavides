@@ -233,6 +233,11 @@ Changelog:
       - Development environment continues using TypeScript source (handled by Vite dev server)
       - Built index.html contains: <script src="/assets/index-VxahRusA.js"> (not /src/main.tsx)
       - Ready for Cloudflare Pages deployment with zero MIME type errors
+    - ANALYTICS CLEANUP: Simplified tracking to use only Google Tag Manager
+      - Removed redundant Google Analytics gtag script (G-TDTMB2DBTF)
+      - All tracking now goes through GTM (GTM-TD9DT6M6) using dataLayer
+      - Updated analytics.ts to use GTM dataLayer instead of direct gtag calls
+      - Cleaner implementation with single tracking system
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 
