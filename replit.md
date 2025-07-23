@@ -211,6 +211,11 @@ Changelog:
       - Reduced image sizes attributes for mobile (40vw vs 100vw)
       - Added intersection observer for future image lazy loading enhancements
       - Expected payload reduction: ~20MB (from 25MB to ~5MB) for initial page load
+    - GOOGLE TAG MANAGER INTEGRATION: Added comprehensive tracking for Casa Benavides
+      - Implemented GTM script (GTM-TD9DT6M6) as high as possible in head section
+      - Added noscript fallback iframe immediately after body tag opening
+      - Enables advanced tracking, conversion monitoring, and marketing analytics
+      - Works alongside existing Google Analytics (G-TDTMB2DBTF) for comprehensive data
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 
