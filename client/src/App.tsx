@@ -48,9 +48,28 @@ function Router() {
 }
 
 function App() {
-  // Initialize Google Analytics when app loads
+  // Initialize Google Tag Manager when app loads
   useEffect(() => {
-    initGA();
+    // Initialize dataLayer
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    
+    // Load GTM script with proper typing
+    const gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TD9DT6M6';
+    
+    const firstScript = document.getElementsByTagName('script')[0];
+    if (firstScript && firstScript.parentNode) {
+      firstScript.parentNode.insertBefore(gtmScript, firstScript);
+    }
+    
+    // Initialize GTM
+    (window as any).dataLayer.push({
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js'
+    });
+    
+    console.log('Google Tag Manager loaded from React app');
   }, []);
 
   return (
