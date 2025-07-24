@@ -1,0 +1,20 @@
+# API routes
+/api/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type
+
+# JavaScript files - fix MIME type issues
+/assets/*.js
+  Content-Type: text/javascript
+
+# CSS files
+/assets/*.css
+  Content-Type: text/css
+
+# Static files
+/*.js
+  Content-Type: text/javascript
+
+/*.css
+  Content-Type: text/css
