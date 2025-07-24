@@ -1,37 +1,4 @@
-# Cloudflare Pages Headers - Target Specific Files
-
-# Main application entry point
-/src/main.tsx
-  Content-Type: application/javascript
-
-# All source TypeScript files
-/src/*.tsx
-  Content-Type: application/javascript
-
-/src/*.ts
-  Content-Type: application/javascript
-
-# Component files  
-/src/components/*.tsx
-  Content-Type: application/javascript
-
-/src/pages/*.tsx
-  Content-Type: application/javascript
-
-/src/lib/*.ts
-  Content-Type: application/javascript
-
-# All JavaScript files
-/*.js
-  Content-Type: application/javascript
-
-# Built assets
-/assets/*.js
-  Content-Type: application/javascript
-
-# CSS files
-/*.css
-  Content-Type: text/css
-
-/assets/*.css
-  Content-Type: text/css
+/api/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type

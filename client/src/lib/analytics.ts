@@ -1,37 +1,37 @@
-// Google Tag Manager integration
+// Define the gtag function globally
 declare global {
   interface Window {
     dataLayer: any[];
+    gtag: (...args: any[]) => void;
   }
 }
 
-// Initialize GTM (already loaded in HTML head)
+// Initialize Google Analytics (already loaded in HTML head)
 export const initGA = () => {
-  // GTM is already initialized in the HTML head
-  console.log('Google Tag Manager is initialized');
+  // Google Analytics is already initialized in the HTML head
+  // This function is kept for compatibility but does nothing
+  console.log('Google Analytics is already initialized');
 };
 
-// Track page views using GTM dataLayer
+// Track page views - useful for single-page applications
 export const trackPageView = (url: string) => {
-  if (typeof window === 'undefined' || !window.dataLayer) return;
+  if (typeof window === 'undefined' || !window.gtag) return;
   
-  window.dataLayer.push({
-    event: 'page_view',
+  window.gtag('config', 'G-TDTMB2DBTF', {
     page_path: url
   });
 };
 
-// Track events using GTM dataLayer
+// Track events
 export const trackEvent = (
   action: string, 
   category?: string, 
   label?: string, 
   value?: number
 ) => {
-  if (typeof window === 'undefined' || !window.dataLayer) return;
+  if (typeof window === 'undefined' || !window.gtag) return;
   
-  window.dataLayer.push({
-    event: action,
+  window.gtag('event', action, {
     event_category: category,
     event_label: label,
     value: value,
