@@ -5,18 +5,7 @@ declare global {
   }
 }
 
-// Load GTM dynamically after React app mounts (prevents MIME type issues)
-export const loadGTM = (gtmId: string) => {
-  if (typeof window === 'undefined') return;
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
-  document.head.appendChild(script);
-};
-
-// Track page views - useful for single-page applications
+// Track page views - GTM is now loaded directly in HTML head
 export const trackPageView = (url: string) => {
   if (typeof window === 'undefined' || !window.dataLayer) return;
   
@@ -26,7 +15,7 @@ export const trackPageView = (url: string) => {
   });
 };
 
-// Track events
+// Track events  
 export const trackEvent = (
   action: string, 
   category?: string, 

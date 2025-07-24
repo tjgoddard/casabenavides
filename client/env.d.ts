@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_GTM_ID: string;
+  // Add environment variables here as needed
 }
 
 interface ImportMeta {
