@@ -4,7 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect, Suspense, lazy } from "react";
-import { initGA } from "./lib/analytics";
+import { loadGTM } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
 
 // Lazy load pages to reduce initial bundle size
@@ -50,26 +50,7 @@ function Router() {
 function App() {
   // Initialize Google Tag Manager when app loads
   useEffect(() => {
-    // Initialize dataLayer
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    
-    // Load GTM script with proper typing
-    const gtmScript = document.createElement('script');
-    gtmScript.async = true;
-    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TD9DT6M6';
-    
-    const firstScript = document.getElementsByTagName('script')[0];
-    if (firstScript && firstScript.parentNode) {
-      firstScript.parentNode.insertBefore(gtmScript, firstScript);
-    }
-    
-    // Initialize GTM
-    (window as any).dataLayer.push({
-      'gtm.start': new Date().getTime(),
-      event: 'gtm.js'
-    });
-    
-    console.log('Google Tag Manager loaded from React app');
+    loadGTM('GTM-TD9DT6M6');
   }, []);
 
   return (

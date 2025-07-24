@@ -5,11 +5,15 @@ declare global {
   }
 }
 
-// Initialize Google Tag Manager (already loaded in HTML head)
-export const initGA = () => {
-  // Google Tag Manager is already initialized in the HTML head
-  // This function is kept for compatibility but does nothing
-  console.log('Google Tag Manager is initialized');
+// Load GTM dynamically after React app mounts (prevents MIME type issues)
+export const loadGTM = (gtmId: string) => {
+  if (typeof window === 'undefined') return;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+  document.head.appendChild(script);
 };
 
 // Track page views - useful for single-page applications

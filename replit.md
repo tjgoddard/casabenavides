@@ -211,6 +211,12 @@ Changelog:
       - Reduced image sizes attributes for mobile (40vw vs 100vw)
       - Added intersection observer for future image lazy loading enhancements
       - Expected payload reduction: ~20MB (from 25MB to ~5MB) for initial page load
+    - GTM INTEGRATION FIX: Resolved critical MIME type error that caused white screen
+      - Root cause: GTM script was being loaded as ES module (type="module") causing MIME type conflicts
+      - Solution: GTM is not an ES Module, must be loaded dynamically after React app mounts
+      - Implemented loadGTM() function that injects GTM script via document.createElement()
+      - Moved GTM initialization from HTML head to React useEffect() to prevent module conflicts
+      - Critical lesson: Never load GTM in HTML head or as module - always dynamic injection
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 
