@@ -1,0 +1,17 @@
+# JavaScript files
+/*.js
+  Content-Type: text/javascript
+
+# CSS files
+/*.css
+  Content-Type: text/css
+
+# Asset JavaScript files
+/assets/*.js
+  Content-Type: text/javascript
+
+# API routes
+/api/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type

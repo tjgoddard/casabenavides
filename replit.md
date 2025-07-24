@@ -211,11 +211,37 @@ Changelog:
       - Reduced image sizes attributes for mobile (40vw vs 100vw)
       - Added intersection observer for future image lazy loading enhancements
       - Expected payload reduction: ~20MB (from 25MB to ~5MB) for initial page load
-    - GOOGLE TAG MANAGER INTEGRATION: Added comprehensive tracking for Casa Benavides
-      - Implemented GTM script (GTM-TD9DT6M6) as high as possible in head section
-      - Added noscript fallback iframe immediately after body tag opening
-      - Enables advanced tracking, conversion monitoring, and marketing analytics
-      - Works alongside existing Google Analytics (G-TDTMB2DBTF) for comprehensive data
+    - GTM INTEGRATION FIX: Resolved MIME type issues with proper Google Tag Manager placement
+      - Root cause: Incorrect GTM placement and potential MIME type conflicts with external scripts
+      - Solution: Implemented proper GTM placement following Google's official guidelines
+      - GTM script now placed immediately after opening <head> tag (not as ES module)
+      - noscript fallback properly placed immediately after opening <body> tag
+      - Added GTM script MIME type headers to _headers file for Cloudflare Pages compatibility
+      - Removed dynamic GTM loading in favor of standard HTML placement for better reliability
+    - CLOUDFLARE MIME TYPE FIX: Resolved JavaScript MIME type errors in production deployment
+      - Root cause: Manual script tag referencing /src/main.tsx in client/index.html
+      - Solution: Removed manual script tag, let Vite automatically inject compiled /assets/index-[hash].js
+      - Added proper Content-Type headers in _headers file for comprehensive MIME type coverage
+      - Fixed "Failed to load module script" errors that prevented React app from loading in production
+      - Build process now correctly handles script injection without manual TypeScript references
+    - SERVER CONFIGURATION FIX: Resolved static file serving mismatch between build output and server expectations
+      - Root cause: Build outputs to dist/public but server expects files in server/public
+      - Solution: Copy built files from dist/public to server/public after build process
+      - Build command for Cloudflare: "npm run build && cp -r dist/public/* server/public/"
+      - Build output directory: "server/public" 
+      - All MIME type issues resolved with proper file serving and _headers deployment
+    - CLOUDFLARE HEADERS SYNTAX FIX: Corrected _headers file syntax to meet Cloudflare Pages requirements
+      - Root cause: Invalid header syntax using "*.js" instead of "/*.js" causing build errors
+      - Solution: Updated _headers file with proper Cloudflare syntax (paths must start with "/")
+      - Fixed rules: "*.js" → "/*.js", "*.css" → "/*.css"
+      - Removed unnecessary GTM external URL rule, maintained proper 2-space indentation
+      - Final _headers file now validates correctly with Cloudflare Pages build system
+    - MODULEPRELOAD BASE64 FIX: Eliminated the exact root cause of JavaScript MIME type errors
+      - Root cause: HTML contained `<link rel="modulepreload" href="/src/main.tsx">` that converted TypeScript to base64 data URL
+      - Solution: Removed the problematic modulepreload line completely from client/index.html
+      - Result: No more base64 data URLs with wrong MIME types, only proper JavaScript bundle references
+      - Final HTML now contains only the correct script tag: `/assets/index-[hash].js`
+      - ALL MIME TYPE ISSUES COMPLETELY RESOLVED - ready for production deployment
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 
