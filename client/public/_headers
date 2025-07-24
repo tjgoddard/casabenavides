@@ -1,16 +1,12 @@
-# JavaScript files - CRITICAL FIX for MIME type
-*.js
-  Content-Type: text/javascript
-
-# Google Tag Manager scripts
-https://www.googletagmanager.com/gtm.js*
+# JavaScript files
+/*.js
   Content-Type: text/javascript
 
 # CSS files
-*.css
+/*.css
   Content-Type: text/css
 
-# Additional JS patterns for safety
+# Asset JavaScript files
 /assets/*.js
   Content-Type: text/javascript
 
