@@ -227,6 +227,7 @@
     }
     </script>
     <!-- Hero image will be preloaded dynamically by the component -->
+    <script type="module" src="/src/main.tsx"></script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -235,19 +236,10 @@
     <!-- End Google Tag Manager (noscript) -->
     
     <div id="root"></div>
-    <!-- Load JavaScript after initial paint -->
+    <!-- Vite will inject the script tag automatically -->
+    
+    <!-- Image optimization script -->
     <script>
-      // Delay JavaScript loading until after first paint
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          const script = document.createElement('script');
-          script.type = 'module';
-          script.src = '/src/main.tsx';
-          script.fetchPriority = 'high';
-          document.body.appendChild(script);
-        });
-      });
-      
       // Aggressive image loading optimization
       document.addEventListener('DOMContentLoaded', function() {
         // Add intersection observer for images
