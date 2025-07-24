@@ -99,7 +99,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           console.log("Email sent successfully for submission:", submission.id);
         } catch (emailError) {
           console.error("Failed to send email:", emailError);
-          console.error("Email error details:", emailError.message);
+          console.error("Email error details:", (emailError as Error).message);
           // Don't fail the request if email fails
         }
       } else {
