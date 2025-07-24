@@ -218,10 +218,11 @@ Changelog:
       - Moved GTM initialization from HTML head to React useEffect() to prevent module conflicts
       - Critical lesson: Never load GTM in HTML head or as module - always dynamic injection
     - CLOUDFLARE MIME TYPE FIX: Resolved JavaScript MIME type errors in production deployment
-      - Root cause: Cloudflare Pages serving JS files as application/octet-stream instead of text/javascript
-      - Solution: Added proper Content-Type headers in _headers file for /assets/*.js and /*.js files
+      - Root cause: Manual script tag referencing /src/main.tsx in client/index.html
+      - Solution: Removed manual script tag, let Vite automatically inject compiled /assets/index-[hash].js
+      - Added proper Content-Type headers in _headers file for comprehensive MIME type coverage
       - Fixed "Failed to load module script" errors that prevented React app from loading in production
-      - Build process correctly generates JavaScript bundles, issue was server-side MIME type configuration
+      - Build process now correctly handles script injection without manual TypeScript references
     - Final production-ready state achieved with clean, maintainable codebase
 ```
 
