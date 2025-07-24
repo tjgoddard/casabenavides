@@ -3,8 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { useEffect, Suspense, lazy } from "react";
-import { loadGTM } from "./lib/analytics";
+import { Suspense, lazy } from "react";
 import { useAnalytics } from "./hooks/use-analytics";
 
 // Lazy load pages to reduce initial bundle size
@@ -48,10 +47,7 @@ function Router() {
 }
 
 function App() {
-  // Initialize Google Tag Manager when app loads
-  useEffect(() => {
-    loadGTM('GTM-TD9DT6M6');
-  }, []);
+  // GTM is now loaded directly in HTML head for proper placement
 
   return (
     <QueryClientProvider client={queryClient}>

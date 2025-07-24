@@ -1,6 +1,24 @@
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'wouter';
-import { trackPageView } from '../lib/analytics';
+
+// Global dataLayer declaration for GTM
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag?: (...args: any[]) => void;
+  }
+}
+
+// Track page views with GTM dataLayer
+const trackPageView = (url: string) => {
+  if (typeof window === 'undefined' || !window.dataLayer) return;
+  
+  // Push page view event to dataLayer (GTM will handle this)
+  window.dataLayer.push({
+    event: 'page_view',
+    page_path: url
+  });
+};
 
 export const useAnalytics = () => {
   const [location] = useLocation();

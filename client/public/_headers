@@ -2,6 +2,10 @@
 *.js
   Content-Type: text/javascript
 
+# Google Tag Manager scripts
+https://www.googletagmanager.com/gtm.js*
+  Content-Type: text/javascript
+
 # CSS files
 *.css
   Content-Type: text/css
