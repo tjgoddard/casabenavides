@@ -1,6 +1,5 @@
 import { useState, lazy } from "react";
-import { MapPin, Phone, Mail, Check, Calendar, ExternalLink } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { MapPin, Phone, Mail, Check } from "lucide-react";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
@@ -78,11 +77,11 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">CONTACT US</h2>
-          <p className="luxury-body text-sm text-gray-900 max-w-4xl mx-auto leading-relaxed">Get in touch to plan your perfect Taos getaway</p>
+          <p className="luxury-body text-lg text-gray-800 max-w-4xl mx-auto leading-relaxed">Get in touch to plan your perfect Taos getaway</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -104,7 +103,7 @@ export default function ContactSection() {
                 <MapPin className="w-5 h-5 text-casa-blue mt-1 mr-4 flex-shrink-0" />
                 <div>
                   <h3 className="luxury-subheading font-semibold text-casa-navy">Address</h3>
-                  <p className="luxury-body text-gray-900">
+                  <p className="luxury-body text-lg text-gray-800 leading-relaxed">
                     Casa Benavides Inn<br />
                     137 Kit Carson Road<br />
                     Taos, New Mexico 87571
@@ -137,7 +136,7 @@ export default function ContactSection() {
             <Card className="mt-8">
               <CardContent className="p-6">
                 <h3 className="font-semibold text-gray-900 mb-4">Best of Taos Location</h3>
-                <div className="space-y-2 text-gray-600">
+                <div className="space-y-2 luxury-body text-gray-800 text-lg leading-relaxed">
                   {locationHighlights.map((highlight, index) => (
                     <p key={index}>
                       <Check className="w-4 h-4 text-casa-blue mr-2 inline" />
@@ -194,13 +193,16 @@ export default function ContactSection() {
                     />
                   </div>
                   
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-casa-blue hover:bg-casa-blue-light"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
+                  <div className="textured-btn-wrap w-full">
+                    <div className="textured-btn-border" />
+                    <button 
+                      type="submit" 
+                      className="textured-btn w-full"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </button>
+                  </div>
                 </form>
               </CardContent>
             </Card>
@@ -209,20 +211,21 @@ export default function ContactSection() {
             <Card className="mt-8 border-2 border-casa-blue">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">Make Your Reservation</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="luxury-body text-gray-800 text-lg leading-relaxed mb-4">
                   Individual room reservations of up to 4 rooms can be made using our automated reservations system. 
                   Please call for Group Reservations over 4 rooms.
                 </p>
-                <Button asChild className="bg-casa-blue hover:bg-casa-blue-light">
+                <div className="textured-btn-wrap">
+                  <div className="textured-btn-border" />
                   <a 
                     href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="textured-btn"
                   >
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Click to Make Your Reservation!
+                    Make Your Reservation
                   </a>
-                </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -244,16 +247,17 @@ export default function ContactSection() {
             ></iframe>
           </div>
           <div className="text-center mt-4">
-            <Button asChild variant="outline" className="border-casa-blue text-casa-blue hover:bg-casa-blue hover:text-white">
+            <div className="textured-btn-wrap mx-auto">
+              <div className="textured-btn-border" />
               <a 
                 href="https://www.google.com/maps/place/137+Kit+Carson+Rd,+Taos,+NM+87571/@36.4070267,-105.57262,18z/data=!4m2!3m1!1s0x87176522a5e3309d:0x77572bd3bb2f6f2a" 
                 target="_blank"
                 rel="noopener noreferrer"
+                className="textured-btn"
               >
-                <ExternalLink className="w-4 h-4 mr-2" />
                 View & Print Directions
               </a>
-            </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -49,6 +49,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/newsletter" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
+                  Specials & Newsletter
+                </Link>
+              </li>
+              <li>
                 <Link href="/policies" className="text-casa-blue-accent hover:text-white transition-colors duration-200">
                   Policies
                 </Link>

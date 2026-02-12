@@ -35,7 +35,7 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">WHY CHOOSE CASA BENAVIDES?</h2>
@@ -50,7 +50,7 @@ export default function FeaturesSection() {
                 </div>
               </div>
               <h3 className="luxury-subheading text-2xl font-light mb-6 text-casa-navy tracking-wide">{feature.title}</h3>
-              <p className="luxury-body text-sm text-gray-900 leading-relaxed">{feature.description}</p>
+              <p className="luxury-body text-lg text-gray-800 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

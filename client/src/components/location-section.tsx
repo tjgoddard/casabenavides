@@ -1,56 +1,76 @@
-import { MapPin, Calendar } from "lucide-react";
-import { Button } from "../components/ui/button";
-
-// Using direct path approach
-// import img3 from "../../../attached_assets/IMG_3405_new.png";
+import locationImg from "../../../attached_assets/IMG_3403.png";
 
 export default function LocationSection() {
   return (
-    <div className="py-20 bg-casa-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">STAY CLOSE TO THE BEST OF TAOS</h2>
-            <p className="luxury-body text-sm text-gray-900 mb-6 leading-relaxed">Looking for a hotel in the heart of Taos? Casa Benavides Historic Bed & Breakfast Inn is the perfect place to stay. Just outside the front door is a leisurely stroll to all the enchanted beauty, energy, shopping, Southwest cuisine and Native culture Taos has to offer. And we're just a short 30-minute drive to the legendary slopes of Taos Ski Valley.</p>
-            <p className="luxury-body text-sm text-gray-900 mb-6 leading-relaxed">At Casa Benavides, you can explore the town's rich cultural heritage, enjoy world-class skiing and snowboarding, or take a scenic drive to the Rio Grande Gorge Bridge, the High Road to Taos, or Ojo Caliente Hot Springs. Whether you're planning a winter getaway or a summer road trip through Northern New Mexico, Casa Benavides is the perfect home base.</p>
-            <p className="luxury-body text-sm text-gray-900 mb-8 leading-relaxed">For travelers searching for a cozy, well-located Taos Inn, Casa Benavides blends comfort, character, and unbeatable proximity to everything this magical town has to offer.</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild variant="outline" className="border-casa-blue text-casa-blue hover:bg-casa-blue hover:text-white">
-                <a 
-                  href="https://www.google.com/maps/place/137+Kit+Carson+Rd,+Taos,+NM+87571/@36.4070267,-105.57262,18z/data=!4m2!3m1!1s0x87176522a5e3309d:0x77572bd3bb2f6f2a"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MapPin className="w-4 h-4 mr-2" />
-                  Get Directions
-                </a>
-              </Button>
-              <Button asChild className="bg-casa-blue hover:bg-casa-blue-light">
-                <a 
-                  href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Make Reservation
-                </a>
-              </Button>
+    <section className="relative overflow-hidden py-12 md:py-16">
+      {/* STAIR CASE (hidden for now – restore by uncommenting block below and removing image grid) */}
+      {/* <svg className="absolute" width="0" height="0" aria-hidden="true">
+        <defs>
+          <filter id="sand-texture">
+            <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="5" stitchTiles="stitch" result="noise" />
+            <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise" />
+            <feBlend in="SourceGraphic" in2="grayNoise" mode="multiply" result="textured" />
+            <feComponentTransfer in="textured">
+              <feFuncA type="linear" slope="1" />
+            </feComponentTransfer>
+          </filter>
+        </defs>
+      </svg>
+      <div
+        className="absolute -top-1 right-0 bottom-0 w-full pointer-events-none hidden md:block"
+        aria-hidden="true"
+        style={{
+          background: 'linear-gradient(180deg, #d4a05a 0%, #dbb06e 20%, #e2be82 40%, #eacd9a 60%, #f0dbb2 78%, #f5ece0 100%)',
+          clipPath: `polygon(
+            45% 0%, 100% 0%, 100% 100%,
+            65% 100%,
+            65% 84%,
+            60% 84%,
+            60% 68%,
+            55% 68%,
+            55% 52%,
+            52% 52%,
+            52% 36%,
+            49% 36%,
+            49% 20%,
+            45% 20%,
+            45% 0%
+          )`,
+          filter: 'url(#sand-texture)',
+        }}
+      /> */}
+
+      {/* Content: text left, image right (image from About section) */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-16 items-center">
+          <div className="flex flex-col items-center text-center lg:items-center lg:justify-center">
+            <div className="max-w-sm w-full text-center lg:text-left">
+              <p className="luxury-body text-lg text-gray-800 leading-relaxed">
+                In the heart of Taos, where adobe streets, art, and high-desert spirit meet, Casa Benavides offers a stay rooted in New Mexico's charm and history. This intimate historic bed & breakfast is your walkable home base for the Plaza's galleries and shops, local flavors, and the culture that makes Taos unforgettable. When adventure calls, you're perfectly placed for everything from Taos Ski Valley to the Rio Grande Gorge and the High Road, then back to a cozy, character-filled retreat that feels distinctly Taos.
+              </p>
+
+              {/* Textured border button */}
+              <div className="mt-6 textured-btn-wrap inline-block">
+                <div className="textured-btn-border" />
+                <a href="/our-story" className="textured-btn">Our Inn</a>
+              </div>
             </div>
           </div>
-          <div className="lg:order-first">
-            <div className="relative">
-              <img 
-                src="/casa-living-room.png" 
-                alt="Casa Benavides Inn living room with authentic Southwest art collection and pottery" 
-                className="w-full h-96 object-cover rounded-xl shadow-lg"
-                loading="lazy"
-                sizes="(max-width: 640px) 40vw, (max-width: 768px) 45vw, (max-width: 1024px) 35vw, 400px"
-                decoding="async"
-              />
-            </div>
+          {/* Image (moved from About section) - slightly larger */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-casa-blue/20 to-transparent rounded-2xl transform rotate-2 group-hover:rotate-1 smooth-transition" />
+            <img
+              src={locationImg}
+              alt="Casa Benavides Inn authentic Southwest architecture"
+              className="relative w-full h-[420px] lg:h-[540px] object-cover rounded-2xl luxury-shadow smooth-transition group-hover:scale-105"
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 55vw"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -6,7 +6,7 @@ import { Mail, Phone, Users, Calendar, MapPin } from "lucide-react";
 
 export default function GroupReservations() {
   return (
-    <>
+    <div className="pb-14 md:pb-0">
       <Navigation />
       <PageHeaderCarousel 
         title="GROUP RESERVATIONS" 
@@ -17,7 +17,7 @@ export default function GroupReservations() {
 
           <div className="space-y-12">
             <section>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Group Reservations are a single reservation of four (4) rooms, or more for single or multiple nights, paid for by a single or multiple payers.</p>
                 <p>Group Reservations cannot be made using our automated online reservations system.</p>
                 <p><strong>Group Reservations can only be made and confirmed by calling the Casa Benavides office at: 575-758-1772</strong></p>
@@ -26,7 +26,7 @@ export default function GroupReservations() {
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Deposit Requirements</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Group Reservations made within 90 days of arrival require a 100% non-refundable deposit. We understand that plans can change. Any unused portion of the non-refundable deposit can be applied toward a future reservation made within one year. The non-refundable deposit will be forfeited.</p>
                 <p>Advanced Group Reservations made outside the 90-day arrival window require a 50% non-refundable deposit. The remaining 50% non-refundable balance must be paid by 90 days prior to arrival, or 50% of the room reservations will be cancelled at that time. We understand that plans can change. Otherwise, the non-refundable deposit will be forfeited.</p>
               </div>
@@ -34,21 +34,21 @@ export default function GroupReservations() {
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Room Rates</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Group Reservations room prices are based upon double occupancy – Two (2) guests per room per night. Our room fees include our breakfast for each guest in our dining room, between the hours of 7:00 AM and 9:30 AM every morning. Any number of guests exceeding the double occupancy shall be charged an additional rate of $20 per person per night. If the number of room guests exceed the number of guests designated at the time the original reservation was made, then the additional charges will be collected at check-in.</p>
               </div>
             </section>
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Discounts</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Casa Benavides is a small family operated business and unable to offer any discounted rates. We do not participate in AARP or AAA travel membership programs, nor do we offer Government or Military discounts.</p>
               </div>
             </section>
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Check-In</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Room Check-In time for Group Reservations is from 3:00 PM to 7:00 PM Mountain time.</p>
                 <p>Room Check-In is not available outside of this time window, unless advanced arrangements have been made with the Casa Benavides by calling 575-758-1772. Additional fees may apply for early or late check-in.</p>
               </div>
@@ -56,7 +56,7 @@ export default function GroupReservations() {
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Check-Out</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p><strong>Room Check-Out is by 11:00 AM Mountain time</strong></p>
                 <p>Extended Check-Out time is available by calling the front desk 575-758-1772. Additional fees may apply.</p>
               </div>
@@ -64,7 +64,7 @@ export default function GroupReservations() {
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Conference & Meeting Room</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Conference & Meeting Room - is available for Group Reservations with advanced notice.</p>
                 <p>An additional Conference Room fee may apply.</p>
               </div>
@@ -72,21 +72,21 @@ export default function GroupReservations() {
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">No Smoking</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Casa Benavides is a non-smoking, non-vaping facility. Smoking/vaping is permitted only outdoors on the Casa Benavides property at a single location. Contact our front desk at 575-758-1772 for the designated area.</p>
               </div>
             </section>
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Guest Criteria</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Human guests including children are welcome. Non-human pets are not.</p>
               </div>
             </section>
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Payment</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>All deposits and payments can be made by using Cash, Check, Visa, MasterCard, American Express, or Discovery.</p>
               </div>
             </section>
@@ -99,7 +99,7 @@ export default function GroupReservations() {
                     <Phone className="w-5 h-5 text-casa-blue mr-3" />
                     <span className="luxury-body text-gray-900 text-lg">575-758-1772</span>
                   </div>
-                  <p className="luxury-body text-gray-900 text-sm">Call to discuss your group reservation needs</p>
+                  <p className="luxury-body text-gray-800 text-lg leading-relaxed">Call to discuss your group reservation needs</p>
                 </div>
               </div>
             </div>
@@ -107,6 +107,6 @@ export default function GroupReservations() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

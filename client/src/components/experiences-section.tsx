@@ -10,7 +10,7 @@ export default function ExperiencesSection() {
     {
       title: "Discover Taos Plaza & Historic Downtown",
       description: "At the historic heart of town, Taos Plaza blends centuries of culture with contemporary flair. Wander through art galleries, boutique shops, and cafés; soak up live music or join the farmers' market on weekends. Notable stops include the Kit Carson House & Museum, the Couse-Sharp Historic Site, The Harwood Museum, and Millicent Rogers Museum.",
-      image: "/taos-plaza-new.jpg"
+      image: "/taos-plaza.jpg"
     },
     {
       title: "Experience Ancient Taos Pueblo",
@@ -30,16 +30,16 @@ export default function ExperiencesSection() {
     {
       title: "Explore Art, History & Local Culture",
       description: "Taos is an artistic mecca—from the Taos Art Museum (Nicolai Fechin House) to the fall Dixon Studio Tour. Add historic Spanish mission tours (like San Francisco de Asís in Ranchos de Taos), D.H. Lawrence explorations, rock‑climbing, disc golf, horseback riding, hot air ballooning, and soaking in hot springs.",
-      image: "/fechin-house.jpg"
+      image: "/fechin-house.png"
     }
   ];
 
   return (
-    <section id="experiences" className="py-32 bg-white">
+    <section id="experiences" className="py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
           <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">TAOS EXPERIENCES</h2>
-          <p className="luxury-body text-sm text-gray-900 max-w-4xl mx-auto leading-relaxed">
+          <p className="luxury-body text-lg text-gray-800 max-w-4xl mx-auto leading-relaxed">
             Discover the magic of Taos with adventures that blend natural beauty, rich culture, and unforgettable experiences 
             just moments from your doorstep at Casa Benavides.
           </p>
@@ -50,7 +50,7 @@ export default function ExperiencesSection() {
             <div key={index} className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               <div className={`luxury-hover smooth-transition ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <h3 className="luxury-subheading text-3xl md:text-4xl font-light mb-8 text-casa-navy tracking-wide">{experience.title}</h3>
-                <p className="luxury-body text-sm text-gray-900 leading-relaxed">{experience.description}</p>
+                <p className="luxury-body text-lg text-gray-800 leading-relaxed">{experience.description}</p>
               </div>
               <div className={`luxury-hover smooth-transition ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 <div className="relative overflow-hidden rounded-lg shadow-xl">
@@ -66,24 +66,17 @@ export default function ExperiencesSection() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-[#1a365d] to-[#0682b3] rounded-xl p-12 text-center mt-32 shadow-2xl">
-          <h3 className="luxury-subheading text-3xl md:text-4xl font-light text-white mb-8 tracking-wide">Why Stay at Casa Benavides?</h3>
-          <p className="text-white text-sm leading-relaxed max-w-4xl mx-auto mb-8 font-light">
-            Our prime downtown location puts you in the center of everything: a short drive to Taos Ski Valley, 
-            steps from Taos Plaza, and just minutes from world‑famous landmarks like Taos Pueblo and the Rio Grande Gorge. 
-            Whether you're chasing adrenaline or cultural enrichment, you'll find it all close to your door.
-          </p>
-          <div className="mt-8">
-            <a 
-              href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-casa-blue px-12 py-4 rounded-md luxury-body font-semibold hover:bg-white/90 smooth-transition shadow-lg hover:shadow-xl transform hover:scale-105"
-              onClick={() => trackEvent('click', 'reservation', 'experiences_book_adventure')}
-            >
-              Book Your Taos Adventure
-            </a>
-          </div>
+        <div className="text-center mt-32">
+          <a
+            href="https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 text-sm font-semibold uppercase tracking-widest text-gray-900 bg-[#faf7f2] border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-colors"
+            style={{ filter: 'url(#rough-border-global)' }}
+            onClick={() => trackEvent('click', 'reservation', 'experiences_check_availability')}
+          >
+            Check Availability
+          </a>
         </div>
       </div>
     </section>

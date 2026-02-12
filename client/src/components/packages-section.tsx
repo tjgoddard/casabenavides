@@ -1,4 +1,3 @@
-import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 
 export default function PackagesSection() {
@@ -28,7 +27,7 @@ export default function PackagesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="luxury-heading text-5xl md:text-6xl mb-8 text-casa-navy">SPECIALS & PACKAGES</h2>
-          <p className="luxury-body text-sm text-gray-900 max-w-4xl mx-auto leading-relaxed">
+          <p className="luxury-body text-lg text-gray-800 max-w-4xl mx-auto leading-relaxed">
             Enhance your stay with our carefully crafted packages designed to create unforgettable experiences
           </p>
         </div>
@@ -45,33 +44,29 @@ export default function PackagesSection() {
               <div className="space-y-6">
                 <h3 className="luxury-subheading text-3xl font-light tracking-wide text-casa-navy mb-4">{pkg.title}</h3>
                 <p className="text-sm text-casa-blue font-medium mb-6">{pkg.description}</p>
-                <p className="luxury-body text-sm text-gray-900 leading-relaxed mb-8">{pkg.details}</p>
+                <p className="luxury-body text-lg text-gray-800 leading-relaxed mb-8">{pkg.details}</p>
                 
-                <Button 
-                  asChild 
-                  className="luxury-button text-white rounded-full group-hover:scale-105 smooth-transition"
-                >
+                <div className="textured-btn-wrap mx-auto">
+                  <div className="textured-btn-border" />
                   <a 
                     href={`https://reserve5.resnexus.com/resnexus/Reservations/Lodging/7C459783-8167-4C52-9A85-DF5D26CA7985?forcedesktop=1&promo=${pkg.promo}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="textured-btn"
                   >
-                    BOOK NOW
+                    Book Now
                   </a>
-                </Button>
+                </div>
               </div>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-20">
-          <Button 
-            asChild 
-            variant="outline" 
-            className="border-2 border-casa-blue text-casa-blue hover:bg-casa-blue hover:text-white px-10 py-5 font-medium tracking-wide rounded-full smooth-transition"
-          >
-            <a href="/contact">VIEW ALL PACKAGES</a>
-          </Button>
+          <div className="textured-btn-wrap mx-auto">
+            <div className="textured-btn-border" />
+            <a href="/contact" className="textured-btn">View All Packages</a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,22 +1,21 @@
 import Navigation from "../components/navigation";
 import HeroSection from "../components/hero-section";
-import AboutSection from "../components/about-section";
 import SeasonalSection from "../components/seasonal-section";
 import LocationSection from "../components/location-section";
-import FeaturesSection from "../components/features-section";
-import PackagesSection from "../components/packages-section";
+import GallerySection from "../components/gallery-section";
+import ReviewsSection from "../components/reviews-section";
 import Footer from "../components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen pb-14 md:pb-0">
       <Navigation />
       <main>
         <HeroSection showSubtitle={true} />
         <LocationSection />
-        <AboutSection />
+        <GallerySection />
+        <ReviewsSection />
         <SeasonalSection />
-        <FeaturesSection />
       </main>
       <Footer />
     </div>

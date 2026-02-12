@@ -1,14 +1,12 @@
 import Navigation from "../components/navigation";
-import HeroSection from "../components/hero-section";
 import ContactSection from "../components/contact-section";
 import Footer from "../components/footer";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen pb-14 md:pb-0">
       <Navigation />
-      <main>
-        <HeroSection />
+      <main className="pt-24 md:pt-28">
         <ContactSection />
       </main>
       <Footer />

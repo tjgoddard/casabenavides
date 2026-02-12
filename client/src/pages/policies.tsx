@@ -4,7 +4,7 @@ import PageHeaderCarousel from "../components/page-header-carousel";
 
 export default function Policies() {
   return (
-    <>
+    <div className="pb-14 md:pb-0">
       <Navigation />
       <PageHeaderCarousel 
         title="OUR POLICIES" 
@@ -16,7 +16,7 @@ export default function Policies() {
           <div className="space-y-12">
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Room Rates</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>ROOM RATES are published on our "Rates & Reservations" page. Room Rates are guaranteed through the duration of your reservation. Applicable New Mexico Gross Receipts tax and Lodgers tax are added at check-out.</p>
                 <p><strong>ROOM RATES ARE BASED ON DOUBLE OCCUPANCY - TWO GUESTS</strong></p>
                 <p><strong>$20.00 ADDITIONAL FEE CHARGED PER GUEST PER NIGHT OVER TWO GUESTS</strong></p>
@@ -26,14 +26,14 @@ export default function Policies() {
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Discounts</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Casa Benavides is a small family operated business and unable to offer any discounted rates. We do not participate in AARP or AAA travel membership programs, nor do we offer Government or Military discounts.</p>
               </div>
             </section>
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Check-In</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p><strong>3:00 PM to 7:00 PM Mountain Time</strong></p>
                 <p>Advance notice is required to gain access to your room for early or late check-in.</p>
                 <p>Additional fees may apply.</p>
@@ -42,7 +42,7 @@ export default function Policies() {
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Check-Out</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p><strong>11:00 AM Mountain Time</strong></p>
                 <p>Extended Check-Out time is available by calling the front desk. Additional fees WILL apply.</p>
               </div>
@@ -50,7 +50,7 @@ export default function Policies() {
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Deposit</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>One night minimum on all reserved rooms.</p>
                 <p>50% deposit on all room reservations over one night.</p>
               </div>
@@ -58,35 +58,35 @@ export default function Policies() {
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Cancellations</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Must be made at least 15 days prior to reservation date to receive a refund of deposit. Cancellations made less than 15 days prior to arrival will forfeit the deposit.</p>
               </div>
             </section>
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">No Smoking</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Casa Benavides is a non-smoking, non-vaping facility. Smoking/vaping is permitted only outdoors on the Casa Benavides property at a single location.</p>
               </div>
             </section>
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Guest Criteria</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Children are welcome. We have a No Pet Policy.</p>
               </div>
             </section>
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Payment</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Cash, Checks, Visa, Master Card, American Express, or Discovery</p>
               </div>
             </section>
 
             <section>
               <h2 className="luxury-subheading text-3xl md:text-4xl font-light mb-6 text-casa-navy tracking-wide">Group Reservations</h2>
-              <div className="space-y-4 luxury-body text-gray-900">
+              <div className="space-y-4 luxury-body text-gray-800 text-lg leading-relaxed">
                 <p>Reservations of 4 rooms or more are available for conferences, meetings and event, however they cannot be made using our automated reservation system. Please call for details.</p>
               </div>
             </section>
@@ -94,6 +94,6 @@ export default function Policies() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

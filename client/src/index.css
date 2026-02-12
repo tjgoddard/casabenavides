@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -30,9 +30,9 @@
   --casa-blue: #0682b3;
   --casa-blue-light: #0d9ad6;
   --casa-blue-accent: #e6f4ff;
-  --casa-light: hsl(210, 40%, 98%);
+  --casa-light: #f7f3ec;
   --casa-navy: #1a365d;
-  --casa-cream: #fefcf9;
+  --casa-cream: #f5f0e8;
   --casa-sage: #9ca89b;
   --casa-warm-gray: #6b7280;
 }
@@ -66,15 +66,31 @@
   }
 
   body {
-    @apply antialiased bg-white text-gray-900;
-    font-family: 'Brandon Grotesque', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.025em;
+    @apply antialiased text-gray-900;
+    background-color: #faf7f2;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
     font-display: swap;
   }
   
   html {
     scroll-behavior: smooth;
+  }
+
+  /* No gap at top on mobile – hero can touch viewport edge */
+  @media (max-width: 767px) {
+    html, body {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+/* Ensure nav bar is transparent over hero on mobile (no white strip) */
+@media (max-width: 767px) {
+  header.nav-over-hero {
+    background-color: transparent !important;
   }
 }
 
@@ -104,7 +120,7 @@
   }
   
   .bg-casa-light {
-    background-color: hsl(210, 40%, 98%);
+    background-color: #f7f3ec;
   }
   
   /* Hero image positioning and cropping */
@@ -202,6 +218,36 @@
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Textured border button - reusable across site */
+  .textured-btn-wrap {
+    position: relative;
+    display: inline-block;
+  }
+  .textured-btn-border {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border: 3px solid #1a365d;
+    filter: url(#rough-border-global);
+  }
+  .textured-btn {
+    position: relative;
+    display: block;
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1a365d;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+  }
+  .textured-btn:hover {
+    background-color: #1a365d;
+    color: white;
   }
 
   .bg-casa-cream {

@@ -40,7 +40,7 @@ export default function PageHeaderCarousel({ title, subtitle }: PageHeaderCarous
   };
 
   return (
-    <section className="relative">
+    <section className="relative pt-[88px]">
       {/* Page Header - Static Image Only */}
       <div className="relative h-[40vh] min-h-[300px] overflow-hidden">
         <img 
