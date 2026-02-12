@@ -1,10 +1,13 @@
+import { lazy, Suspense } from "react";
 import Navigation from "../components/navigation";
 import HeroSection from "../components/hero-section";
-import SeasonalSection from "../components/seasonal-section";
 import LocationSection from "../components/location-section";
-import GallerySection from "../components/gallery-section";
-import ReviewsSection from "../components/reviews-section";
 import Footer from "../components/footer";
+
+// Lazy load below-the-fold sections
+const GallerySection = lazy(() => import("../components/gallery-section"));
+const ReviewsSection = lazy(() => import("../components/reviews-section"));
+const SeasonalSection = lazy(() => import("../components/seasonal-section"));
 
 export default function Home() {
   return (
@@ -13,9 +16,15 @@ export default function Home() {
       <main>
         <HeroSection showSubtitle={true} />
         <LocationSection />
-        <GallerySection />
-        <ReviewsSection />
-        <SeasonalSection />
+        <Suspense fallback={<div className="h-96" />}>
+          <GallerySection />
+        </Suspense>
+        <Suspense fallback={<div className="h-96" />}>
+          <ReviewsSection />
+        </Suspense>
+        <Suspense fallback={<div className="h-96" />}>
+          <SeasonalSection />
+        </Suspense>
       </main>
       <Footer />
     </div>

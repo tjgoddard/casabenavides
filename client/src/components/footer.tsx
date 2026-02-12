@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { Calendar } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 
-export default function Footer() {
+export default memo(function Footer() {
   return (
     <footer className="bg-casa-blue text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,4 +107,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+});

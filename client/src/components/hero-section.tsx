@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { trackEvent } from "../lib/analytics";
 import heroImage1 from "../../../attached_assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
@@ -12,42 +13,61 @@ interface HeroSectionProps {
   compact?: boolean;
 }
 
+const images = [
+  {
+    src: heroImage1,
+    alt: "Casa Benavides Inn - Adobe Architecture at Sunset with Turquoise Accents"
+  },
+  {
+    src: heroImage2,
+    alt: "Taos Mountain Landscape at Sunset"
+  },
+  {
+    src: heroImage3,
+    alt: "Casa Benavides Inn - Courtyard Patio with Colorful Umbrellas"
+  },
+  {
+    src: heroImage4,
+    alt: "Casa Benavides Inn - Interior Living Space with Southwest Decor"
+  }
+];
+
 export default function HeroSection({ showSubtitle = false, compact = false }: HeroSectionProps) {
-  const images = [
-    {
-      src: heroImage1,
-      alt: "Casa Benavides Inn - Adobe Architecture at Sunset with Turquoise Accents"
-    },
-    {
-      src: heroImage2,
-      alt: "Taos Mountain Landscape at Sunset"
-    },
-    {
-      src: heroImage3,
-      alt: "Casa Benavides Inn - Courtyard Patio with Colorful Umbrellas"
-    },
-    {
-      src: heroImage4,
-      alt: "Casa Benavides Inn - Interior Living Space with Southwest Decor"
-    }
-  ];
 
   // Static image - no carousel rotation
   const currentImageIndex = 0;
+
+  // Preload LCP hero image so the browser fetches it as early as possible
+  const heroSrc = images[0].src;
+  useEffect(() => {
+    const src = typeof heroSrc === "string" ? heroSrc : "";
+    if (!src) return;
+    const existing = document.querySelector(`link[rel="preload"][as="image"][href="${src}"]`);
+    if (existing) return;
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = src;
+    document.head.appendChild(link);
+    return () => link.remove();
+  }, [heroSrc]);
 
   return (
     <section id="home" className={`relative bg-gray-900 ${compact ? "pt-[88px]" : ""}`}>
       {/* Hero Section - full height on home; compact (same as Gallery) on other pages */}
       <div className={`relative overflow-hidden bg-gray-900 ${compact ? "h-[40vh] min-h-[300px]" : "h-[85vh] min-h-[600px]"}`}>
-        {/* Static hero image */}
+        {/* Static hero image - dimensions reduce CLS */}
         <img 
           src={images[0].src}
           alt={images[0].alt}
+          width={1920}
+          height={1080}
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ objectPosition: '25% 30%' }}
           fetchPriority="high"
           loading="eager"
           decoding="async"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black bg-opacity-15"></div>
         

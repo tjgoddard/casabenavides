@@ -1,6 +1,7 @@
+import { memo } from "react";
 import locationImg from "../../../attached_assets/IMG_3403.png";
 
-export default function LocationSection() {
+export default memo(function LocationSection() {
   return (
     <section className="relative overflow-hidden py-12 md:py-16">
       {/* STAIR CASE (hidden for now – restore by uncommenting block below and removing image grid) */}
@@ -62,6 +63,8 @@ export default function LocationSection() {
             <img
               src={locationImg}
               alt="Casa Benavides Inn authentic Southwest architecture"
+              width={800}
+              height={600}
               className="relative w-full h-[420px] lg:h-[540px] object-cover rounded-2xl luxury-shadow smooth-transition group-hover:scale-105"
               loading="lazy"
               sizes="(max-width: 1024px) 100vw, 55vw"
@@ -73,4 +76,4 @@ export default function LocationSection() {
       </div>
     </section>
   );
-}
+});

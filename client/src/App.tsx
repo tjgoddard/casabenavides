@@ -9,9 +9,85 @@ import { useAnalytics } from "./hooks/use-analytics";
 /** Scroll to top on every route change and on initial load (e.g. refresh). */
 function ScrollToTop() {
   const [location] = useLocation();
+
+  // #region agent log
   useEffect(() => {
+    const runId = "scroll-effect-location";
+    const before = window.scrollY;
+    const docScroll = document.documentElement.scrollTop;
+    fetch("http://127.0.0.1:7244/ingest/9a088c47-6bd0-4d1f-afe9-90cd2280186b", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        hypothesisId: "H1-H5",
+        location: "App.tsx:ScrollToTop(location-effect)",
+        message: "location effect run",
+        data: {
+          runId,
+          location,
+          scrollRestoration: history.scrollRestoration,
+          beforeWindowScrollY: before,
+          beforeDocScrollTop: docScroll,
+        },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
     window.scrollTo(0, 0);
+    const afterY = window.scrollY;
+    const afterDoc = document.documentElement.scrollTop;
+    fetch("http://127.0.0.1:7244/ingest/9a088c47-6bd0-4d1f-afe9-90cd2280186b", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        hypothesisId: "H2-H5",
+        location: "App.tsx:ScrollToTop(after-scrollTo)",
+        message: "right after scrollTo(0,0)",
+        data: { runId, afterWindowScrollY: afterY, afterDocScrollTop: afterDoc },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
+    let rafCount = 0;
+    const checkAfterPaint = () => {
+      rafCount++;
+      const y = window.scrollY;
+      const doc = document.documentElement.scrollTop;
+      fetch("http://127.0.0.1:7244/ingest/9a088c47-6bd0-4d1f-afe9-90cd2280186b", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          hypothesisId: "H2",
+          location: "App.tsx:ScrollToTop(after-paint)",
+          message: "scrollY after paint",
+          data: { runId, rafCount, windowScrollY: y, docScrollTop: doc },
+          timestamp: Date.now(),
+        }),
+      }).catch(() => {});
+      if (rafCount < 3) requestAnimationFrame(checkAfterPaint);
+    };
+    requestAnimationFrame(checkAfterPaint);
+    return () => clearTimeout(timeoutId);
   }, [location]);
+
+  useEffect(() => {
+    const runId = "scroll-effect-mount";
+    fetch("http://127.0.0.1:7244/ingest/9a088c47-6bd0-4d1f-afe9-90cd2280186b", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        hypothesisId: "H4",
+        location: "App.tsx:ScrollToTop(mount-effect)",
+        message: "mount-only effect run",
+        data: { runId, scrollRestoration: history.scrollRestoration },
+        timestamp: Date.now(),
+      }),
+    }).catch(() => {});
+    window.scrollTo(0, 0);
+  }, []);
+  // #endregion
+
   return null;
 }
 

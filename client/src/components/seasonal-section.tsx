@@ -1,14 +1,15 @@
+import { memo } from "react";
 import heroImage2 from "../../../attached_assets/iStock-1458935906_1752360314185.jpg";
 import skiValleyImage from "../../../attached_assets/taos-ski-valley-aerial.png";
 
-const experienceImages: { src: string; alt: string; objectPosition?: string }[] = [
+const experienceImages: { src: any; alt: string; objectPosition?: string }[] = [
   { src: heroImage2, alt: "Taos Mountain landscape at sunset" },
   { src: skiValleyImage, alt: "Taos Ski Valley" },
   { src: "/taos-pueblo.jpg", alt: "Taos Pueblo", objectPosition: "center 90%" },
   { src: "/rio-grande-gorge.webp", alt: "Rio Grande Gorge and Bridge" },
 ];
 
-export default function SeasonalSection() {
+export default memo(function SeasonalSection() {
   return (
     <section className="py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,4 +55,4 @@ export default function SeasonalSection() {
       </div>
     </section>
   );
-}
+});

@@ -1,15 +1,19 @@
+import { memo } from "react";
 import interiorImage from "../../../attached_assets/IMG_4445_1752533547607.jpg";
 
-export default function GallerySection() {
+export default memo(function GallerySection() {
   return (
     <section id="gallery" className="relative w-full bg-casa-cream">
       <div className="relative w-full aspect-[16/10] sm:aspect-[2/1] md:aspect-[21/9] overflow-hidden">
         <img
           src={interiorImage}
           alt="Casa Benavides Inn - Interior Living Space with Southwest Decor"
+          width={1920}
+          height={810}
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
           decoding="async"
+          sizes="100vw"
         />
         {/* Subtle bottom-to-top gradient for contrast */}
         <div
@@ -44,4 +48,4 @@ export default function GallerySection() {
       </div>
     </section>
   );
-}
+});

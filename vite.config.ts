@@ -27,6 +27,26 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes("node_modules")) {
+            if (id.includes("@radix-ui")) return "vendor-radix";
+            if (id.includes("@tanstack/react-query")) return "vendor-query";
+            if (id.includes("react-dom") || id.includes("wouter")) return "vendor-router";
+            if (id.includes("lucide-react")) return "vendor-icons";
+            return "vendor";
+          }
+        },
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
+        assetFileNames: "assets/[name]-[hash][extname]",
+      },
+    },
+    target: "es2020",
+    minify: "esbuild",
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
   },
   server: {
     fs: {

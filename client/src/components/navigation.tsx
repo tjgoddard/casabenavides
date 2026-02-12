@@ -3,6 +3,16 @@ import { useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import logoImage from "../../../attached_assets/casa-benavides-your-front-Photoroom-removebg-preview_1752360228306.png";
 
+const navigationLinks: { href: string; label: string; external?: boolean }[] = [
+  { href: "/", label: "HOME" },
+  { href: "/gallery", label: "GALLERY" },
+  { href: "/our-story", label: "OUR STORY" },
+  { href: "/breakfast", label: "BREAKFAST" },
+  { href: "/experiences", label: "EXPERIENCES" },
+  { href: "/newsletter", label: "SPECIALS" },
+  { href: "/contact", label: "CONTACT" },
+];
+
 export default function Navigation() {
   const [location] = useLocation();
   const isHomePage = location === "/";
@@ -12,32 +22,34 @@ export default function Navigation() {
   const [showBlueNav, setShowBlueNav] = useState(false);
 
   useEffect(() => {
+    let rafId: number | null = null;
+    let lastKnownScrollY = 0;
+    
     const handleScroll = () => {
-      const threshold = 60;
-      setIsScrolled(window.scrollY > threshold);
-      // Blue bar appears with the cream header (same threshold) so the transition is one smooth step
-      setShowBlueNav(window.scrollY > threshold);
+      lastKnownScrollY = window.scrollY;
+      if (rafId) return;
+      
+      rafId = requestAnimationFrame(() => {
+        const threshold = 60;
+        setIsScrolled(lastKnownScrollY > threshold);
+        // Blue bar appears with the cream header (same threshold) so the transition is one smooth step
+        setShowBlueNav(lastKnownScrollY > threshold);
+        rafId = null;
+      });
     };
 
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   // On non-home pages: always show full nav (cream header + blue bar). On home: transparent at top, full nav when scrolled.
   const showFullNav = !isHomePage || isScrolled;
   const isOverHero = isHomePage && !isScrolled;
   const showBlueNavBar = !isHomePage || showBlueNav;
-
-  const navigationLinks: { href: string; label: string; external?: boolean }[] = [
-    { href: "/", label: "HOME" },
-    { href: "/gallery", label: "GALLERY" },
-    { href: "/our-story", label: "OUR STORY" },
-    { href: "/breakfast", label: "BREAKFAST" },
-    { href: "/experiences", label: "EXPERIENCES" },
-    { href: "/newsletter", label: "SPECIALS" },
-    { href: "/contact", label: "CONTACT" },
-  ];
 
   const isActiveLink = (href: string) =>
     href === "/" ? location === "/" : location === href || location.startsWith(href + "/");

@@ -25,7 +25,7 @@ export default function ExperiencesSection() {
     {
       title: "Adventure on the Rio Grande River",
       description: "Just below the gorge awaits an exhilarating whitewater rafting route—17 miles of basalt‑walled chasm with rapids and calm stretches. For anglers, the Rio Grande and Red River offer prime fishing spots year‑round.",
-      image: "/rio-grande-river.jpg"
+      image: "/rio-grande-river.webp"
     },
     {
       title: "Explore Art, History & Local Culture",
