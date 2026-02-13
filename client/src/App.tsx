@@ -103,13 +103,16 @@ const Gallery = lazy(() => import("./pages/gallery"));
 const Newsletter = lazy(() => import("./pages/newsletter"));
 const NotFound = lazy(() => import("./pages/not-found"));
 
-// Loading component with critical CSS
+// Loading component: Casa Benavides sign as loading signal
 const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="text-center">
-      <div className="w-8 h-8 border-2 border-casa-blue border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-      <p className="text-gray-600 text-sm">Loading...</p>
-    </div>
+  <div className="flex items-center justify-center min-h-screen bg-stone-50">
+    <img
+      src="/casa-benavides-loading.png"
+      alt="Casa Benavides"
+      className="h-32 w-auto object-contain animate-pulse"
+      width={200}
+      height={256}
+    />
   </div>
 );
 

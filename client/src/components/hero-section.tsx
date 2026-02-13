@@ -14,22 +14,10 @@ interface HeroSectionProps {
 }
 
 const images = [
-  {
-    src: heroImage1,
-    alt: "Casa Benavides Inn - Adobe Architecture at Sunset with Turquoise Accents"
-  },
-  {
-    src: heroImage2,
-    alt: "Taos Mountain Landscape at Sunset"
-  },
-  {
-    src: heroImage3,
-    alt: "Casa Benavides Inn - Courtyard Patio with Colorful Umbrellas"
-  },
-  {
-    src: heroImage4,
-    alt: "Casa Benavides Inn - Interior Living Space with Southwest Decor"
-  }
+  { src: heroImage1, alt: "Casa Benavides Inn - Adobe Architecture at Sunset with Turquoise Accents" },
+  { src: heroImage2, alt: "Taos Mountain Landscape at Sunset" },
+  { src: heroImage3, alt: "Casa Benavides Inn - Courtyard Patio with Colorful Umbrellas" },
+  { src: heroImage4, alt: "Casa Benavides Inn - Interior Living Space with Southwest Decor" }
 ];
 
 export default function HeroSection({ showSubtitle = false, compact = false }: HeroSectionProps) {

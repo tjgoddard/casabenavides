@@ -2,9 +2,6 @@ import { useState, useEffect, lazy } from "react";
 import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import { Button } from "../components/ui/button";
 import heroImage1 from "../../../attached_assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
-import heroImage2 from "../../../attached_assets/iStock-1458935906_1752360314185.jpg";
-import heroImage3 from "../../../attached_assets/IMG_4446_1752533547603.jpg";
-import heroImage4 from "../../../attached_assets/IMG_4445_1752533547607.jpg";
 
 interface PageHeaderCarouselProps {
   title: string;
@@ -49,7 +46,7 @@ export default function PageHeaderCarousel({ title, subtitle }: PageHeaderCarous
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ objectPosition: '25% 30%' }}
           loading="eager"
-          sizes="(max-width: 640px) 50vw, (max-width: 768px) 75vw, (max-width: 1024px) 85vw, 90vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 85vw, 90vw"
           decoding="async"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>

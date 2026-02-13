@@ -2,7 +2,7 @@ import { memo } from "react";
 import heroImage2 from "../../../attached_assets/iStock-1458935906_1752360314185.jpg";
 import skiValleyImage from "../../../attached_assets/taos-ski-valley-aerial.png";
 
-const experienceImages: { src: any; alt: string; objectPosition?: string }[] = [
+const experienceImages: { src: string; alt: string; objectPosition?: string }[] = [
   { src: heroImage2, alt: "Taos Mountain landscape at sunset" },
   { src: skiValleyImage, alt: "Taos Ski Valley" },
   { src: "/taos-pueblo.jpg", alt: "Taos Pueblo", objectPosition: "center 90%" },
