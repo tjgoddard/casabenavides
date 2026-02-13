@@ -1,5 +1,5 @@
 import { memo } from "react";
-import locationImg from "../../../attached_assets/IMG_3403.png";
+import locationImg from "../../../attached_assets/IMG_3403.webp";
 
 export default memo(function LocationSection() {
   return (

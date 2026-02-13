@@ -1,7 +1,7 @@
 import { useState, useEffect, lazy } from "react";
 import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import { Button } from "../components/ui/button";
-import heroImage1 from "../../../attached_assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
+import heroImage1 from "../../../attached_assets/IMG_4448_edit_no_sky_1752537525049.webp";
 
 interface PageHeaderCarouselProps {
   title: string;

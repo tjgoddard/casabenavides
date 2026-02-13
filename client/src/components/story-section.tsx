@@ -1,5 +1,5 @@
 import { trackEvent } from "../lib/analytics";
-import heroImage from "../../../attached_assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
+import heroImage from "../../../attached_assets/IMG_4448_edit_no_sky_1752537525049.webp";
 
 const CHAPTER_MAX_W = "max-w-[720px]";
 

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { trackEvent } from "../lib/analytics";
-import heroImage1 from "../../../attached_assets/IMG_4448 edit no sky_(2)_1752537525049.jpg";
-import heroImage2 from "../../../attached_assets/iStock-1458935906_1752360314185.jpg";
+import heroImage1 from "../../../attached_assets/IMG_4448_edit_no_sky_1752537525049.webp";
+import heroImage2 from "../../../attached_assets/iStock-1458935906_1752360314185.webp";
 import heroImage3 from "../../../attached_assets/IMG_4446_1752533547603.jpg";
 import heroImage4 from "../../../attached_assets/IMG_4445_1752533547607.jpg";
 import logoImage from "../../../attached_assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)-Photoroom_1752359300963.jpg";

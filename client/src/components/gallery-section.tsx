@@ -1,5 +1,5 @@
 import { memo } from "react";
-import interiorImage from "../../../attached_assets/IMG_4445_1752533547607.jpg";
+import interiorImage from "../../../attached_assets/IMG_4445_1752533547607.webp";
 
 export default memo(function GallerySection() {
   return (

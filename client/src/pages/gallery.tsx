@@ -1,9 +1,9 @@
 import Navigation from "../components/navigation";
 import Footer from "../components/footer";
 import PageHeaderCarousel from "../components/page-header-carousel";
-import interiorImage from "../../../attached_assets/IMG_4445_1752533547607.jpg";
+import interiorImage from "../../../attached_assets/IMG_4445_1752533547607.webp";
 import courtyardImage from "../../../attached_assets/IMG_4446_1752533547603.jpg";
-import locationImage from "../../../attached_assets/IMG_3403.png";
+import locationImage from "../../../attached_assets/IMG_3403.webp";
 
 const galleryImages = [
   { src: "/gallery-living-room-art.png", alt: "Casa Benavides Inn - Living room with vigas, art, and Southwestern furnishings" },

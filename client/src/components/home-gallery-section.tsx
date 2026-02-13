@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import heroImage2 from "../../../attached_assets/iStock-1458935906_1752360314185.jpg";
-import skiValleyImage from "../../../attached_assets/taos-ski-valley-aerial.png";
+import heroImage2 from "../../../attached_assets/iStock-1458935906_1752360314185.webp";
+import skiValleyImage from "../../../attached_assets/taos-ski-valley-aerial.webp";
 
 const destinations: {
   src: string;

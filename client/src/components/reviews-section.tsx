@@ -47,7 +47,7 @@ export default function ReviewsSection() {
       {/* Textured background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/reviews-bg.png')" }}
+        style={{ backgroundImage: "url('/reviews-bg.webp')" }}
       />
       <div className="absolute inset-0 bg-black/15" aria-hidden="true" />
       {/* Top fade: gallery bottom fade continues into reviews (warm tan → transparent) */}
