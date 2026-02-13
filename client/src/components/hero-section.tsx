@@ -2,10 +2,6 @@ import { useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { trackEvent } from "../lib/analytics";
 import heroImage1 from "../../../attached_assets/IMG_4448_edit_no_sky_1752537525049.webp";
-import heroImage2 from "../../../attached_assets/iStock-1458935906_1752360314185.webp";
-import heroImage3 from "../../../attached_assets/IMG_4446_1752533547603.jpg";
-import heroImage4 from "../../../attached_assets/IMG_4445_1752533547607.jpg";
-import logoImage from "../../../attached_assets/f4f18f_a6469b265dcd46f3a644733b43dd2045~mv2 (2)-Photoroom_1752359300963.jpg";
 
 interface HeroSectionProps {
   showSubtitle?: boolean;
@@ -13,18 +9,12 @@ interface HeroSectionProps {
   compact?: boolean;
 }
 
+// Only the LCP image is used (static hero); other images removed to avoid shipping 18MB+ on home.
 const images = [
   { src: heroImage1, alt: "Casa Benavides Inn - Adobe Architecture at Sunset with Turquoise Accents" },
-  { src: heroImage2, alt: "Taos Mountain Landscape at Sunset" },
-  { src: heroImage3, alt: "Casa Benavides Inn - Courtyard Patio with Colorful Umbrellas" },
-  { src: heroImage4, alt: "Casa Benavides Inn - Interior Living Space with Southwest Decor" }
 ];
 
 export default function HeroSection({ showSubtitle = false, compact = false }: HeroSectionProps) {
-
-  // Static image - no carousel rotation
-  const currentImageIndex = 0;
-
   // Preload LCP hero image so the browser fetches it as early as possible
   const heroSrc = images[0].src;
   useEffect(() => {

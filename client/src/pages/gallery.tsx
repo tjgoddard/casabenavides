@@ -2,7 +2,7 @@ import Navigation from "../components/navigation";
 import Footer from "../components/footer";
 import PageHeaderCarousel from "../components/page-header-carousel";
 import interiorImage from "../../../attached_assets/IMG_4445_1752533547607.webp";
-import courtyardImage from "../../../attached_assets/IMG_4446_1752533547603.jpg";
+import courtyardImage from "../../../attached_assets/IMG_4446_1752533547603.webp";
 import locationImage from "../../../attached_assets/IMG_3403.webp";
 
 const galleryImages = [
