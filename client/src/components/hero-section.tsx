@@ -32,8 +32,11 @@ export default function HeroSection({ showSubtitle = false, compact = false }: H
 
   return (
     <section id="home" className={`relative bg-gray-900 ${compact ? "pt-[88px]" : ""}`}>
-      {/* Hero Section - full height on home; compact (same as Gallery) on other pages */}
-      <div className={`relative overflow-hidden bg-gray-900 ${compact ? "h-[40vh] min-h-[300px]" : "h-[85vh] min-h-[600px]"}`}>
+      {/* Hero Section - reserved box via aspect-ratio + min-height to avoid blank/partial then snap at first paint */}
+      <div
+        className={`relative w-full overflow-hidden bg-gray-900 ${compact ? "min-h-[300px]" : "min-h-[320px] sm:min-h-[420px] lg:min-h-[520px]"}`}
+        style={{ aspectRatio: "16 / 9" }}
+      >
         {/* Static hero image - dimensions reduce CLS */}
         <img 
           src={images[0].src}
