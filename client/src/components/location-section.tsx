@@ -1,5 +1,5 @@
 import { memo } from "react";
-import locationImg from "../../../attached_assets/IMG_3403.webp";
+import { HOME_IMAGE_URLS } from "../lib/home-image-urls";
 
 export default memo(function LocationSection() {
   return (
@@ -57,12 +57,12 @@ export default memo(function LocationSection() {
               </div>
             </div>
           </div>
-          {/* Image (moved from About section) - slightly larger */}
+          {/* Second homepage image (Supabase) */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-casa-blue/20 to-transparent rounded-2xl transform rotate-2 group-hover:rotate-1 smooth-transition" />
             <img
-              src={locationImg}
-              alt="Casa Benavides Inn authentic Southwest architecture"
+              src={HOME_IMAGE_URLS.locationGraphic}
+              alt="Casa Benavides Inn - In the heart of Taos"
               width={800}
               height={600}
               className="relative w-full h-[420px] lg:h-[540px] object-cover rounded-2xl luxury-shadow smooth-transition group-hover:scale-105"

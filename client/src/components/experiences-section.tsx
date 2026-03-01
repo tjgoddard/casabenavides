@@ -1,26 +1,28 @@
 import { trackEvent } from "../lib/analytics";
+import { GALLERY_IMAGE_URLS } from "../lib/gallery-image-urls";
+import { HOME_IMAGE_URLS } from "../lib/home-image-urls";
 
 export default function ExperiencesSection() {
   const experiences = [
     {
       title: "Conquer the Slopes at Taos Ski Valley",
       description: "Just a short drive away, Taos Ski Valley is a year‑round playground. In winter, skiers and snowboarders relish world‑class expert terrain—and après‑ski treats like bratwurst and green‑chile burritos at Bavarian‑style lodges. Spring through fall? Hit the mountain biking trails, guided hikes (including to Wheeler Peak or Williams Lake), snowshoe tours, ice skating, and even snowmobiling under starlit skies.",
-      image: "/taos-ski-valley.jpg"
+      image: HOME_IMAGE_URLS.experienceTaos.taosSkiValley
     },
     {
       title: "Discover Taos Plaza & Historic Downtown",
       description: "At the historic heart of town, Taos Plaza blends centuries of culture with contemporary flair. Wander through art galleries, boutique shops, and cafés; soak up live music or join the farmers' market on weekends. Notable stops include the Kit Carson House & Museum, the Couse-Sharp Historic Site, The Harwood Museum, and Millicent Rogers Museum.",
-      image: "/taos-plaza-new.png"
+      image: GALLERY_IMAGE_URLS.taosPlaza
     },
     {
       title: "Experience Ancient Taos Pueblo",
       description: "A UNESCO World Heritage Site and National Historic Landmark, Taos Pueblo is the oldest continuously inhabited community in the U.S. Explore its multi‑storied adobe structures, learn from local guides about ancient Tiwa traditions, and savor authentic cultural workshops.",
-      image: "/taos-pueblo.jpg"
+      image: HOME_IMAGE_URLS.experienceTaos.pueblo
     },
     {
       title: "Marvel at Rio Grande Gorge & Bridge",
       description: "Head 10 minutes out of town to witness the Rio Grande Gorge Bridge—one of America's tallest. Hike the scenic rim trails, spot bighorn sheep, watch rafters tackle the rapids below, or time it for magical sunset views.",
-      image: "/rio-grande-gorge.webp"
+      image: HOME_IMAGE_URLS.experienceTaos.rioGrandeGorge
     },
     {
       title: "Adventure on the Rio Grande River",

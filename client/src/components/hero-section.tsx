@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { trackEvent } from "../lib/analytics";
-import heroImage1 from "../../../attached_assets/IMG_4448_edit_no_sky_1752537525049.webp";
+import { HOME_IMAGE_URLS } from "../lib/home-image-urls";
 
 interface HeroSectionProps {
   showSubtitle?: boolean;
@@ -9,49 +9,41 @@ interface HeroSectionProps {
   compact?: boolean;
 }
 
-// Only the LCP image is used (static hero); other images removed to avoid shipping 18MB+ on home.
-const images = [
-  { src: heroImage1, alt: "Casa Benavides Inn - Adobe Architecture at Sunset with Turquoise Accents" },
-];
+const heroAlt = "Casa Benavides Inn - Homepage Banner";
 
 export default function HeroSection({ showSubtitle = false, compact = false }: HeroSectionProps) {
-  // Preload LCP hero image so the browser fetches it as early as possible
-  const heroSrc = images[0].src;
+  const heroSrc = HOME_IMAGE_URLS.heroBanner;
   useEffect(() => {
-    const src = typeof heroSrc === "string" ? heroSrc : "";
-    if (!src) return;
-    const existing = document.querySelector(`link[rel="preload"][as="image"][href="${src}"]`);
+    if (!heroSrc) return;
+    const existing = document.querySelector(`link[rel="preload"][as="image"][href="${heroSrc}"]`);
     if (existing) return;
     const link = document.createElement("link");
     link.rel = "preload";
     link.as = "image";
-    link.href = src;
+    link.href = heroSrc;
     document.head.appendChild(link);
     return () => link.remove();
   }, [heroSrc]);
 
   return (
     <section id="home" className={`relative bg-gray-900 ${compact ? "pt-[88px]" : ""}`}>
-      {/* Hero Section - reserved box via aspect-ratio + min-height to avoid blank/partial then snap at first paint */}
       <div
         className={`relative w-full overflow-hidden bg-gray-900 ${compact ? "min-h-[300px]" : "min-h-[320px] sm:min-h-[420px] lg:min-h-[520px]"}`}
         style={{ aspectRatio: "16 / 9" }}
       >
-        {/* Static hero image - dimensions reduce CLS */}
-        <img 
-          src={images[0].src}
-          alt={images[0].alt}
+        <img
+          src={heroSrc}
+          alt={heroAlt}
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ objectPosition: '25% 30%' }}
+          style={{ objectPosition: "25% 30%" }}
           fetchPriority="high"
           loading="eager"
           decoding="async"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-15"></div>
-        
+        <div className="absolute inset-0 bg-black bg-opacity-15" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <div className="text-white px-4 max-w-6xl mx-auto">
             

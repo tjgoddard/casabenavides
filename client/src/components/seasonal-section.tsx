@@ -1,12 +1,11 @@
 import { memo } from "react";
-import heroImage2 from "../../../attached_assets/iStock-1458935906_1752360314185.webp";
-import skiValleyImage from "../../../attached_assets/taos-ski-valley-aerial.webp";
+import { HOME_IMAGE_URLS } from "../lib/home-image-urls";
 
-const experienceImages: { src: string; alt: string; objectPosition?: string }[] = [
-  { src: heroImage2, alt: "Taos Mountain landscape at sunset" },
-  { src: skiValleyImage, alt: "Taos Ski Valley" },
-  { src: "/taos-pueblo.jpg", alt: "Taos Pueblo", objectPosition: "center 90%" },
-  { src: "/rio-grande-gorge.webp", alt: "Rio Grande Gorge and Bridge" },
+const experiencePhotos: { src: string; alt: string; href: string }[] = [
+  { src: HOME_IMAGE_URLS.experienceTaos.taosMountains, alt: "Taos Mountains", href: "/experiences" },
+  { src: HOME_IMAGE_URLS.experienceTaos.taosSkiValley, alt: "Taos Ski Valley", href: "/experiences" },
+  { src: HOME_IMAGE_URLS.experienceTaos.pueblo, alt: "Taos Pueblo", href: "/experiences" },
+  { src: HOME_IMAGE_URLS.experienceTaos.rioGrandeGorge, alt: "Rio Grande Gorge", href: "/experiences" },
 ];
 
 export default memo(function SeasonalSection() {
@@ -35,20 +34,23 @@ export default memo(function SeasonalSection() {
             </div>
           </div>
           
-          {/* Destination images grid (from former Explore Taos section) */}
+          {/* Experience Taos photos (Supabase) */}
           <div className="grid grid-cols-2 gap-4">
-            {experienceImages.map((img, i) => (
-              <div key={i} className="relative group overflow-hidden rounded-xl shadow-lg">
+            {experiencePhotos.map((item, i) => (
+              <a
+                key={i}
+                href={item.href}
+                className="relative group overflow-hidden rounded-xl shadow-lg"
+              >
                 <img
-                  src={img.src}
-                  alt={img.alt}
+                  src={item.src}
+                  alt={item.alt}
                   className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-300"
-                  style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined}
                   loading="lazy"
                   decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-xl" />
-              </div>
+              </a>
             ))}
           </div>
         </div>

@@ -1,13 +1,13 @@
 import { memo } from "react";
-import interiorImage from "../../../attached_assets/IMG_4445_1752533547607.webp";
+import { HOME_IMAGE_URLS } from "../lib/home-image-urls";
 
 export default memo(function GallerySection() {
   return (
     <section id="gallery" className="relative w-full bg-casa-cream">
       <div className="relative w-full aspect-[16/10] sm:aspect-[2/1] md:aspect-[21/9] overflow-hidden">
         <img
-          src={interiorImage}
-          alt="Casa Benavides Inn - Interior Living Space with Southwest Decor"
+          src={HOME_IMAGE_URLS.galleryVeranda}
+          alt="Casa Benavides Inn - Veranda"
           width={1920}
           height={810}
           className="absolute inset-0 w-full h-full object-cover"
@@ -15,12 +15,7 @@ export default memo(function GallerySection() {
           decoding="async"
           sizes="100vw"
         />
-        {/* Subtle bottom-to-top gradient for contrast */}
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-transparent"
-          aria-hidden
-        />
-        {/* Bottom fade into Reviews: transparent → warm tan (reviews background tone) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-transparent" aria-hidden />
         <div
           className="absolute bottom-0 left-0 right-0 h-[220px] md:h-[260px] pointer-events-none"
           style={{

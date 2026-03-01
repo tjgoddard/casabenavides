@@ -1,23 +1,22 @@
 import Navigation from "../components/navigation";
 import Footer from "../components/footer";
 import PageHeaderCarousel from "../components/page-header-carousel";
-import interiorImage from "../../../attached_assets/IMG_4445_1752533547607.webp";
-import courtyardImage from "../../../attached_assets/IMG_4446_1752533547603.webp";
-import locationImage from "../../../attached_assets/IMG_3403.webp";
+import { GALLERY_IMAGE_URLS } from "../lib/gallery-image-urls";
+import { HOME_IMAGE_URLS } from "../lib/home-image-urls";
 
 const galleryImages = [
-  { src: "/gallery-living-room-art.png", alt: "Casa Benavides Inn - Living room with vigas, art, and Southwestern furnishings" },
-  { src: "/gallery-fireplace-sunflowers.png", alt: "Casa Benavides Inn - Common area with kiva fireplace, sunflowers painting, and adobe charm" },
+  { src: GALLERY_IMAGE_URLS.galleryLivingRoomArt, alt: "Casa Benavides Inn - Living room with vigas, art, and Southwestern furnishings" },
+  { src: GALLERY_IMAGE_URLS.galleryFireplaceSunflowers, alt: "Casa Benavides Inn - Common area with kiva fireplace, sunflowers painting, and adobe charm" },
   { src: "/breakfast-dining-room.png", alt: "Casa Benavides Inn - Dining room with vigas, Southwestern art, and tables set for breakfast" },
-  { src: interiorImage, alt: "Casa Benavides Inn - Interior Living Space with Southwest Decor" },
-  { src: courtyardImage, alt: "Casa Benavides Inn - Courtyard Patio with Colorful Umbrellas" },
-  { src: locationImage, alt: "Casa Benavides Inn - Adobe Architecture" },
-  { src: "/gallery-room-light-blue.png", alt: "Guest room with light blue walls, kiva fireplace, and vigas ceiling" },
-  { src: "/gallery-sitting-teal.png", alt: "Sitting area with teal walls, woven chairs, and stained glass" },
-  { src: "/gallery-fireplace-corner.png", alt: "Corner room with light blue walls and orange kiva fireplace" },
-  { src: "/gallery-turquoise-kiva.png", alt: "Common area with turquoise kiva fireplace and door" },
-  { src: "/gallery-bedroom-two-beds.png", alt: "Southwestern bedroom with two beds and terracotta accents" },
-  { src: "/gallery-patio-blue-doors.png", alt: "Outdoor patio with blue doors and tiled fountain" },
+  { src: HOME_IMAGE_URLS.heroBanner, alt: "Casa Benavides Inn - Interior Living Space with Southwest Decor" },
+  { src: HOME_IMAGE_URLS.galleryVeranda, alt: "Casa Benavides Inn - Courtyard Patio with Colorful Umbrellas" },
+  { src: HOME_IMAGE_URLS.locationGraphic, alt: "Casa Benavides Inn - Adobe Architecture" },
+  { src: GALLERY_IMAGE_URLS.galleryRoomLightBlue, alt: "Guest room with light blue walls, kiva fireplace, and vigas ceiling" },
+  { src: GALLERY_IMAGE_URLS.gallerySittingTeal, alt: "Sitting area with teal walls, woven chairs, and stained glass" },
+  { src: GALLERY_IMAGE_URLS.galleryFireplaceCorner, alt: "Corner room with light blue walls and orange kiva fireplace" },
+  { src: GALLERY_IMAGE_URLS.galleryTurquoiseKiva, alt: "Common area with turquoise kiva fireplace and door" },
+  { src: GALLERY_IMAGE_URLS.galleryBedroomTwoBeds, alt: "Southwestern bedroom with two beds and terracotta accents" },
+  { src: GALLERY_IMAGE_URLS.galleryPatioBlueDoors, alt: "Outdoor patio with blue doors and tiled fountain" },
 ];
 
 export default function Gallery() {
